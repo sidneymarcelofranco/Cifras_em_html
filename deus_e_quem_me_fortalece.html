@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deus É Quem Me Fortalece</title>
+<link rel="stylesheet" href="css/cifra.css">
+</head>
+<body data-tom="F#">
+
+<header>
+  <div class="hdr-title">
+    <h1>Deus É Quem Me Fortalece</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="−1 semitom (B)">−</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="index.html" class="tb-btn" title="Índice">⌂</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom + (=)">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom − (-)">A−</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()" title="Tela cheia (F)">⛶</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)" title="Anterior (↑)">↑</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)" title="Próxima (↓)">↓</button>
+</div>
+
+<main><div class="sections-wrap">
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">F#9  G#m7  D#m7(9)  C#9  B9</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">    F#9                    Bbm</div><div class="ly">Pra que me preocupar com o dia de amanhã</div></div>
+  <div class="bl"><div class="ch">           B9</div><div class="ly">Se tudo está nas mãos de Deus</div></div>
+  <div class="bl"><div class="ch">              B9</div><div class="ly">O controle é dele e não meu</div></div>
+  <div class="bl"><div class="ch">    F#9            Bbm</div><div class="ly">Eu não preciso ver para acreditar</div></div>
+  <div class="bl"><div class="ch">             B9</div><div class="ly">Que Deus tem todo o poder</div></div>
+  <div class="bl"><div class="ch">            B9</div><div class="ly">De fazer o que quiser fazer</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">B9</div><div class="ly">Em qualquer situação</div></div>
+  <div class="bl"><div class="ch">                   C#9</div><div class="ly">Na fartura ou escassez</div></div>
+  <div class="bl"><div class="ch">D#m7(9)             Db/F</div><div class="ly">Tendo a provisão ou não</div></div>
+  <div class="bl"><div class="ch">F#9</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">B9</div><div class="ly">Eu não sei do amanhã</div></div>
+  <div class="bl"><div class="ch">                  C#9</div><div class="ly">O que vestir ou comer</div></div>
+  <div class="bl"><div class="ch">D#m7(9)             Db/F</div><div class="ly">Mas de uma coisa eu sei</div></div>
+  <div class="bl"><div class="ch">F#9</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">G#m7             F#/A#  B9</div><div class="ly">Quem me fortalece é Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">                    F#9</div><div class="ly">Deus é quem me fortalece</div></div>
+  <div class="bl"><div class="ch">                   G#m7</div><div class="ly">Não preciso mais chorar</div></div>
+  <div class="bl"><div class="ch">                     F#/A#</div><div class="ly">Mesmo em meio a tempestade</div></div>
+  <div class="bl"><div class="ch">                   B9</div><div class="ly">No meu barco ele está</div></div>
+  <div class="bl"><div class="ch">                  F#9</div><div class="ly">Na sombra do onipotente</div></div>
+  <div class="bl"><div class="ch">                    G#m7</div><div class="ly">Sei que posso descansar</div></div>
+  <div class="bl"><div class="ch">               F#/A#</div><div class="ly">Debaixo de suas asas</div></div>
+  <div class="bl"><div class="ch">                B9</div><div class="ly">Nada pode me abalar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">F#9  G#m7  D#m7(9)  C#9  B9</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">    F#9                    Bbm</div><div class="ly">Pra que me preocupar com o dia de amanhã</div></div>
+  <div class="bl"><div class="ch">           B9</div><div class="ly">Se tudo está nas mãos de Deus</div></div>
+  <div class="bl"><div class="ch">              B9</div><div class="ly">O controle é dele e não meu</div></div>
+  <div class="bl"><div class="ch">    F#9            Bbm</div><div class="ly">Eu não preciso ver para acreditar</div></div>
+  <div class="bl"><div class="ch">             B9</div><div class="ly">Que Deus tem todo o poder</div></div>
+  <div class="bl"><div class="ch">            B9</div><div class="ly">De fazer o que quiser fazer</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">B9</div><div class="ly">Em qualquer situação</div></div>
+  <div class="bl"><div class="ch">                   C#9</div><div class="ly">Na fartura ou escassez</div></div>
+  <div class="bl"><div class="ch">D#m7(9)             Db/F</div><div class="ly">Tendo a provisão ou não</div></div>
+  <div class="bl"><div class="ch">F#9</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">B9</div><div class="ly">Eu não sei do amanhã</div></div>
+  <div class="bl"><div class="ch">                  C#9</div><div class="ly">O que vestir ou comer</div></div>
+  <div class="bl"><div class="ch">D#m7(9)             Db/F</div><div class="ly">Mas de uma coisa eu sei</div></div>
+  <div class="bl"><div class="ch">F#9</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">G#m7             F#/A#  B9</div><div class="ly">Quem me fortalece é Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">                    F#9</div><div class="ly">Deus é quem me fortalece</div></div>
+  <div class="bl"><div class="ch">                   G#m7</div><div class="ly">Não preciso mais chorar</div></div>
+  <div class="bl"><div class="ch">                     F#/A#</div><div class="ly">Mesmo em meio a tempestade</div></div>
+  <div class="bl"><div class="ch">                   B9</div><div class="ly">No meu barco ele está</div></div>
+  <div class="bl"><div class="ch">                  F#9</div><div class="ly">Na sombra do onipotente</div></div>
+  <div class="bl"><div class="ch">                    G#m7</div><div class="ly">Sei que posso descansar</div></div>
+  <div class="bl"><div class="ch">               F#/A#</div><div class="ly">Debaixo de suas asas</div></div>
+  <div class="bl"><div class="ch">                B9</div><div class="ly">Nada pode me abalar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">                    F#9</div><div class="ly">Deus é quem me fortalece</div></div>
+  <div class="bl"><div class="ch">                   G#m7</div><div class="ly">Não preciso mais chorar</div></div>
+  <div class="bl"><div class="ch">                     F#/A#</div><div class="ly">Mesmo em meio a tempestade</div></div>
+  <div class="bl"><div class="ch">                   B9</div><div class="ly">No meu barco ele está</div></div>
+  <div class="bl"><div class="ch">                  F#9</div><div class="ly">Na sombra do onipotente</div></div>
+  <div class="bl"><div class="ch">                    G#m7</div><div class="ly">Sei que posso descansar</div></div>
+  <div class="bl"><div class="ch">               F#/A#</div><div class="ly">Debaixo de suas asas</div></div>
+  <div class="bl"><div class="ch">                B9</div><div class="ly">Nada pode me abalar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">B9</div><div class="ly">Em qualquer situação</div></div>
+  <div class="bl"><div class="ch">                   C#9</div><div class="ly">Na fartura ou escassez</div></div>
+  <div class="bl"><div class="ch">D#m7(9)             Db/F</div><div class="ly">Tendo a provisão ou não</div></div>
+  <div class="bl"><div class="ch">F#9</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">G#m7</div><div class="ly">Eu não sei do amanhã</div></div>
+  <div class="bl"><div class="ch">                   C#9</div><div class="ly">O que vestir ou comer</div></div>
+  <div class="bl"><div class="ch">D#m7(9)             Db/F</div><div class="ly">Mas de uma coisa eu sei</div></div>
+  <div class="bl"><div class="ch">F#9</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">D#m7(9)      Db/F</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">G#m7</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">B9</div><div class="ly">Quem me fortalece é Deus</div></div>
+  <div class="bl"><div class="ch">D#m7(9)      Db/F    F#9</div><div class="ly">Quem me fortalece é Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">                    F#9</div><div class="ly">Deus é quem me fortalece</div></div>
+  <div class="bl"><div class="ch">                   G#m7</div><div class="ly">Não preciso mais chorar</div></div>
+  <div class="bl"><div class="ch">                     F#/A#</div><div class="ly">Mesmo em meio a tempestade</div></div>
+  <div class="bl"><div class="ch">                   B9</div><div class="ly">No meu barco ele está</div></div>
+  <div class="bl"><div class="ch">                  F#9</div><div class="ly">Na sombra do onipotente</div></div>
+  <div class="bl"><div class="ch">                    G#m7</div><div class="ly">Sei que posso descansar</div></div>
+  <div class="bl"><div class="ch">               F#/A#</div><div class="ly">Debaixo de suas asas</div></div>
+  <div class="bl"><div class="ch">                B9</div><div class="ly">Nada pode me abalar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">                    F#9</div><div class="ly">Deus é quem me fortalece</div></div>
+  <div class="bl"><div class="ch">                   G#m7</div><div class="ly">Não preciso mais chorar</div></div>
+  <div class="bl"><div class="ch">                     F#/A#</div><div class="ly">Mesmo em meio a tempestade</div></div>
+  <div class="bl"><div class="ch">                   B9</div><div class="ly">No meu barco ele está</div></div>
+  <div class="bl"><div class="ch">                 F#/A#</div><div class="ly">Na sombra do onipotente</div></div>
+  <div class="bl"><div class="ch">                    G#m7</div><div class="ly">Sei que posso descansar</div></div>
+  <div class="bl"><div class="ch">               D#m7(9)</div><div class="ly">Debaixo de suas asas</div></div>
+  <div class="bl"><div class="ch">             F#9  B9</div><div class="ly">Nada pode me abalar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">                    F#9</div><div class="ly">Deus é quem me fortalece</div></div>
+  <div class="bl"><div class="ch">                   G#m7</div><div class="ly">Não preciso mais chorar</div></div>
+  <div class="bl"><div class="ch">                     F#/A#</div><div class="ly">Mesmo em meio a tempestade</div></div>
+  <div class="bl"><div class="ch">                   B9</div><div class="ly">No meu barco ele está</div></div>
+  <div class="bl"><div class="ch">                  F#9</div><div class="ly">Na sombra do onipotente</div></div>
+  <div class="bl"><div class="ch">                    G#m7</div><div class="ly">Sei que posso descansar</div></div>
+  <div class="bl"><div class="ch">               F#/A#</div><div class="ly">Debaixo de suas asas</div></div>
+  <div class="bl"><div class="ch">                B9</div><div class="ly">Nada pode me abalar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="bl"><div class="ch">                    B9</div><div class="ly">Deus é quem me fortalece</div></div>
+</div></div>
+
+</div></main>
+<script src="js/cifra.js"></script>
+</body>
+</html>

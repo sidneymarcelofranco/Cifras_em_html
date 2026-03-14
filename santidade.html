@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santidade</title>
+<link rel="stylesheet" href="css/cifra.css">
+</head>
+<body data-tom="Bb">
+
+<header>
+  <div class="hdr-title">
+    <h1>Santidade</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="−1 semitom (B)">−</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="index.html" class="tb-btn" title="Índice">⌂</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom + (=)">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom − (-)">A−</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()" title="Tela cheia (F)">⛶</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)" title="Anterior (↑)">↑</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)" title="Próxima (↓)">↓</button>
+</div>
+
+<main><div class="sections-wrap">
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Bb9  Gm7(11)  F  Eb9
+Bb9  Gm7(11)  F  Eb9</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">Bb           Bb9</div><div class="ly">O meu melhor quero te dar</div></div>
+  <div class="bl"><div class="ch">Gm7(11)                Eb</div><div class="ly">Me derramar aos Teus pés</div></div>
+  <div class="bl"><div class="ch">Bb             Bb9</div><div class="ly">Ser Tua imagem e semelhança</div></div>
+  <div class="bl"><div class="ch">Gm7(11)       Eb</div><div class="ly">É o desejo do meu coração</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Cm7               Bb/D</div><div class="ly">Se o meu corpo errar o caminho</div></div>
+  <div class="bl"><div class="ch">Eb               Bb/D</div><div class="ly">Meu coração clamará por Ti</div></div>
+  <div class="bl"><div class="ch">   Eb               F/A    Bb</div><div class="ly">Abraça-me com Tua misericórdia</div></div>
+  <div class="bl"><div class="ch">Cm7          Bb/D</div><div class="ly">Vem me envolver</div></div>
+  <div class="bl"><div class="ch">    Eb         D7</div><div class="ly">Tua face quero ver</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Gm7(11)     F            Eb      Bb/D</div><div class="ly">Quero   vestir as roupas da santidade</div></div>
+  <div class="bl"><div class="ch">Cm7     Bb/D   Eb         D7</div><div class="ly">E mergulhar no Santo dos Santos</div></div>
+  <div class="bl"><div class="ch">Gm7(11)   F       Eb       Bb/D</div><div class="ly">Tenho     sede de Deus</div></div>
+  <div class="bl"><div class="ch">Cm7        Bb/D</div><div class="ly">Quero conhecer</div></div>
+  <div class="bl"><div class="ch">Eb       F           Eb</div><div class="ly">Quero exalar mais de Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">Bb           Bb9</div><div class="ly">O meu melhor quero te dar</div></div>
+  <div class="bl"><div class="ch">Gm7(11)                Eb</div><div class="ly">Me derramar aos Teus pés</div></div>
+  <div class="bl"><div class="ch">Bb             Bb9</div><div class="ly">Ser Tua imagem e semelhança</div></div>
+  <div class="bl"><div class="ch">Gm7(11)       Eb</div><div class="ly">É o desejo do meu coração</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Cm7              Bb/D</div><div class="ly">Se o meu corpo errar o caminho</div></div>
+  <div class="bl"><div class="ch">Eb               Bb/D</div><div class="ly">Meu coração clamará por Ti</div></div>
+  <div class="bl"><div class="ch">   Eb               F/A    Bb</div><div class="ly">Abraça-me com Tua misericórdia</div></div>
+  <div class="bl"><div class="ch">Cm7          Bb/D</div><div class="ly">Vem me envolver</div></div>
+  <div class="bl"><div class="ch">    Eb         D7</div><div class="ly">Tua face quero ver</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Gm7(11)     F            Eb      Bb/D</div><div class="ly">Quero   vestir as roupas da santidade</div></div>
+  <div class="bl"><div class="ch">Cm7     Bb/D   Eb         D7</div><div class="ly">E mergulhar no Santo dos Santos</div></div>
+  <div class="bl"><div class="ch">Gm7(11)   F       Eb       Bb/D</div><div class="ly">Tenho     sede de Deus</div></div>
+  <div class="bl"><div class="ch">Cm7        Bb/D</div><div class="ly">Quero conhecer</div></div>
+  <div class="bl"><div class="ch">Eb       F</div><div class="ly">Quero exalar mais de Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">Bb9  F  Gm7(11)  Eb9
+Bb9  F  Gm7(11)  Eb9
+Bb9  F  Gm7(11)  Eb9
+Bb9  F  Gm7(11)  Eb9</div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Eb               Bb/D</div><div class="ly">Se o meu corpo errar o caminho</div></div>
+  <div class="bl"><div class="ch">Eb               Bb/D</div><div class="ly">Meu coração clamará por Ti</div></div>
+  <div class="bl"><div class="ch">   Eb               F/A    Bb</div><div class="ly">Abraça-me com Tua misericórdia</div></div>
+  <div class="bl"><div class="ch">Cm7          Bb/D</div><div class="ly">Vem me envolver</div></div>
+  <div class="bl"><div class="ch">    Eb         D7</div><div class="ly">Tua face quero ver</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Gm7(11)     F            Eb      Bb/D</div><div class="ly">Quero   vestir as roupas da santidade</div></div>
+  <div class="bl"><div class="ch">Cm7     Bb/D   Eb         D7</div><div class="ly">E mergulhar no Santo dos Santos</div></div>
+  <div class="bl"><div class="ch">Gm7(11)   F       Eb       Bb/D</div><div class="ly">Tenho     sede de Deus</div></div>
+  <div class="bl"><div class="ch">Cm7        Bb/D</div><div class="ly">Quero conhecer</div></div>
+  <div class="bl"><div class="ch">Eb       F           Eb</div><div class="ly">Quero exalar mais de Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">Gm7(11)  F  Eb9  Bb9</div>
+</div></div>
+
+</div></main>
+<script src="js/cifra.js"></script>
+</body>
+</html>
