@@ -69,6 +69,7 @@ let cur = 0;
 let semitonesOffset = 0;
 let cols = 1;
 let fontBase = 0;
+let lyricsOnly = false;
 
 let secs, total, originalTom;
 
@@ -77,6 +78,8 @@ let secs, total, originalTom;
 document.addEventListener('DOMContentLoaded', () => {
   secs  = Array.from(document.querySelectorAll('.s'));
   total = secs.length;
+
+  ensureLyricsToggleButton();
 
   // Lê o tom original do data-tom no <body>
   originalTom = document.body.dataset.tom || 'C';
@@ -100,6 +103,26 @@ document.addEventListener('DOMContentLoaded', () => {
   bindSwipe();
   bindSectionClick();
 });
+
+function ensureLyricsToggleButton() {
+  const toolbar = document.querySelector('.toolbar');
+  if (!toolbar || document.getElementById('btnLyrics')) return;
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'tb-btn';
+  btn.id = 'btnLyrics';
+  btn.textContent = 'Ly';
+  btn.title = 'Visao de letra somente (L)';
+  btn.addEventListener('click', toggleLyricsOnly);
+
+  const fsBtn = document.getElementById('btnFS');
+  if (fsBtn && fsBtn.parentElement === toolbar) {
+    toolbar.insertBefore(btn, fsBtn.nextSibling);
+  } else {
+    toolbar.appendChild(btn);
+  }
+}
 
 
 // ── NAVEGAÇÃO ─────────────────────────────────────────────────────
@@ -167,6 +190,16 @@ function toggleFS() {
     document.exitFullscreen();
     if (btn) btn.textContent = '⛶';
   }
+}
+
+
+// ── LETRA SOMENTE ────────────────────────────────────────────────
+function toggleLyricsOnly() {
+  lyricsOnly = !lyricsOnly;
+  document.body.classList.toggle('lyrics-only', lyricsOnly);
+
+  const b = document.getElementById('btnLyrics');
+  if (b) b.classList.toggle('active-btn', lyricsOnly);
 }
 
 
@@ -238,6 +271,7 @@ function bindKeys() {
       case '=': case '+': sz(1);  break;
       case '-': case '_': sz(-1); break;
       case 'f': case 'F': toggleFS(); break;
+      case 'l': case 'L': toggleLyricsOnly(); break;
       case 'b': case 'B': transpose(-1); break;  // bemol
       case 's': case 'S': transpose(1);  break;  // sustenido
     }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu És Deus (A Ele)</title>
+<link rel="stylesheet" href="css/cifra.css">
+</head>
+<body data-tom="A">
+
+<header>
+  <div class="hdr-title">
+    <h1>Tu És Deus (A Ele)</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="−1 semitom (B)">−</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="index.html" class="tb-btn" title="Índice">⌂</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom + (=)">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom − (-)">A−</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()" title="Tela cheia (F)">⛶</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)" title="Anterior (↑)">↑</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)" title="Próxima (↓)">↓</button>
+</div>
+
+<main><div class="sections-wrap">
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A  A9</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">A                  D</div><div class="ly">Ao que venceu a morte</div></div>
+  <div class="bl"><div class="ch">F#m7                 E</div><div class="ly">Ao Criador da Vida</div></div>
+  <div class="bl"><div class="ch">A                D</div><div class="ly">Mudou a minha sorte</div></div>
+  <div class="bl"><div class="ch">F#m7                    E</div><div class="ly">Quando não vi saída</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">       D9              E4</div><div class="ly">Tu és Deus, quem sou eu?</div></div>
+  <div class="bl"><div class="ch">                  A   A4  A</div><div class="ly">Pra negar o Teu poder</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Verso 2</div><div class="bd">
+  <div class="bl"><div class="ch">A                  D</div><div class="ly">Mesmo em meio ao medo</div></div>
+  <div class="bl"><div class="ch">F#m7                 E</div><div class="ly">Correu ao meu encontro</div></div>
+  <div class="bl"><div class="ch">A                    D</div><div class="ly">Já não sou mais o mesmo</div></div>
+  <div class="bl"><div class="ch">F#m7                 E</div><div class="ly">Tenho um novo canto</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">    D9</div><div class="ly">A Ele que me enxergou</div></div>
+  <div class="bl"><div class="ch">   E4</div><div class="ly">A Ele que me resgatou</div></div>
+  <div class="bl"><div class="ch">     A9        A4 A9</div><div class="ly">Toda honra, toda glória</div></div>
+  <div class="bl"><div class="ch">   D9</div><div class="ly">A Ele que comigo está</div></div>
+  <div class="bl"><div class="ch">      E4</div><div class="ly">Que nunca me abandonará</div></div>
+  <div class="bl"><div class="ch">    A9         A4 A9</div><div class="ly">Toda honra, toda glória</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">        D9              E4</div><div class="ly">Tu és Deus, quem sou eu?</div></div>
+  <div class="bl"><div class="ch">                  A9        A4 A9</div><div class="ly">Pra negar o Teu poder, o Teu poder</div></div>
+  <div class="bl"><div class="ch">        D9             E</div><div class="ly">Tu és Deus, quem sou eu?</div></div>
+  <div class="bl"><div class="ch">                  A9       A4 A9</div><div class="ly">Pra negar o Teu poder, o Teu poder</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">  D9</div><div class="ly">A Ele que me enxergou</div></div>
+  <div class="bl"><div class="ch">  E</div><div class="ly">A Ele que me resgatou</div></div>
+  <div class="bl"><div class="ch">  A9        A4 A9</div><div class="ly">Toda honra, toda glória</div></div>
+  <div class="bl"><div class="ch">  D9</div><div class="ly">A Ele que comigo está</div></div>
+  <div class="bl"><div class="ch">  E</div><div class="ly">Que nunca me abandonará</div></div>
+  <div class="bl"><div class="ch">  A9        A4 A9</div><div class="ly">Toda honra, toda glória</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="bl"><div class="ch">       D9             E</div><div class="ly">Tu és Deus, quem sou eu</div></div>
+  <div class="bl"><div class="ch">                 A9  A4 A9</div><div class="ly">Pra negar o Teu poder?</div></div>
+</div></div>
+
+</div></main>
+<script src="js/cifra.js"></script>
+</body>
+</html>

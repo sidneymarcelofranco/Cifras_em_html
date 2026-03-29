@@ -92,6 +92,13 @@ header h1 {
 .tb-btn.active-btn { background:rgba(251,191,36,0.2); border-color:#fbbf24; }
 .tb-sep { width:32px; border-top:1px solid rgba(255,255,255,0.1); margin:1px 0; }
 
+/* modo letra somente */
+body.lyrics-only .ch,
+body.lyrics-only .co { display:none; }
+body.lyrics-only .bl { margin-bottom:8px; }
+body.lyrics-only .ly { line-height:1.7; }
+body.lyrics-only .hdr-transpose { opacity:0.5; }
+
 /* ── MAIN ── */
 main { padding:10px 3% 20px calc(52px + 2%); max-width:100%; }
 

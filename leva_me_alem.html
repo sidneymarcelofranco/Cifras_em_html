@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leva-me Além</title>
+<link rel="stylesheet" href="css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Leva-me Além</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="−1 semitom (B)">−</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="index.html" class="tb-btn" title="Índice">⌂</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom + (=)">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom − (-)">A−</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()" title="Tela cheia (F)">⛶</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)" title="Anterior (↑)">↑</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)" title="Próxima (↓)">↓</button>
+</div>
+
+<main><div class="sections-wrap">
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">D  A/C#  G  D4  D
+D  A/C#  G  G/B  A</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">    D         A/C#</div><div class="ly">Render a Ti, adoração</div></div>
+  <div class="bl"><div class="ch">  Bm       Bm/A    G    D/F#</div><div class="ly">E derramar meu ser</div></div>
+  <div class="bl"><div class="ch">Em          A4      A/G     Em     A4</div><div class="ly">É o que meu coração deseja toda manhã</div></div>
+  <div class="bl"><div class="ch">G/B A/C#     D         A/C#</div><div class="ly">Te imaginar, é me inspirar</div></div>
+  <div class="bl"><div class="ch">     G</div><div class="ly">Pra Te dizer</div></div>
+  <div class="bl"><div class="ch">   G        A/G       F#m7</div><div class="ly">Estou apaixonado cada vez mais</div></div>
+  <div class="bl"><div class="ch">      Bm  Bm/A</div><div class="ly">Por Ti</div></div>
+  <div class="bl"><div class="ch">          Em        D/F#</div><div class="ly">Senhor, Tu és incomparável</div></div>
+  <div class="bl"><div class="ch">     G             A</div><div class="ly">Teu nome é maravilhoso!</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G/B A/C#  D</div><div class="ly">Leva-me além</div></div>
+  <div class="bl"><div class="ch">     D/F#   G     D/F#</div><div class="ly">Leva-me além</div></div>
+  <div class="bl"><div class="ch">       Em           D/F#</div><div class="ly">A um nível mais profundo</div></div>
+  <div class="bl"><div class="ch">      G                    A</div><div class="ly">De intimidade contigo, ó Senhor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pós-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G/B A/C#  D</div><div class="ly">Leva-me além</div></div>
+  <div class="bl"><div class="ch">     D/F#   G        D/F#</div><div class="ly">Leva-me além</div></div>
+  <div class="bl"><div class="ch">            Em        D/F#           G  G/A</div><div class="ly">Que a minha vida flua mais da Tua unção</div></div>
+  <div class="bl"><div class="ch">                D</div><div class="ly">Mais do Teu poder</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="co">G/D  D ( G/B  A/C# )</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">    D         A/C#</div><div class="ly">Render a Ti, adoração</div></div>
+  <div class="bl"><div class="ch">  Bm       Bm/A    G    D/F#</div><div class="ly">E derramar meu ser</div></div>
+  <div class="bl"><div class="ch">Em          A4      A/G     Em     A4</div><div class="ly">É o que meu coração deseja toda manhã</div></div>
+  <div class="bl"><div class="ch">G/B A/C#      D          A/C#</div><div class="ly">Te imaginar, é me inspirar</div></div>
+  <div class="bl"><div class="ch">     G</div><div class="ly">Pra Te dizer</div></div>
+  <div class="bl"><div class="ch">   G        A/G       F#m7</div><div class="ly">Estou apaixonado cada vez mais</div></div>
+  <div class="bl"><div class="ch">      Bm Bm/A</div><div class="ly">Por Ti</div></div>
+  <div class="bl"><div class="ch">          Em        D/F#</div><div class="ly">Senhor, Tu és incomparável</div></div>
+  <div class="bl"><div class="ch">     G             A</div><div class="ly">Teu nome é maravilhoso!</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">G/B A/C#  D</div><div class="ly">Leva-me além</div></div>
+  <div class="bl"><div class="ch">     D/F#   G     D/F#</div><div class="ly">Leva-me além</div></div>
+  <div class="bl"><div class="ch">       Em           D/F#</div><div class="ly">A um nível mais profundo</div></div>
+  <div class="bl"><div class="ch">      G                    A</div><div class="ly">De intimidade contigo, ó Senhor</div></div>
+  <div class="bl"><div class="ch">G/B A/C#  D</div><div class="ly">Leva-me além</div></div>
+  <div class="bl"><div class="ch">     D/F#   G      D/F#</div><div class="ly">Leva-me além</div></div>
+  <div class="bl"><div class="ch">            Em        D/F#           G   G/A</div><div class="ly">Que a minha vida flua mais da Tua unção</div></div>
+  <div class="bl"><div class="ch">               D</div><div class="ly">Mais do Teu poder</div></div>
+</div></div>
+
+</div></main>
+<script src="js/cifra.js"></script>
+</body>
+</html>
