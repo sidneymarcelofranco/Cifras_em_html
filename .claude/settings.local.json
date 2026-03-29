@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p songs docs)",
+      "Bash(mv a_boa_parte.html ajuntamento.html deus_e_quem_me_fortalece.html leva_me_alem.html lugar_secreto.html minha_alma_engrandece.html santidade.html tu_es_deus_a_ele.html songs/)",
+      "Bash(sed -i 's|href=\"\"css/cifra.css\"\"|href=\"\"../css/cifra.css\"\"|g' *.html)",
+      "Bash(sed -i 's|src=\"\"js/cifra.js\"\"|src=\"\"../js/cifra.js\"\"|g' *.html)",
+      "Bash(sed -i 's|href=\"\"index.html\"\"|href=\"\"../index.html\"\"|g' *.html)",
+      "Bash(grep -l \"cifra.css\" *.html)"
+    ]
+  }
+}

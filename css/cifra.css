@@ -19,9 +19,9 @@ header {
 .hdr-title { flex:1; min-width:0; }
 header h1 {
   font-family:Georgia,serif; font-size:1.0rem; font-weight:700;
-  color:#fbbf24; white-space:nowrap;
-  overflow:hidden; text-overflow:ellipsis;
+  color:#fbbf24;
   text-transform:uppercase; letter-spacing:0.06em;
+  line-height:1.25;
 }
 .hdr-counter {
   font-size:0.65rem; color:#6b7280;
