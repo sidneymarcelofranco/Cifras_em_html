@@ -83,7 +83,7 @@ window.SONGS = [
   {
     artist: "Vineyard",
     title: "Quebrantado",
-    key: "C",
+    key: "G",
     file: "songs/quebrantado.html"
   }
 ];

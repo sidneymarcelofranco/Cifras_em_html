@@ -3,61 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cifras — Igreja</title>
+<title>Cifras</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:#111827; color:#f9fafb; font-family:Georgia,serif; padding:20px 5% 60px; max-width:640px; margin:0 auto; }
-h1 { font-size:1.3rem; color:#fbbf24; margin-bottom:4px; }
-p.sub { font-size:0.8rem; color:#9ca3af; margin-bottom:24px; }
-.artist { margin:20px 0 8px; padding-bottom:6px; border-bottom:1px solid rgba(255,255,255,0.09); }
-.artist h2 { font-size:0.9rem; color:#f9fafb; letter-spacing:0.04em; text-transform:uppercase; }
-.card { display:block; text-decoration:none; background:#1f2937; border:1px solid rgba(255,255,255,0.07); border-left:4px solid #fbbf24; border-radius:10px; padding:14px 16px; margin-bottom:12px; transition:background 0.15s; }
-.card:active { background:#263044; }
-.card h3 { font-size:1rem; color:#fbbf24; margin-bottom:3px; }
-.card p { font-size:0.78rem; color:#9ca3af; font-family:'Courier New',monospace; }
+body {
+  background:#111827; color:#f9fafb;
+  font-family:Georgia,serif;
+  padding:32px 5% 80px;
+  max-width:600px; margin:0 auto;
+}
+
+/* header */
+.page-header { margin-bottom:28px; }
+.page-header h1 {
+  font-size:1.5rem; color:#fbbf24;
+  letter-spacing:0.06em; text-transform:uppercase;
+  margin-bottom:4px;
+}
+.page-header p {
+  font-size:0.78rem; color:#6b7280;
+  font-family:'Courier New',monospace;
+}
+
+/* busca */
+.search-wrap { position:relative; margin-bottom:28px; }
+.search-wrap input {
+  width:100%; padding:12px 16px 12px 42px;
+  background:#1f2937; border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px; color:#f9fafb;
+  font-size:0.95rem; font-family:Georgia,serif;
+  outline:none; transition:border-color 0.2s;
+  -webkit-appearance:none;
+  appearance:none;
+}
+.search-wrap input::placeholder { color:#4b5563; }
+.search-wrap input:focus { border-color:rgba(251,191,36,0.5); }
+.search-icon {
+  position:absolute; left:14px; top:50%; transform:translateY(-50%);
+  color:#4b5563; font-size:1rem; pointer-events:none;
+}
+.clear-btn {
+  position:absolute; right:12px; top:50%; transform:translateY(-50%);
+  background:none; border:none; color:#6b7280; font-size:1.1rem;
+  cursor:pointer; padding:4px; display:none; line-height:1;
+}
+.clear-btn.visible { display:block; }
+
+/* contagem */
+.count { font-size:0.72rem; color:#6b7280; font-family:'Courier New',monospace; margin-bottom:20px; }
+
+/* grupo de artista */
+.artist-group { margin-bottom:8px; }
+.artist-label {
+  font-size:0.68rem; color:#9ca3af;
+  letter-spacing:0.1em; text-transform:uppercase;
+  padding:0 4px; margin-bottom:6px;
+  display:flex; align-items:center; gap:8px;
+}
+.artist-label::after {
+  content:''; flex:1; height:1px;
+  background:rgba(255,255,255,0.07);
+}
+
+/* card */
+.card {
+  display:flex; align-items:center; justify-content:space-between;
+  text-decoration:none;
+  background:#1f2937; border:1px solid rgba(255,255,255,0.06);
+  border-left:3px solid #fbbf24;
+  border-radius:10px; padding:13px 16px;
+  margin-bottom:8px; transition:background 0.15s, border-color 0.15s;
+}
+.card:active, .card:hover { background:#263044; border-color:rgba(251,191,36,0.6); }
+.card-title { font-size:0.98rem; color:#fbbf24; }
+.card-key {
+  font-size:0.72rem; color:#6b7280;
+  font-family:'Courier New',monospace;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:6px; padding:2px 8px;
+  white-space:nowrap; flex-shrink:0; margin-left:12px;
+}
+
+/* sem resultados */
+.empty { text-align:center; padding:40px 0; color:#4b5563; font-size:0.9rem; }
 </style>
 </head>
 <body>
-<h1>🎸 Cifras</h1>
-<p class="sub">Selecione a música por artista</p>
+
+<div class="page-header">
+  <h1>Cifras</h1>
+  <p id="songCount"></p>
+</div>
+
+<div class="search-wrap">
+  <span class="search-icon">🔍</span>
+  <input type="search" id="searchInput" placeholder="Buscar música ou artista…" autocomplete="off">
+  <button class="clear-btn" id="clearBtn" onclick="clearSearch()">✕</button>
+</div>
 
 <div id="song-list"></div>
 
 <script src="database/songs.js"></script>
 <script>
 (function () {
-  var songs = window.SONGS || [];
+  var songs = (window.SONGS || []).slice().sort(function(a, b) {
+    return a.artist.localeCompare(b.artist, 'pt') || a.title.localeCompare(b.title, 'pt');
+  });
 
-  // Agrupa por artista mantendo a ordem de primeira aparição
-  var artistOrder = [];
-  var byArtist = {};
-  songs.forEach(function (s) {
-    if (!byArtist[s.artist]) {
-      byArtist[s.artist] = [];
-      artistOrder.push(s.artist);
+  var input   = document.getElementById('searchInput');
+  var clearBtn = document.getElementById('clearBtn');
+  var countEl = document.getElementById('songCount');
+
+  countEl.textContent = songs.length + ' música' + (songs.length !== 1 ? 's' : '');
+
+  render('');
+
+  input.addEventListener('input', function() {
+    var q = input.value.trim();
+    clearBtn.classList.toggle('visible', q.length > 0);
+    render(q);
+  });
+
+  function clearSearch() {
+    input.value = '';
+    clearBtn.classList.remove('visible');
+    input.focus();
+    render('');
+  }
+  window.clearSearch = clearSearch;
+
+  function render(query) {
+    var q = query.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    var filtered = q
+      ? songs.filter(function(s) {
+          var hay = (s.artist + ' ' + s.title).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+          return hay.indexOf(q) >= 0;
+        })
+      : songs;
+
+    if (filtered.length === 0) {
+      document.getElementById('song-list').innerHTML =
+        '<div class="empty">Nenhuma música encontrada</div>';
+      return;
     }
-    byArtist[s.artist].push(s);
-  });
 
-  var html = '';
-  artistOrder.forEach(function (artist) {
-    html += '<section class="artist"><h2>' + escHtml(artist) + '</h2></section>';
-    byArtist[artist].forEach(function (s) {
-      html += '<a class="card" href="' + escHtml(s.file) + '">'
-            + '<h3>' + escHtml(s.title) + '</h3>'
-            + '<p>Tom: ' + escHtml(s.key) + '</p>'
-            + '</a>';
+    // Agrupa por artista
+    var artistOrder = [], byArtist = {};
+    filtered.forEach(function(s) {
+      if (!byArtist[s.artist]) { byArtist[s.artist] = []; artistOrder.push(s.artist); }
+      byArtist[s.artist].push(s);
     });
-  });
 
-  document.getElementById('song-list').innerHTML = html;
+    var html = '';
+    artistOrder.forEach(function(artist) {
+      html += '<div class="artist-group">'
+            + '<div class="artist-label">' + esc(artist) + '</div>';
+      byArtist[artist].forEach(function(s) {
+        html += '<a class="card" href="' + esc(s.file) + '">'
+              + '<span class="card-title">' + esc(s.title) + '</span>'
+              + '<span class="card-key">' + esc(s.key) + '</span>'
+              + '</a>';
+      });
+      html += '</div>';
+    });
 
-  function escHtml(str) {
+    document.getElementById('song-list').innerHTML = html;
+  }
+
+  function esc(str) {
     return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 })();
 </script>

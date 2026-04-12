@@ -68,7 +68,7 @@ function useFlat(semitones, originalTom) {
 let cur = 0;
 let semitonesOffset = 0;
 let cols = 1;
-let fontBase = 0;
+let fontBase = 3;   // padrão = +3 cliques (equivale a ~127% do tamanho base)
 let lyricsOnly = false;
 
 let secs, total, originalTom;
@@ -79,7 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
   secs  = Array.from(document.querySelectorAll('.s'));
   total = secs.length;
 
+  // Destaca botão home
+  const homeBtn = document.querySelector('.toolbar a.tb-btn[href*="index"]');
+  if (homeBtn) homeBtn.classList.add('home-btn');
+
   ensureLyricsToggleButton();
+  ensureZoomIndicator();
 
   // Lê o tom original do data-tom no <body>
   originalTom = document.body.dataset.tom || 'C';
@@ -168,6 +173,35 @@ function sz(d) {
   fontBase = Math.max(-3, Math.min(5, fontBase + d));
   document.documentElement.style.setProperty('--cf', (0.9  + fontBase * 0.08) + 'em');
   document.documentElement.style.setProperty('--lf', (0.95 + fontBase * 0.08) + 'em');
+  updateZoomIndicator();
+}
+
+function ensureZoomIndicator() {
+  const toolbar = document.querySelector('.toolbar');
+  if (!toolbar || document.getElementById('zoomIndicator')) return;
+
+  const el = document.createElement('div');
+  el.id = 'zoomIndicator';
+  el.className = 'tb-zoom';
+  el.title = 'Nível de zoom (0 = padrão)';
+
+  // Insere após o botão A−
+  const btns = toolbar.querySelectorAll('.tb-btn');
+  let aMinus = null;
+  btns.forEach(b => { if (b.textContent.trim() === 'A−') aMinus = b; });
+  if (aMinus) aMinus.after(el);
+  else toolbar.appendChild(el);
+
+  updateZoomIndicator();
+}
+
+function updateZoomIndicator() {
+  const el = document.getElementById('zoomIndicator');
+  if (!el) return;
+  const label = fontBase === 0 ? 'Z 0' : (fontBase > 0 ? `Z+${fontBase}` : `Z${fontBase}`);
+  el.textContent = label;
+  el.style.color = fontBase === 0 ? '#6b7280' : fontBase > 0 ? '#34d399' : '#f97316';
+  el.title = `Zoom: nível ${fontBase > 0 ? '+' : ''}${fontBase}  (~${Math.round((0.9 + fontBase * 0.08) / 0.9 * 100)}%)`;
 }
 
 

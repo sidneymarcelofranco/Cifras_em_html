@@ -99,7 +99,7 @@ Cifras_em_html/
 | O Canto das Igrejas                  | Tu És Deus (A Ele)              | A   |
 | Rachel Novaes feat. Thamires Garcia  | Minh'alma Engrandece / Adorado  | C   |
 | Trazendo a Arca                      | Leva-me Além                    | D   |
-| Vineyard                             | Quebrantado                     | C   |
+| Vineyard                             | Quebrantado                     | G   |
 
 ---
 
