@@ -26,11 +26,22 @@ Cifras_em_html/
 
 ---
 
+## Repertórios
+
+- **[repertorio.html](repertorio.html)** — interface de gerenciamento de repertórios
+- Dados persistidos em **localStorage** (`cifras_repertoires`) — não há arquivo JSON dinâmico (impossível escrever em disco via `file://`)
+- Cada repertório: `{ id, name, songs: [songId, ...] }` — referencia músicas por `id`, nunca duplica arquivos
+- Operações: criar, renomear, excluir repertório; adicionar/remover/reordenar músicas
+- Busca inline no modal de adição; indica músicas já adicionadas
+
+---
+
 ## Como adicionar uma música nova
 
 **Dois passos, sempre os dois:**
 
 1. **Criar `songs/<nome>.html`** seguindo o padrão de `docs/patterns.md`
+   - O `id` deve ser único e nunca alterado após criado (quebra repertórios salvos)
    - `<body data-tom="X">` com o tom original
    - Seções com `.lbl intro/verso/pre/refrao/ponte/solo/final`
    - Blocos `.bl > .ch + .ly` para acordes + letra; `.co` para seções instrumentais
