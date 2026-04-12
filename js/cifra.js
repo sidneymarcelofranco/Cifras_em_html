@@ -180,17 +180,17 @@ function ensureZoomIndicator() {
   const toolbar = document.querySelector('.toolbar');
   if (!toolbar || document.getElementById('zoomIndicator')) return;
 
+  // Spacer empurra o zoom para o fundo
+  const spacer = document.createElement('div');
+  spacer.className = 'tb-zoom-spacer';
+
   const el = document.createElement('div');
   el.id = 'zoomIndicator';
   el.className = 'tb-zoom';
   el.title = 'Nível de zoom (0 = padrão)';
 
-  // Insere após o botão A−
-  const btns = toolbar.querySelectorAll('.tb-btn');
-  let aMinus = null;
-  btns.forEach(b => { if (b.textContent.trim() === 'A−') aMinus = b; });
-  if (aMinus) aMinus.after(el);
-  else toolbar.appendChild(el);
+  toolbar.appendChild(spacer);
+  toolbar.appendChild(el);
 
   updateZoomIndicator();
 }

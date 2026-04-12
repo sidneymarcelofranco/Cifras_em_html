@@ -29,7 +29,7 @@ Cifras_em_html/
 ## Repertórios
 
 - **[repertorio.html](repertorio.html)** — interface de gerenciamento de repertórios
-- Dados persistidos em **localStorage** (`cifras_repertoires`) — não há arquivo JSON dinâmico (impossível escrever em disco via `file://`)
+- Dados persistidos em **localStorage** (`cifras_repertorio`) — não há arquivo JSON dinâmico (impossível escrever em disco via `file://`)
 - Cada repertório: `{ id, name, songs: [songId, ...] }` — referencia músicas por `id`, nunca duplica arquivos
 - Operações: criar, renomear, excluir repertório; adicionar/remover/reordenar músicas
 - Busca inline no modal de adição; indica músicas já adicionadas
