@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuas Águas</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="Gm">
+
+<header>
+  <div class="hdr-title">
+    <h1>Tuas Águas</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="−1 semitom (B)">−</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Índice">⌂</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom + (=)">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom − (-)">A−</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()" title="Tela cheia (F)">⛶</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)" title="Anterior (↑)">↑</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)" title="Próxima (↓)">↓</button>
+</div>
+
+<main><div class="sections-wrap">
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Gm  F/A  Bb
+Gm  F/A  Bb</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Sei que estás aqui</div></div>
+  <div class="bl"><div class="ch">F/A       Bb</div><div class="ly">Aqui neste lugar</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Posso Te sentir</div></div>
+  <div class="bl"><div class="ch">Eb       Bb</div><div class="ly">Sonda-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Entra neste lugar</div></div>
+  <div class="bl"><div class="ch">F/A       Bb</div><div class="ly">Vem me transformar</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Toca o meu coração</div></div>
+  <div class="bl"><div class="ch">Eb       Bb</div><div class="ly">Renova-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Cm      Eb</div><div class="ly">Com Teu amor</div></div>
+  <div class="bl"><div class="ch">Gm      F</div><div class="ly">Enche-me</div></div>
+  <div class="bl"><div class="ch">Cm      Eb</div><div class="ly">Com Teu amor</div></div>
+  <div class="bl"><div class="ch">Gm      F</div><div class="ly">Inunda-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Em Tuas águas</div></div>
+  <div class="bl"><div class="ch">F/A          Gm</div><div class="ly">Quero mergulhar mais fundo</div></div>
+  <div class="bl"><div class="ch">F</div><div class="ly">Quero contemplar</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Tua presença, é o meu lugar</div></div>
+  <div class="bl"><div class="ch">F/A      Gm    F</div><div class="ly">Nada vai me separar</div></div>
+  <div class="bl"><div class="ch">Eb    F/A  Gm  F</div><div class="ly">Do Teu amor, do Teu amor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Sei que estás aqui</div></div>
+  <div class="bl"><div class="ch">F/A       Bb</div><div class="ly">Aqui neste lugar</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Posso Te sentir</div></div>
+  <div class="bl"><div class="ch">Eb       Bb</div><div class="ly">Sonda-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Cm      Eb</div><div class="ly">Com Teu amor</div></div>
+  <div class="bl"><div class="ch">Gm      F</div><div class="ly">Enche-me</div></div>
+  <div class="bl"><div class="ch">Cm      Eb</div><div class="ly">Com Teu amor</div></div>
+  <div class="bl"><div class="ch">Gm      F</div><div class="ly">Inunda-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Em Tuas águas</div></div>
+  <div class="bl"><div class="ch">F/A          Gm</div><div class="ly">Quero mergulhar mais fundo</div></div>
+  <div class="bl"><div class="ch">F</div><div class="ly">Quero contemplar</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Tua presença, é o meu lugar</div></div>
+  <div class="bl"><div class="ch">F/A      Gm    F</div><div class="ly">Nada vai me separar</div></div>
+  <div class="bl"><div class="ch">Eb    F/A  Gm  F</div><div class="ly">Do Teu amor, do Teu amor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">Eb  F/A  Gm  F
+Eb  F/A  Gm  F</div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Em Tuas águas</div></div>
+  <div class="bl"><div class="ch">F/A          Gm</div><div class="ly">Quero mergulhar mais fundo</div></div>
+  <div class="bl"><div class="ch">F</div><div class="ly">Quero contemplar</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Tua presença, é o meu lugar</div></div>
+  <div class="bl"><div class="ch">F/A      Gm    F</div><div class="ly">Nada vai me separar</div></div>
+  <div class="bl"><div class="ch">Eb    F/A  Gm  F</div><div class="ly">Do Teu amor, do Teu amor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">Eb  F/A  Gm  F
+Gm</div>
+</div></div>
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

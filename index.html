@@ -21,28 +21,45 @@ p.sub { font-size:0.8rem; color:#9ca3af; margin-bottom:24px; }
 <h1>🎸 Cifras</h1>
 <p class="sub">Selecione a música por artista</p>
 
-<section class="artist"><h2>Aline Barros</h2></section>
-<a class="card" href="songs/santidade.html"><h3>Santidade</h3><p>Tom: Bb</p></a>
+<div id="song-list"></div>
 
-<section class="artist"><h2>Florianópolis House of Prayer</h2></section>
-<a class="card" href="songs/a_boa_parte.html"><h3>A Boa Parte</h3><p>Tom: E</p></a>
+<script src="database/songs.js"></script>
+<script>
+(function () {
+  var songs = window.SONGS || [];
 
-<section class="artist"><h2>Gabriela Rocha</h2></section>
-<a class="card" href="songs/lugar_secreto.html"><h3>Lugar Secreto</h3><p>Tom: Am</p></a>
+  // Agrupa por artista mantendo a ordem de primeira aparição
+  var artistOrder = [];
+  var byArtist = {};
+  songs.forEach(function (s) {
+    if (!byArtist[s.artist]) {
+      byArtist[s.artist] = [];
+      artistOrder.push(s.artist);
+    }
+    byArtist[s.artist].push(s);
+  });
 
-<section class="artist"><h2>Ipalpha</h2></section>
-<a class="card" href="songs/ajuntamento.html"><h3>Ajuntamento</h3><p>Tom: C</p></a>
+  var html = '';
+  artistOrder.forEach(function (artist) {
+    html += '<section class="artist"><h2>' + escHtml(artist) + '</h2></section>';
+    byArtist[artist].forEach(function (s) {
+      html += '<a class="card" href="' + escHtml(s.file) + '">'
+            + '<h3>' + escHtml(s.title) + '</h3>'
+            + '<p>Tom: ' + escHtml(s.key) + '</p>'
+            + '</a>';
+    });
+  });
 
-<section class="artist"><h2>Julliany Souza feat. Léo Brandão</h2></section>
-<a class="card" href="songs/deus_e_quem_me_fortalece.html"><h3>Deus É Quem Me Fortalece</h3><p>Tom: F#</p></a>
+  document.getElementById('song-list').innerHTML = html;
 
-<section class="artist"><h2>O Canto das Igrejas</h2></section>
-<a class="card" href="songs/tu_es_deus_a_ele.html"><h3>Tu És Deus (A Ele)</h3><p>Tom: A</p></a>
-
-<section class="artist"><h2>Rachel Novaes feat. Thamires Garcia</h2></section>
-<a class="card" href="songs/minha_alma_engrandece.html"><h3>Minh'alma Engrandece / Adorado</h3><p>Tom: C</p></a>
-
-<section class="artist"><h2>Trazendo a Arca</h2></section>
-<a class="card" href="songs/leva_me_alem.html"><h3>Leva-me Além</h3><p>Tom: D</p></a>
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+})();
+</script>
 </body>
 </html>
