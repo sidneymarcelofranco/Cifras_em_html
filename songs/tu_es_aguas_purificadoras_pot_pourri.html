@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu És / Águas Purificadoras (Pot-pourri)</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Tu És / Águas Purificadoras (Pot-pourri)</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7 A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Junto ao poço estava eu</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Quando um homem judeu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7 A/C# G2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Viu a sede que havia em mim</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Sem me ouvir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# G2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Conheceu e me ofereceu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7 A/C# G2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Uma água que jorra sem fim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me de beber pois tenho sede</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Não quero mais buscar em outras</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch">Fontes</div><div class="ly">Em7 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não precisarei aqui voltar</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Pra minha sede saciar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Uma vez que eu já ouvi teu falar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D G</div><div class="ly">Tu és, por quem a minh'alma esperou</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">A fonte da vida que me encontrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És o Dom de Deus</div></div>
+  <div class="bl"><div class="ch">G A</div><div class="ly">O Messias, o meu Salvador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bm7 A/C# G Em7 )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bm7 A/C# G )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7 A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Junto ao poço estava eu</div></div>
+  <div class="bl"><div class="ch">G2 Em7</div><div class="ly">Quando um homem judeu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7 A/C# G2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Viu a sede que havia em mim</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Sem me ouvir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# G2 Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Conheceu e me ofereceu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7 A/C# G2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Uma água que jorra sem fim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me de beber pois tenho sede</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não quero mais buscar em outras</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch">Fontes</div><div class="ly">Em7 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não precisarei aqui voltar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pra minha sede saciar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Uma vez que eu já ouvi teu falar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D G</div><div class="ly">Tu és, por quem a minh'alma esperou</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">A fonte da vida que me encontrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És o Dom de Deus</div></div>
+  <div class="bl"><div class="ch">G A</div><div class="ly">O Messias, o meu Salvador</div></div>
+  <div class="bl"><div class="ch">D G</div><div class="ly">Tu és, por quem a minh'alma esperou</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">A fonte da vida que me encontrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És o Dom de Deus</div></div>
+  <div class="bl"><div class="ch">G A</div><div class="ly">O Messias, o meu Salvador</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me de beber pois tenho sede</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não quero mais buscar em outras</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch">Fontes</div><div class="ly">Em7 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não precisarei aqui voltar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pra minha sede saciar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Uma vez que eu já ouvi teu falar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me de beber pois tenho sede</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não quero mais buscar em outras</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch">Fontes</div><div class="ly">Em7 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não precisarei aqui voltar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pra minha sede saciar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Uma vez que eu já ouvi teu falar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D G</div><div class="ly">Tu és, por quem a minh'alma esperou</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">A fonte da vida que me encontrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És o Dom de Deus</div></div>
+  <div class="bl"><div class="ch">G A</div><div class="ly">O Messias, o meu Salvador</div></div>
+  <div class="bl"><div class="ch">D G</div><div class="ly">Tu és, por quem a minh'alma esperou</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">A fonte da vida que me encontrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És o Dom de Deus</div></div>
+  <div class="bl"><div class="ch">G A</div><div class="ly">O Messias, o meu Salvador</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão - Águas Purificadoras</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quero beber do teu rio, Senhor</div></div>
+  <div class="bl"><div class="ch">G D/F# Em7 A</div><div class="ly">Sacia minha sede, lava o meu interior</div></div>
+  <div class="bl"><div class="ch">Bm7 G A</div><div class="ly">Eu quero fluir em tuas águas</div></div>
+  <div class="bl"><div class="ch">Bm7 G</div><div class="ly">Eu quero beber da tua fonte</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fonte de águas vivas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quero beber do teu rio, Senhor</div></div>
+  <div class="bl"><div class="ch">G D/F# Em7 A</div><div class="ly">Sacia minha sede, lava o meu interior</div></div>
+  <div class="bl"><div class="ch">Bm7 G A</div><div class="ly">Eu quero fluir em tuas águas</div></div>
+  <div class="bl"><div class="ch">Bm7 G</div><div class="ly">Eu quero beber da tua fonte</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fonte de águas vivas</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">D C</div><div class="ly">Tu és, por quem a minh'alma esperou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A fonte da vida que me encontrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És o Dom de Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm/Bb A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Messias, o meu Salvador</div></div>
+  <div class="bl"><div class="ch">D C</div><div class="ly">Tu és, por quem a minh'alma esperou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A fonte da vida que me encontrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És o Dom de Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm/Bb A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Messias, o meu Salvador</div></div>
+  <div class="bl"><div class="ch">D G</div><div class="ly">Tu és, por quem a minh'alma esperou</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">A fonte da vida que me encontrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És o Dom de Deus</div></div>
+  <div class="bl"><div class="ch">G A D</div><div class="ly">O Messias, o meu Salvador</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senhor e Rei</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Senhor e Rei</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A Bm7/A E7</div></div>
+  <div class="bl"><div class="ch">A9 D9 E</div><div class="ly">A Bm7/A E7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9 D/A D/E A9 Bm Bm7/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Acima de todos acima de tudo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F# E4 E D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Está o Senhor entronizado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A D/A D/E A Bm Bm7/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Os anjos e os homens os céus e a terra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F# E4 E D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Montanhas e mares declaram quem Tu és</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A C#m D D/E E</div><div class="ly">Tu és Senhor e rei</div></div>
+  <div class="bl"><div class="ch">A C#m D A/C# Bm7</div><div class="ly">Governas sobre o universo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm/A E/G# A/C# E/D D A/C# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Justo e fiel vestido de gló--ria e po---der</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7/A E4 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Coroado estás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A A/C# D D/E E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pra sem-pre reinarás</div></div>
+  <div class="bl"><div class="ch">A C#m D D/E E</div><div class="ly">Prostrados aos teus pés</div></div>
+  <div class="bl"><div class="ch">A C#m D A/C# Bm7</div><div class="ly">Erguemos o Teu santo nome</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7/A E/G# A/C# E/D D A/C# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em adoração nos entrega--mos a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm/A E4 E D A A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Toma o Teu lugar e habi-ta entre nós</div></div>
+  <div class="bl"><div class="ch">E4 Bm7 F#m E</div><div class="ly">Oh santo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9 D/A D/E A9 Bm Bm7/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Acima de todos acima de tudo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F# E4 E D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Está o Senhor entronizado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A D/A D/E A Bm Bm7/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Os anjos e os homens os céus e a terra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F# E4 E D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Montanhas e mares declaram quem Tu és</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A C#m. D D/E E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tu és Senhor e rei</div></div>
+  <div class="bl"><div class="ch">A C#m D A/C# Bm7</div><div class="ly">Governas sobre o universo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm/A E/G# (E D#) A/C# E/D D A/C# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Justo e fiel vestido de gló--ria e po---der</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7/A E4 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Coroado estás</div></div>
+  <div class="bl"><div class="ch">D A A/C# D F# G#</div><div class="ly">Pra sem-pre reinarás</div></div>
+  <div class="bl"><div class="ch">A C#m D D/E E</div><div class="ly">Prostrados aos teus pés</div></div>
+  <div class="bl"><div class="ch">A C#m D A/C# Bm7</div><div class="ly">Erguemos o Teu santo nome</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7/A E/G# A/C# E/D D A/C# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em adoração nos entrega--mos a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm/A E4 E D A A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Toma o Teu lugar e habi-ta entre nós</div></div>
+  <div class="bl"><div class="ch">E4 Bm7 F#m E</div><div class="ly">Oh santo Deus</div></div>
+  <div class="bl"><div class="ch">E4 Bm F#m7 E</div><div class="ly">Oh santo Deus Santo Deus santo Deus santo Deus</div></div>
+  <div class="bl"><div class="ch">Bm F#m7 E</div><div class="ly">Oh santo Deus Santo Deus santo Deus santo Deus</div></div>
+  <div class="bl"><div class="ch">Bm F#m7 E</div><div class="ly">Oh santo Deus Santo Deus santo Deus santo Deus</div></div>
+  <div class="bl"><div class="ch">Bm F#m7 E</div><div class="ly">Oh santo Deus Santo Deus santo Deus santo Deus</div></div>
+  <div class="bl"><div class="ch">Bm F#m E</div><div class="ly">Tu és sa---An----to</div></div>
+  <div class="bl"><div class="ch">Bm F#m E</div><div class="ly">Tu és sa---An----to</div></div>
+  <div class="bl"><div class="ch">Bm F#m E</div><div class="ly">Tu és sa---An----to</div></div>
+  <div class="bl"><div class="ch">Bm F#m E</div><div class="ly">Tu és sa---An----to</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">A9 D9 E</div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Bm7/A E7</div></div>
+  <div class="bl"><div class="ch">A9 D9 E</div><div class="ly">A Bm7/A E7</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

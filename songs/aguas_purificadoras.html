@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Águas Purificadoras</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Águas Purificadoras</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D Em/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Existe um rio, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D Em/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que flui do Teu grande amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Águas que correm do trono</div></div>
+  <div class="bl"><div class="ch">G A4 A G/A</div><div class="ly">Águas que curam, que limpam</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D Em/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por onde o rio passar</div></div>
+  <div class="bl"><div class="ch">Bm7 A4 A</div><div class="ly">Tudo vai transformar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois leva a vida do próprio Deus</div></div>
+  <div class="bl"><div class="ch">G Em7</div><div class="ly">E este rio está</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A4 A G/B A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Neste lugar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D G D D/F#</div><div class="ly">Quero beber do Teu rio, Senhor</div></div>
+  <div class="bl"><div class="ch">G D/F# Em7 A</div><div class="ly">Sacia minha sede, lava o meu interior</div></div>
+  <div class="bl"><div class="ch">Bm7 G A</div><div class="ly">Eu quero fluir em Tuas águas</div></div>
+  <div class="bl"><div class="ch">Bm7 F#m7 G</div><div class="ly">Eu quero beber da Tua fonte</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Fonte de águas vivas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/A D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tu és a fonte, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Em/D D Em/D )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D Em/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Existe um rio, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D Em/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que flui do Teu grande amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Águas que correm do trono</div></div>
+  <div class="bl"><div class="ch">G A4 A G/A</div><div class="ly">Águas que curam, que limpam</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D Em/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por onde o rio passar</div></div>
+  <div class="bl"><div class="ch">Bm7 A4 A</div><div class="ly">Tudo vai transformar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois leva a vida do próprio Deus</div></div>
+  <div class="bl"><div class="ch">G Em7</div><div class="ly">E este rio está</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A4 A G/B A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Neste lugar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D G D D/F#</div><div class="ly">Quero beber do Teu rio, Senhor</div></div>
+  <div class="bl"><div class="ch">G D/F# Em7 A</div><div class="ly">Sacia minha sede, lava o meu interior</div></div>
+  <div class="bl"><div class="ch">Bm7 G A</div><div class="ly">Eu quero fluir em Tuas águas</div></div>
+  <div class="bl"><div class="ch">Bm7 F#m7 G</div><div class="ly">Eu quero beber da Tua fonte</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Fonte de águas vivas</div></div>
+  <div class="bl"><div class="ch">D D4</div><div class="ly">Tu és a fonte, Senhor</div></div>
+  <div class="bl"><div class="ch">D D4</div><div class="ly">Tu és o rio, Senhor</div></div>
+  <div class="bl"><div class="ch">Bm A</div><div class="ly">Tu és a fonte, Senhor</div></div>
+  <div class="bl"><div class="ch">G A</div><div class="ly">Tu és o rio, Senhor</div></div>
+  <div class="bl"><div class="ch">D D4</div><div class="ly">Tu és a fonte, Senhor</div></div>
+  <div class="bl"><div class="ch">D D4</div><div class="ly">Tu és o rio, Senhor</div></div>
+  <div class="bl"><div class="ch">Bm A</div><div class="ly">Tu és a fonte, Senhor</div></div>
+  <div class="bl"><div class="ch">G A</div><div class="ly">Tu és o rio, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tu és o rio, Senhor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

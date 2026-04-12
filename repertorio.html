@@ -132,13 +132,32 @@ body {
 .btn-add-song:hover { background:rgba(251,191,36,0.22); }
 
 /* ── LISTA DE MÚSICAS DO REPERTÓRIO ── */
+.song-list { list-style:none; }
+
 .song-row {
   display:flex; align-items:center; gap:10px;
   background:#1f2937; border:1px solid rgba(255,255,255,0.06);
   border-left:3px solid #fbbf24;
   border-radius:10px; padding:12px 14px;
-  margin-bottom:8px; transition:background 0.15s;
+  margin-bottom:8px;
+  transition:background 0.15s, opacity 0.15s, transform 0.15s;
+  cursor:default;
 }
+.song-row.dragging {
+  opacity:0.4; transform:scale(0.98);
+}
+.song-row.drag-over {
+  border-color:rgba(251,191,36,0.7);
+  background:#263044;
+  box-shadow:0 0 0 2px rgba(251,191,36,0.25);
+}
+.drag-handle {
+  color:#374151; cursor:grab; font-size:0.9rem;
+  padding:2px 4px; flex-shrink:0; line-height:1;
+  transition:color 0.15s; user-select:none;
+}
+.drag-handle:active { cursor:grabbing; }
+.song-row:hover .drag-handle { color:#6b7280; }
 .song-row-num {
   font-size:0.68rem; color:#6b7280;
   font-family:'Courier New',monospace;
@@ -165,16 +184,6 @@ body {
   border-radius:6px; padding:2px 8px;
   flex-shrink:0;
 }
-.song-row-move {
-  display:flex; flex-direction:column; gap:2px; flex-shrink:0;
-}
-.btn-move {
-  background:none; border:none; color:#4b5563;
-  cursor:pointer; font-size:0.7rem; padding:1px 4px;
-  border-radius:3px; line-height:1; transition:color 0.15s;
-}
-.btn-move:hover { color:#f9fafb; }
-.btn-move:disabled { opacity:0.2; cursor:default; }
 .btn-rem {
   background:none; border:none; color:#4b5563;
   cursor:pointer; font-size:0.85rem; padding:4px;
@@ -434,23 +443,21 @@ function renderDetail() {
   detail.style.display = 'block';
 
   const songs = rep.songs.map(id => songMap[id]).filter(Boolean);
+
   const listHtml = songs.length === 0
     ? '<div class="rep-empty">Nenhuma música ainda.<br>Clique em "+ Adicionar músicas".</div>'
-    : songs.map((s, i) => `
-        <div class="song-row">
+    : `<ol class="song-list" id="songList">${songs.map((s, i) => `
+        <li class="song-row" draggable="true" data-id="${esc(s.id)}">
+          <span class="drag-handle" title="Arrastar para reordenar">⠿</span>
           <span class="song-row-num">${i + 1}</span>
           <div class="song-row-info">
             <a class="song-row-title" href="${esc(s.file)}">${esc(s.title)}</a>
             <div class="song-row-artist">${esc(s.artist)}</div>
           </div>
           <span class="song-row-key">${esc(s.key)}</span>
-          <div class="song-row-move">
-            <button class="btn-move" onclick="moveSong('${s.id}',-1)" ${i===0?'disabled':''} title="Subir">▲</button>
-            <button class="btn-move" onclick="moveSong('${s.id}',1)"  ${i===songs.length-1?'disabled':''} title="Descer">▼</button>
-          </div>
-          <button class="btn-rem" onclick="removeSong('${s.id}')" title="Remover do repertório">✕</button>
-        </div>
-      `).join('');
+          <button class="btn-rem" onclick="removeSong('${esc(s.id)}')" title="Remover do repertório">✕</button>
+        </li>`).join('')}
+      </ol>`;
 
   detail.innerHTML = `
     <div class="rep-header">
@@ -464,19 +471,78 @@ function renderDetail() {
     </div>
     ${listHtml}
   `;
+
+  if (songs.length > 0) bindDragAndDrop();
 }
 
-// ── MOVER MÚSICA ─────────────────────────────────────────────────────
-function moveSong(songId, dir) {
+// ── DRAG AND DROP ─────────────────────────────────────────────────────
+let saveTimer = null;
+
+function bindDragAndDrop() {
+  const list = document.getElementById('songList');
+  if (!list) return;
+  let dragged = null;
+
+  list.addEventListener('dragstart', e => {
+    const row = e.target.closest('.song-row');
+    if (!row) return;
+    dragged = row;
+    setTimeout(() => row.classList.add('dragging'), 0);
+    e.dataTransfer.effectAllowed = 'move';
+  });
+
+  list.addEventListener('dragend', () => {
+    if (dragged) dragged.classList.remove('dragging');
+    list.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+    dragged = null;
+  });
+
+  list.addEventListener('dragover', e => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    const row = e.target.closest('.song-row');
+    if (!row || row === dragged) return;
+    list.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+    row.classList.add('drag-over');
+  });
+
+  list.addEventListener('dragleave', e => {
+    const row = e.target.closest('.song-row');
+    if (row) row.classList.remove('drag-over');
+  });
+
+  list.addEventListener('drop', e => {
+    e.preventDefault();
+    const target = e.target.closest('.song-row');
+    if (!target || !dragged || target === dragged) return;
+    target.classList.remove('drag-over');
+
+    // Reorder DOM
+    const rows = [...list.querySelectorAll('.song-row')];
+    const fromIdx = rows.indexOf(dragged);
+    const toIdx   = rows.indexOf(target);
+    if (fromIdx < toIdx) target.after(dragged);
+    else target.before(dragged);
+
+    // Update numbers
+    [...list.querySelectorAll('.song-row')].forEach((r, i) => {
+      const num = r.querySelector('.song-row-num');
+      if (num) num.textContent = i + 1;
+    });
+
+    // Persist after 1.5s debounce
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => persistOrder(list), 1500);
+  });
+}
+
+function persistOrder(list) {
   const rep = reps.find(r => r.id === activeRepId);
   if (!rep) return;
-  const i = rep.songs.indexOf(songId);
-  if (i < 0) return;
-  const j = i + dir;
-  if (j < 0 || j >= rep.songs.length) return;
-  [rep.songs[i], rep.songs[j]] = [rep.songs[j], rep.songs[i]];
+  const newOrder = [...list.querySelectorAll('.song-row')].map(r => r.dataset.id);
+  rep.songs = newOrder;
   saveReps(reps);
-  renderDetail();
+  renderSidebar(); // atualiza contagem
 }
 
 // ── REMOVER MÚSICA ────────────────────────────────────────────────────

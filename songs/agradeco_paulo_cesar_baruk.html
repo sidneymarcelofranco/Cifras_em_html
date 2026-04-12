@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agradeço - Paulo César Baruk</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Agradeço - Paulo César Baruk</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm7 ) A/C# D G6</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm7 ) A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que fazer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por todo o bem que já nos foi dado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E a graça que nos tem alcançado?</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Bem sei, não mereci</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm7 ) A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que escolher</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Viver ou reclamar insistente?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O hoje é um novo presente</div></div>
+  <div class="bl"><div class="ch">B7</div><div class="ly">Vou reconhecer</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D/E ( F#m E/G# ) A D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tão grande amor</div></div>
+  <div class="bl"><div class="ch">( F#m E/G# ) A D</div><div class="ly">Seu grande favor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Agradeço pela vida</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">Pelo Sol que a cada novo dia brilha</div></div>
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Pela mesa, o partir do pão</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">A comunhão, Eu agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm7 A/C# D )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm7 A/C# D G9 )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm7 ) A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que fazer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por todo o bem que já nos foi dado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E a graça que nos tem alcançado?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7 D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bem sei, não mereci</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm7 ) A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que escolher</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Viver ou reclamar insistente?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O hoje é um novo presente</div></div>
+  <div class="bl"><div class="ch">B7</div><div class="ly">Vou reconhecer</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D/E ( F#m E/G# ) A D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tão grande amor</div></div>
+  <div class="bl"><div class="ch">( F#m E/G# ) A D</div><div class="ly">Seu grande favor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Agradeço pela vida</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">Pelo Sol que a cada novo dia brilha</div></div>
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Pela mesa, o partir do pão</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">A comunhão, Eu agradeço</div></div>
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Agradeço pela vida</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">Pelo Sol que a cada novo dia brilha</div></div>
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Pela mesa, o partir do pão</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">A comunhão, Eu agradeço</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# B7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pelo dia tão lindo que o senhor fez</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# B7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pelo céu estrelado que nos traz paz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/E Riff 1</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# B7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pela mão que se estende pra fazer o bem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Riff 2 C#m B7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E por todo o bem que o Senhor faz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Só ele faz</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Agradeço pela vida</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">Pelo Sol que a cada novo dia brilha</div></div>
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Pela mesa, o partir do pão</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">A comunhão, Eu agradeço</div></div>
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Agradeço pela vida</div></div>
+  <div class="bl"><div class="ch">G Bm7 A</div><div class="ly">Pelo Sol que a cada novo dia brilha</div></div>
+  <div class="bl"><div class="ch">A Em</div><div class="ly">Pela mesa, o partir do pão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A comunhão, Eu agradeço, agradeço</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

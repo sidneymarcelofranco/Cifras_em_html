@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ainda Que a Figueira - Fernandinho</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Ainda Que a Figueira - Fernandinho</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Em G D9 2x</div>
+  <div class="bl"><div class="ch">Em D9</div><div class="ly">Tu és a minha porção</div></div>
+  <div class="bl"><div class="ch">Am7 C</div><div class="ly">Tu és a minha herança</div></div>
+  <div class="bl"><div class="ch">Em D9</div><div class="ly">Tu és o meu socorro</div></div>
+  <div class="bl"><div class="ch">Am7 C</div><div class="ly">Nos dias de tribulação</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">Mesmo que meus pais me deixem</div></div>
+  <div class="bl"><div class="ch">Am7 C</div><div class="ly">Mesmo que amigos me traiam</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">Eu sei que em Seus braços</div></div>
+  <div class="bl"><div class="ch">Am7 C</div><div class="ly">Eu encontro salvação</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Ainda que a figueira</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Não floresça</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Ainda que a videira</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não dê o seu fruto</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">Mesmo que não haja alimento</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nos campos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C 2x</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu me alegrarei em Ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Em G D9 2x</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Refrão</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">Am7 G D9 3x</div>
+  <div class="bl"><div class="ch">Am7 G D9 C</div><div class="ly">1ª padrão re mi sol sol 3x si la sol re mi rapido</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">2º padrão mi sol si la sol fa# mi re mi mais estacato</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

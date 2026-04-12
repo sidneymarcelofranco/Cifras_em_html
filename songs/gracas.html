@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graças</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Graças</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Me tomaste em teus braços</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E me deste salvação</div></div>
+  <div class="bl"><div class="ch">Gm F</div><div class="ly">Teu amor tens derramado em meu coração</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Não sei como agradecer-Te</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que tens feito por mim</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Eu só posso dar-Te agora</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha canção</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bb F Cm Gm F/A</div><div class="ly">Eu te dou graças, graças Senhor</div></div>
+  <div class="bl"><div class="ch">Bb F Eb</div><div class="ly">Graças meu Senhor Jesus</div></div>
+  <div class="bl"><div class="ch">Bb F Cm Gm F/A</div><div class="ly">Graças, muitas graças Senhor</div></div>
+  <div class="bl"><div class="ch">Bb F Eb</div><div class="ly">Graças meu Senhor Jesus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">Gm</div><div class="ly">La na Cruz me deste vida</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Entregaste tudo ali</div></div>
+  <div class="bl"><div class="ch">Gm F</div><div class="ly">Vida eterna Tu me deste ao morrer</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Por Teu sangue tenho entrada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ante ao trono celestial</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Posso entrar confiantemente</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ante a Ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">Bb F Cm Gm F/A</div><div class="ly">Para dar Te mais graças, graças senhor</div></div>
+  <div class="bl"><div class="ch">Bb F Eb</div><div class="ly">Graças meu Senhor Jesus</div></div>
+  <div class="bl"><div class="ch">Bb F Cm Gm F/A</div><div class="ly">Graças, muitas graças Senhor</div></div>
+  <div class="bl"><div class="ch">Bb F Eb Bb</div><div class="ly">Graças meu Senhor Jesus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teu Santo Nome</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Teu Santo Nome</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Todo ser que vive</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">Louve ao nome do Senhor</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Toda criatura se derrame</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">Aos Seus pés</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Ao som da Sua voz</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">O universo se desfaz</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Não há outro nome</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">Comparado ao grande Eu Sou</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Am7 C9</div><div class="ly">E mesmo sendo pó</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com tudo que há em mim</div></div>
+  <div class="co">D9</div>
+  <div class="co">Confessarei</div>
+  <div class="bl"><div class="ch">Am7 C9</div><div class="ly">Que céus e terra passarão</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">Mas o Teu nome é eterno</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Em7 C9</div><div class="ly">Todo joelho dobrará</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ao ouvir Teu nome</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Teu Santo nome</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">Todo ser confessará</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E G/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louvado seja o Teu nome</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Teu santo nome</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

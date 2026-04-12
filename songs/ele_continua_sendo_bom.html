@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ele Continua Sendo Bom</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Ele Continua Sendo Bom</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">F Bb F Bb</div>
+  <div class="bl"><div class="ch"></div><div class="ly">La do fa</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Do fa do la | sol la fa do</div></div>
+  <div class="bl"><div class="ch">F Bb</div><div class="ly">Um dia a gente aprende a confiar em um Deus que faz milagres</div></div>
+  <div class="bl"><div class="ch">Dm7 Bb</div><div class="ly">Que ouve a nossa oração, que se faz presente aqui</div></div>
+  <div class="bl"><div class="ch">F Bb</div><div class="ly">Um dia a gente aprende a dar um passo só de cada vez</div></div>
+  <div class="bl"><div class="ch">Dm7 Bb</div><div class="ly">Mas sem duvidar, mas sem duvidar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F F/Eb Bb/D Bbm/Db</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que Ele continua sendo bom, que Ele continua sendo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/Eb Bb/D Bbm/Db</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ele continua sendo bom, que Ele continua sendo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F Bb F Bb )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">F Bb</div><div class="ly">Então chega o dia de viver tudo que se aprendeu</div></div>
+  <div class="bl"><div class="ch">Dm7 Bb</div><div class="ly">E a enxergar até o que não se pode ver</div></div>
+  <div class="bl"><div class="ch">F Bb</div><div class="ly">Chega o dia de entender, até ouvir um &quot;não&quot; de Deus</div></div>
+  <div class="bl"><div class="ch">Dm7 Bb</div><div class="ly">Mas sem duvidar, mas sem duvidar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F F/Eb Bb/D Bbm/Db</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que Ele cotinua que Ele continua</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/Eb Bb/D Bbm/Db</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ele continua sendo bom, que Ele continua sendo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/Eb Bb/D Bbm/Db</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ele continua sendo bom, que Ele continua sendo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/Eb Bb/D Bbm/Db</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ele continua sendo bom, que Ele continua sendo Deus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

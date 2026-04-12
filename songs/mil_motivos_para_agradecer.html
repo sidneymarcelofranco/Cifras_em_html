@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mil Motivos Para Agradecer</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="E">
+
+<header>
+  <div class="hdr-title">
+    <h1>Mil Motivos Para Agradecer</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">D#</div><div class="ly">Mil motivos para agradecer</div></div>
+  <div class="bl"><div class="ch">G#</div><div class="ly">Mais de mil razões para louvar</div></div>
+  <div class="bl"><div class="ch">Fm G#</div><div class="ly">Mil canções de amor para cantar</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Por tão grande amor que recebi</div></div>
+  <div class="bl"><div class="ch">G#</div><div class="ly">Pela Graça que me atraiu</div></div>
+  <div class="bl"><div class="ch">Fm G#</div><div class="ly">Por me perdoar sem merecer</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">C# G#</div><div class="ly">Por regenerar meu coração</div></div>
+  <div class="bl"><div class="ch">C# D#</div><div class="ly">E me dar a paz sem fim</div></div>
+  <div class="bl"><div class="ch">C# G#</div><div class="ly">Pelas grandes obras de Tuas mãos</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Graças dou Jesus</div></div>
+  <div class="bl"><div class="ch">G#</div><div class="ly">Graças dou Jesus</div></div>
+  <div class="bl"><div class="ch">Fm G#</div><div class="ly">Graças dou por tudo que fizeste a mim</div></div>
+  <div class="bl"><div class="ch">A# D#</div><div class="ly">Graças dou</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Por me socorrer nas aflições</div></div>
+  <div class="bl"><div class="ch">G#</div><div class="ly">Por saber que nunca estou só</div></div>
+  <div class="bl"><div class="ch">Fm G#</div><div class="ly">Pelo Teu cuidado que é sem fim</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">C# G#</div><div class="ly">Ao autor da minha salvação</div></div>
+  <div class="bl"><div class="ch">C# D#</div><div class="ly">Meu amado meu Senhor</div></div>
+  <div class="bl"><div class="ch">C# G#</div><div class="ly">Seja a minha grata adoração</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">D#</div><div class="ly">Graças dou Jesus</div></div>
+  <div class="bl"><div class="ch">G#</div><div class="ly">Graças dou Jesus</div></div>
+  <div class="bl"><div class="ch">Fm G#</div><div class="ly">Graças dou por tudo que fizeste a mim</div></div>
+  <div class="bl"><div class="ch">A# Cm</div><div class="ly">Graças dou</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">A# G# A#</div>
+  <div class="bl"><div class="ch">Cm A# G# A#</div><div class="ly">Graças dou Jesus</div></div>
+  <div class="bl"><div class="ch">A#</div><div class="ly">Graças dou Jesus</div></div>
+  <div class="bl"><div class="ch">Gm A#</div><div class="ly">Graças dou por tudo que fizeste a mim</div></div>
+  <div class="bl"><div class="ch">C F</div><div class="ly">Graças dou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Graças dou Jesus</div></div>
+  <div class="bl"><div class="ch">A#</div><div class="ly">Graças dou Jesus</div></div>
+  <div class="bl"><div class="ch">Gm A#</div><div class="ly">Graças dou por tudo que fizeste a mim</div></div>
+  <div class="bl"><div class="ch">C F</div><div class="ly">Graças dou</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

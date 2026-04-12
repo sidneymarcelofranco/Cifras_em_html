@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitória No Deserto</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="G">
+
+<header>
+  <div class="hdr-title">
+    <h1>Vitória No Deserto</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Aline Barros</div>
+  <div class="co">Tom: GAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">G D Em C</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">G D</div><div class="ly">Quando a noite fria</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Cair sobre mim</div></div>
+  <div class="bl"><div class="ch">G D Em C</div><div class="ly">E num deserto eu me encontrar</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">Me vi cercado por egípcios</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">E por faraó, óh óh óh</div></div>
+  <div class="bl"><div class="ch">G D Em C</div><div class="ly">Sendo impedido de prosseguir</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">G D</div><div class="ly">Sei que o teu fogo</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Cairá sobre mim</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">Sei que o teu fogo</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Cairá sobre mim</div></div>
+  <div class="bl"><div class="ch">G D Em C</div><div class="ly">E me levará a em ti confiar</div></div>
+  <div class="bl"><div class="ch">G D Em C</div><div class="ly">E me levará a em ti confiar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Então eu direi</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G D</div><div class="ly">Então eu direi, oh oh</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Abra-se o mar</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">E eu passarei pulando e dançando</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Em sua presença</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Então eu direi</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">Então eu direi, oh oh</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Abra-se o mar</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">E eu passarei pulando e dançando</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Em sua presença</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso eu pulo, pulo, pulo</div></div>
+  <div class="bl"><div class="ch">D Em C</div><div class="ly">Pulo, pulo na presença do rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso eu danço, danço, danço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Danço, danço</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Na presença do rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um grito de júbilo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso eu grito, grito, grito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Grito, grito</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Na presença do rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso eu corro, corro, corro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Corro, corro</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Na presença do rei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Interlúdio</div><div class="bd">
+  <div class="co">D Bm Em</div>
+  <div class="co">D C G</div>
+  <div class="co">D Bm Em</div>
+  <div class="co">F D</div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G D</div><div class="ly">Então eu direi, oh oh</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Abra-se o mar</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">E eu passarei pulando e dançando</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Em sua presença</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso eu pulo, pulo, pulo</div></div>
+  <div class="bl"><div class="ch">D Em C</div><div class="ly">Pulo, pulo na presença do rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso eu danço, danço, danço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Danço, danço</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Na presença do rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso eu grito, grito, grito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Grito, grito</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Na presença do rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso eu corro, corro, corro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Corro, corro</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Na presença do rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Então eu direi</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G D</div><div class="ly">Então eu direi, oh oh</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Abra-se o mar</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">E eu passarei pulando e dançando</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Em sua presença</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Então eu direi</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">Então eu direi, oh oh</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Abra-se o mar</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">E eu passarei pulando e dançando</div></div>
+  <div class="bl"><div class="ch">Em C</div><div class="ly">Em sua presença</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">F C F C F G</div>
+  <div class="co">F Em Dm C G/B Am G</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

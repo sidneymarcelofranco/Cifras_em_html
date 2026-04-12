@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1000 Graus</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>1000 Graus</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">F C Em Am</div>
+  <div class="co">F C G</div>
+  <div class="co">F C Em Am</div>
+  <div class="co">F C G C</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Na presença dos homens</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Na presença dos anjos</div></div>
+  <div class="bl"><div class="ch">F Em Am</div><div class="ly">Sempre eu Te louva__rei</div></div>
+  <div class="bl"><div class="ch">Dm7 Em F</div><div class="ly">Te lou__va__rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mesmo estando em guerra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vou celebrando minha vitória</div></div>
+  <div class="bl"><div class="ch">F Em Am</div><div class="ly">Eu te louva__rei</div></div>
+  <div class="bl"><div class="ch">Dm7 Em F</div><div class="ly">Te lou__va__rei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">G C</div><div class="ly">Sobre toda terra</div></div>
+  <div class="bl"><div class="ch">F G C</div><div class="ly">Novo som se ouvirá</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">Tua alegria</div></div>
+  <div class="bl"><div class="ch">F G C</div><div class="ly">Força pra continuar</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">Deus de maravilhas</div></div>
+  <div class="bl"><div class="ch">A7 Dm7</div><div class="ly">Que maravilha</div></div>
+  <div class="bl"><div class="ch">Bb2 Dm7</div><div class="ly">Te louvar, Te louvar</div></div>
+  <div class="bl"><div class="ch">E Am</div><div class="ly">Te louvar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Dm7 Am</div><div class="ly">Eu entro na Tua presença</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Pra receber o Teu poder</div></div>
+  <div class="bl"><div class="ch">Dm7 Am</div><div class="ly">E quanto mais o tempo passa</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Mais quero Deus</div></div>
+  <div class="bl"><div class="ch">Dm7 Am</div><div class="ly">O fogo cai, a igreja canta</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">O inimigo vai ao chão</div></div>
+  <div class="bl"><div class="ch">Dm7 Am</div><div class="ly">Fogo e glória nas cabeças</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Mil graus de unção</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Mil graus de unção!</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F C</div><div class="ly">O som da festa vai subir</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Sua glória descerá</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Se ouvirá um novo som</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De aleluia</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">O som da festa vai subir</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Sua glória descerá</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Se ouvirá um novo som</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">De aleluia, aleluia</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Na presença dos homens</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Na presença dos anjos</div></div>
+  <div class="bl"><div class="ch">F Em Am</div><div class="ly">Sempre eu Te louva__rei</div></div>
+  <div class="bl"><div class="ch">Dm7 Em F</div><div class="ly">Te lou__va__rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mesmo estando em guerra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vou celebrando minha vitória</div></div>
+  <div class="bl"><div class="ch">F Em Am</div><div class="ly">Eu te louva__rei</div></div>
+  <div class="bl"><div class="ch">Dm7 Em F</div><div class="ly">Te lou__va__rei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">G C</div><div class="ly">Sobre toda terra</div></div>
+  <div class="bl"><div class="ch">F G C</div><div class="ly">Novo som se ouvirá</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">Tua alegria</div></div>
+  <div class="bl"><div class="ch">F G C</div><div class="ly">Força pra continuar</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">Deus de maravilhas</div></div>
+  <div class="bl"><div class="ch">A7 Dm7</div><div class="ly">Que maravilha</div></div>
+  <div class="bl"><div class="ch">Bb2 Dm7</div><div class="ly">Te louvar, Te louvar</div></div>
+  <div class="bl"><div class="ch">E Am</div><div class="ly">Te louvar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Dm7 Am</div><div class="ly">Eu entro na Sua presença</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Pra receber o Seu poder</div></div>
+  <div class="bl"><div class="ch">Dm7 Am</div><div class="ly">E quanto mais o tempo passa</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Mais quero Deus</div></div>
+  <div class="bl"><div class="ch">Dm7 Am</div><div class="ly">O fogo cai, a igreja canta</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">O inimigo vai ao chão</div></div>
+  <div class="bl"><div class="ch">Dm7 Am</div><div class="ly">Fogo e glória nas cabeças</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Mil graus de unção</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Mil graus de unção!</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F C</div><div class="ly">O som da festa vai subir</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Sua glória descerá</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Se ouvirá um novo som</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De aleluia</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">O som da festa vai subir</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Sua glória descerá</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Se ouvirá um novo som</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De aleluia</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">O som da festa vai subir</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Sua glória descerá</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Se ouvirá um novo som</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De aleluia</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">O som da festa vai subir</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Sua glória descerá</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Se ouvirá um novo som</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De aleluia</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">O som da festa vai subir</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Sua glória descerá</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Se ouvirá um novo som</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De aleluia</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">O som da festa vai subir</div></div>
+  <div class="bl"><div class="ch">Em Am</div><div class="ly">Sua glória descerá</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Se ouvirá um novo som</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">De aleluia, aleluia</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

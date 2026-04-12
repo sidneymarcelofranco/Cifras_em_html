@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vem Cear</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="A">
+
+<header>
+  <div class="hdr-title">
+    <h1>Vem Cear</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">E A E</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Cristo já nos preparou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um manjar que nos comprou</div></div>
+  <div class="bl"><div class="ch">E E7/D A E</div><div class="ly">E agora, nos convida a cear</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com celestial maná</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#°</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que de graça Deus te dá</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E E7/D A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem faminto, tua alma saciar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E E7/D A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem cear, o Mestre chama vem cear</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#° E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mesmo hoje tu te podes saciar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A A7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Poucos pães multiplicou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#°</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Água em vinho transformou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem faminto, a Jesus</div></div>
+  <div class="bl"><div class="ch">A E</div><div class="ly">Vem cear!</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Eis discípulos a voltar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sem os peixes apanhar</div></div>
+  <div class="bl"><div class="ch">E7</div><div class="ly">Mas Jesus os manda</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Outra vez partir</div></div>
+  <div class="bl"><div class="ch">A D</div><div class="ly">Ao tornar à praia, então, vêem no fogo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D#° E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Peixe e pão e Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E7/D A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que os convida à ceia vir</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E E7/D A A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem cear, o Mestre chama vem cear</div></div>
+  <div class="bl"><div class="ch">D B7 E</div><div class="ly">Mesmo hoje tu te podes saciar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Poucos pães multiplicou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#°</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Água em vinho transformou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem faminto, a Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem cear!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A A4 D D#° )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( E E7/D A E )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Terceira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Quem sedento se achar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Venha a Cristo, sem tardar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E E7/D A/C# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois o vinho sem mistura Ele dá</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E também da vida, o pão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#°</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que nos traz consolação</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E E7/D A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eis que tudo preparado já está</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E E7/D A A7/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem cear, o Mestre chama vem cear</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#° E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mesmo hoje tu te podes saciar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A A7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Poucos pães multiplicou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#°</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Água em vinho transformou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem faminto, a Jesus</div></div>
+  <div class="bl"><div class="ch">A E</div><div class="ly">Vem cear!</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Quarta Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Breve, Cristo vai descer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E a noiva receber</div></div>
+  <div class="bl"><div class="ch">E A E</div><div class="ly">Seu lugar ao lado do Senhor Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quem a fome suportou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#°</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E a sede já passou</div></div>
+  <div class="bl"><div class="ch">E A</div><div class="ly">Lá no céu irá cear em santa luz</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">E A</div><div class="ly">Vem cear, o Mestre chama vem cear</div></div>
+  <div class="bl"><div class="ch">D B7 E</div><div class="ly">Mesmo hoje tu te podes saciar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Poucos pães multiplicou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D#°</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Água em vinho transformou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem faminto, a Jesus</div></div>
+  <div class="bl"><div class="ch">A D</div><div class="ly">Vem cear!</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">A D A</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

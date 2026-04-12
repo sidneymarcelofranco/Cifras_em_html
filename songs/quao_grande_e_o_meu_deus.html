@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quão Grande É o Meu Deus</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Quão Grande É o Meu Deus</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">G Em7 C9 D5 G C/D</div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantarei quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em/D C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E todos hão de ver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/D G C/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Com esplendor de um Rei</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">Em majestade e luz</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Faz a Terra se alegrar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Faz a Terra se alegrar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ele é a própria luz</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">E as trevas vão fugir</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Tremer com sua voz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tremer com sua voz</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantarei quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em/D C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E todos hão de ver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/D G C/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Por gerações Ele é</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">O tempo está em tuas mãos</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">O começo e o fim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O começo e o fim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Três se formam em um</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">Filho, Espírito e Pai</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Cordeiro e leão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cordeiro e leão</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantarei quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em/D C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E todos hão de ver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/D G C/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Terceira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Sobre todo nome é o seu</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">Tu és digno do louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 C/D G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu cantarei quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Db/Eb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É o meu Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Fm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantarei quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">E todos hão de ver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Db/Eb Ab</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Fm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantarei quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">E todos hão de ver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Db/Eb Ab Db/Eb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Fm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantarei quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">E todos hão de ver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Db/Eb Ab Db/Eb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Fm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantarei quão grande é o meu Deus</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">E todos hão de ver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Db/Eb Ab</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão grande é o meu Deus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

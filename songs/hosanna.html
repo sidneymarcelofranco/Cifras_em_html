@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosanna</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Hosanna</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">C F G7 C</div><div class="ly">The angels bow down at the thought of you</div></div>
+  <div class="bl"><div class="ch">C F G7 C</div><div class="ly">The darkness gives way to the light for You</div></div>
+  <div class="bl"><div class="ch">F E7 Am7</div><div class="ly">The price that you paid gives us life brand New</div></div>
+  <div class="bl"><div class="ch">Gm7 F G Am</div><div class="ly">Hosanna forever we worship You</div></div>
+  <div class="bl"><div class="ch">Gm7 F G C</div><div class="ly">Hosanna forever we worship You</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E G C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">For you are the joy that my soul longs for</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E Dm7 Gm/</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">The lamb that was slain for my sins and the One I adore</div></div>
+  <div class="bl"><div class="ch">Am7 Dm7 Am7</div><div class="ly">King of kings, Ruler of everything</div></div>
+  <div class="bl"><div class="ch">Gm7 F G Am7</div><div class="ly">Hosanna forever we worship You</div></div>
+  <div class="bl"><div class="ch">Gm7 F G C</div><div class="ly">Hosanna forever we worship You</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">For your patience and kindness</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">And favor and mercy</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# Am</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">And honor and glory</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm A7/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Because you are worthy</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">We can't live without You</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F D7/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">We can't breath without You</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">We can?t sing without you</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gb/Ab</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Hosanna Hosanna</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">No greater love in this world but You</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">No one can compare to the things You do</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ebm Db/F Gb F7/A Bbm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Whenever You go I will follow You</div></div>
+  <div class="bl"><div class="ch">Abm Gb Ab Bbm7</div><div class="ly">Hosanna forever we worship You</div></div>
+  <div class="bl"><div class="ch">Abm Gb Ab Db</div><div class="ly">Hosanna forever we worship You</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">Someday every tongue shall confess Your name</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">This house made of clay soon shall pass away</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ebm Db/F Ebm F7/A Bbm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">And whatever the test You will bring us through</div></div>
+  <div class="bl"><div class="ch">Abm Gb Ab Bbm7</div><div class="ly">Hosanna forever we worship You</div></div>
+  <div class="bl"><div class="ch">Ab Gb Ab Db</div><div class="ly">Hosanna forever we worship You</div></div>
+  <div class="bl"><div class="ch">Db/F Gb Ab Bbm7</div><div class="ly">Ho-sanna for - ever</div></div>
+  <div class="bl"><div class="ch">Db/F Gb Ab Bbm</div><div class="ly">Ho-sanna forever and ever and ever</div></div>
+  <div class="bl"><div class="ch">D/F# G A Bm7</div><div class="ly">Ho-sanna for - ever</div></div>
+  <div class="bl"><div class="ch">D/F# G Ab Bm7</div><div class="ly">Ho-sanna forever and ever and ever</div></div>
+  <div class="bl"><div class="ch">D/F# G A Bm7</div><div class="ly">Ho-sanna for - ever</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G A Bm7 Eb/G E/G# F/A F#/A# G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ho-sanna forever and ever and ever and ever and ever and ever and ever</div></div>
+  <div class="bl"><div class="ch">Cmaj7 D Em7</div><div class="ly">Ho-sanna for-ever</div></div>
+  <div class="bl"><div class="ch">Cmaj7 D Em7</div><div class="ly">Ho-sanna for-ever Da capo ad lib</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">We love you, Hosanna?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">You?re worthy, Hosanna?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">We need you, Hosanna?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gotta have you, Hosanna?</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

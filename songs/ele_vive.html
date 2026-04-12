@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ele Vive</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Ele Vive</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A#9 D#5</div>
+  <div class="bl"><div class="ch">A#9 A# A#4/D# A#9 A#</div><div class="ly">Hoje é domingo de manhã</div></div>
+  <div class="bl"><div class="ch">A#4/D# F4 G9 Gm</div><div class="ly">Hoje o sol não quer brilhar</div></div>
+  <div class="bl"><div class="ch">F4 F</div><div class="ly">Tudo é solidão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A#4/D# D#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E ela vêm dizer, de madrugada ressurgir</div></div>
+  <div class="bl"><div class="ch">A#9 A# A#4/D# A#9 A#</div><div class="ly">Não acredito em ilusões</div></div>
+  <div class="bl"><div class="ch">A#4/D# F4 G9 Gm</div><div class="ly">O sol da justiça se apagou</div></div>
+  <div class="bl"><div class="ch">F4 F</div><div class="ly">O mundo inteiro viu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D#9 A#/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Os cravos em Suas mãos, o Seu corpo a sofrer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm7 A#/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sua morte lá na cruz não consigo entender</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D# A#/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E agora esse túmulo vazio, este anjo a questionar</div></div>
+  <div class="bl"><div class="ch">Cm7 F4 F</div><div class="ly">Porque procuram entre os mortos quem vivo está</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A#9 F/A# D# A#9 F/A# D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E hoje eu sou li__vre, pois Ele vi__ve</div></div>
+  <div class="bl"><div class="ch">Gm D D# G#9</div><div class="ly">Ele vive, Ele reina em mim, em mim!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A#9 F/A#D# A#9 F/A# D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Morte e peca__do / foi derrota__do</div></div>
+  <div class="bl"><div class="ch">Gm D D# D#m6</div><div class="ly">E eu sou livre! Eu sou livre em fim de mim</div></div>
+  <div class="bl"><div class="ch">A#9 A# D# A#9 A#</div><div class="ly">Quando Jesus ressuscitou</div></div>
+  <div class="bl"><div class="ch">D# F4 G9 Gm</div><div class="ly">Da morte eterna para a luz</div></div>
+  <div class="bl"><div class="ch">F4 F D# A#/D</div><div class="ly">Da água renasci e faz sentido servir</div></div>
+  <div class="bl"><div class="ch">Cm7 F4 F</div><div class="ly">Alguém melhor que eu</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A#9 F/A# D# A#9 F/A# D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E hoje eu sou li__vre, pois Ele vi__ve</div></div>
+  <div class="bl"><div class="ch">Gm D D#</div><div class="ly">Ele vive, Ele reina em mim!</div></div>
+  <div class="bl"><div class="ch">G#9</div><div class="ly">E os que descansam no Senhor</div></div>
+  <div class="bl"><div class="ch">A#</div><div class="ly">Quando voltar despertarão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#9 F/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E em sua carne enfim verão a Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/C F C9 G/C F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E hoje eu sou li__vre, pois Ele vi__ve</div></div>
+  <div class="bl"><div class="ch">Am E F A#9</div><div class="ly">Ele vive, Ele reina em mim, em mim!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/C F C9 G/C F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Morte e peca____do / foi derrota__do</div></div>
+  <div class="bl"><div class="ch">Am E F Fm6</div><div class="ly">E eu sou livre! Eu sou livre em fim de mim</div></div>
+  <div class="bl"><div class="ch">C9 F9 (G) C F9/A</div><div class="ly">Todos os dias de manhã, quero renascer</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

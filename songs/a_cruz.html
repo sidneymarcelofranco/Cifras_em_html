@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Cruz</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>A Cruz</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">F G Am</div>
+  <div class="co">F G Am</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F7M G Am</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O sangue carmesim tocou em mim</div></div>
+  <div class="bl"><div class="ch">F G Am</div><div class="ly">Nunca antes vi amor assim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb C/Bb Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A cruz me mostrou o amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bb Am Gm C )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em meio à escuridão</div></div>
+  <div class="bl"><div class="ch">G Am</div><div class="ly">Resplandeceu a luz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com a morte trouxe a vida</div></div>
+  <div class="bl"><div class="ch">G Am</div><div class="ly">Ressuscitou Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb direto para o C sem tempo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A cruz me mostrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O amor que rasga o véu</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Faz o verbo vir do céu</div></div>
+  <div class="bl"><div class="ch">F Dm7</div><div class="ly">O amor que entrega</div></div>
+  <div class="bl"><div class="ch">G4 G</div><div class="ly">O próprio Filho</div></div>
+  <div class="bl"><div class="ch">C/E F G4 G</div><div class="ly">A cruz me mostrou o amor</div></div>
+  <div class="bl"><div class="ch">C/E F G4 G</div><div class="ly">O amor se revelou Jesus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Eb Cm7</div><div class="ly">A cruz me mostrou a luz</div></div>
+  <div class="bl"><div class="ch">G#</div><div class="ly">Me mostrou o perdão</div></div>
+  <div class="bl"><div class="ch">Cm Bb4 Bb</div><div class="ly">Me mostrou a vida</div></div>
+  <div class="bl"><div class="ch">Eb Cm G#</div><div class="ly">A cruz me mostrou o preço do amor</div></div>
+  <div class="bl"><div class="ch">Cm Bb C (dada)</div><div class="ly">A força da paixão me mostrou, Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G#7M F C )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Enfase notas la mi la, sol re sol, la mi la</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em meio à escuridão</div></div>
+  <div class="bl"><div class="ch">G Am</div><div class="ly">Resplandeceu a luz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com a morte trouxe a vida</div></div>
+  <div class="bl"><div class="ch">G Am</div><div class="ly">Ressuscitou Jesus</div></div>
+  <div class="bl"><div class="ch">Bb Bb Am G C</div><div class="ly">A cruz me mostrou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O amor que rasga o véu</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Faz o verbo vir do céu</div></div>
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">O amor que entrega</div></div>
+  <div class="bl"><div class="ch">G4 G</div><div class="ly">O próprio Filho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">(orq si do re si re fa mi)</div></div>
+  <div class="bl"><div class="ch">C/E F G4 G</div><div class="ly">A cruz me mostrou o amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">(orq si do re si re fa mi)</div></div>
+  <div class="bl"><div class="ch">C/E F G4 G (dada dada dada)</div><div class="ly">O amor se revelou Jesus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Eb Cm7</div><div class="ly">A cruz me mostrou a luz</div></div>
+  <div class="bl"><div class="ch">G#</div><div class="ly">Me mostrou o perdão</div></div>
+  <div class="bl"><div class="ch">Cm Bb4 Bb</div><div class="ly">Me mostrou a vida</div></div>
+  <div class="bl"><div class="ch">Eb Cm G#</div><div class="ly">A cruz me mostrou o preço do amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm Bb C (dadadada dadadada dadadada dadada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A força da paixão me mostrou, Jesus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">Cm (mib re do sol 2x)</div><div class="ly">Que vai além do cálice</div></div>
+  <div class="bl"><div class="ch">Eb (mib re sib sol 2x)</div><div class="ly">Além da dor</div></div>
+  <div class="bl"><div class="ch">Fm Cm Bb</div><div class="ly">Vai além da morte</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Que vai além do cálice</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Além da dor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm Cm Bb 1 2 3 4 break</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vai além da cruz</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F Dm/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A cruz me mostrou a luz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me mostrou o perdão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm/F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me mostrou a vida</div></div>
+  <div class="bl"><div class="ch">F Dm Bb</div><div class="ly">A cruz me mostrou o preço do amor</div></div>
+  <div class="bl"><div class="ch">Dm C</div><div class="ly">A força da paixão me mostrou</div></div>
+  <div class="bl"><div class="ch">F Dm (frase fa sol la mi re)</div><div class="ly">A cruz me mostrou a luz</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">Me mostrou o perdão</div></div>
+  <div class="bl"><div class="ch">Dm C</div><div class="ly">Me mostrou a vida</div></div>
+  <div class="bl"><div class="ch">F Dm Bb (frase fa sol la mi re)</div><div class="ly">A cruz me mostrou o preço do amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm C Bb F/A Gm Bb/C F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A força da paixão me mostrou</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

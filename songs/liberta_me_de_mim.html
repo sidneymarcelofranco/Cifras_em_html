@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liberta-me de Mim</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Liberta-me de Mim</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A7M(9) B4 E</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">A2 B4 E</div><div class="ly">Não entendo o meu próprio agir</div></div>
+  <div class="bl"><div class="ch">A2 B4 E</div><div class="ly">Sem Tua graça o que seria de mim?</div></div>
+  <div class="bl"><div class="ch">A2 B4 E</div><div class="ly">Não entendo o meu próprio agir</div></div>
+  <div class="bl"><div class="ch">A2 B4 E</div><div class="ly">Sem Tua graça o que seria de mim?</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">A2 B4</div><div class="ly">Pois o bem que eu quero fazer não faço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E o mal que eu não quero esse sim</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Acabo cometendo</div></div>
+  <div class="bl"><div class="ch">A2 B4</div><div class="ly">Em meu ser militam carne e espírito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em uma guerra infindável</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">À qual eu não me rendo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A2</div><div class="ly">Pois meu corpo</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Já foi vendido como escravo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E não existe bem nenhum em mim</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Apenas o pecado</div></div>
+  <div class="bl"><div class="ch">A2</div><div class="ly">Mas, eu sei</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Que no tocante ao meu interior</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tenho prazer na Sua lei</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Tu és o meu amado</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A2</div><div class="ly">Então liberta-me de mim</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Eu quero ser a sua casa</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se você estiver aqui</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Eu sei, eu venço o pecado</div></div>
+  <div class="bl"><div class="ch">A2</div><div class="ly">Então enche-me de Ti</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Até que não haja mais espaço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois quando estou em Tua presença</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">O meu viver é transformado</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo 1</div><div class="bd">
+  <div class="co">A2 B4 E F#m7(11)</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">A2 B4</div><div class="ly">Pois o bem que eu quero fazer não faço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E o mal que eu não quero esse sim</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Acabo cometendo</div></div>
+  <div class="bl"><div class="ch">A2 B4</div><div class="ly">Em meu ser militam carne e espírito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em uma guerra infindável</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">À qual eu não me rendo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A2</div><div class="ly">Pois meu corpo</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Já foi vendido como escravo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E não existe bem nenhum em mim</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Apenas o pecado</div></div>
+  <div class="bl"><div class="ch">A2</div><div class="ly">Mas, eu sei</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Que no tocante ao meu interior</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tenho prazer na Sua lei</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Tu és o meu amado</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A2</div><div class="ly">Então liberta-me de mim</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Eu quero ser a sua casa</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se você estiver aqui</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Eu sei, eu venço o pecado</div></div>
+  <div class="bl"><div class="ch">A2</div><div class="ly">Então enche-me de Ti</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Até que não haja mais espaço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois quando estou em Tua presença</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">O meu viver é transformado</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">A2 B4 E</div><div class="ly">E eu passo a ser livre pra viver</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">A Tua vontade</div></div>
+  <div class="bl"><div class="ch">A2 B4 E</div><div class="ly">Ao te conhecer todo o meu ser</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Se enche de bondade</div></div>
+  <div class="bl"><div class="ch">A2 B4 E</div><div class="ly">E reina o espírito sobre a carne</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo 2</div><div class="bd">
+  <div class="co">E F#m7 A2 B4 E F#m7</div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A2</div><div class="ly">Então liberta-me de mim</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Eu quero ser a sua casa</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se você estiver aqui</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Eu sei, eu venço o pecado</div></div>
+  <div class="bl"><div class="ch">A2</div><div class="ly">Então enche-me de Ti</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Até que não haja mais espaço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois quando estou em Tua presença</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">O meu viver é transformado</div></div>
+  <div class="bl"><div class="ch">A2</div><div class="ly">Então liberta-me de mim</div></div>
+  <div class="bl"><div class="ch">B4</div><div class="ly">Eu quero ser a sua casa</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se você estiver aqui</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Eu sei, eu venço o pecado</div></div>
+  <div class="bl"><div class="ch">A2</div><div class="ly">Então enche-me de Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Até que não haja mais espaço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois quando estou em Tua presença</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">O meu viver é transformado</div></div>
+  <div class="bl"><div class="ch">A2 B4 C#m7 B4</div><div class="ly">E reina o espírito sobre a carne</div></div>
+  <div class="bl"><div class="ch">A2 B4 E</div><div class="ly">E reina o espírito sobre a carne</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

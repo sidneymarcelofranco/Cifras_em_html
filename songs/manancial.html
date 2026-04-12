@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manancial</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="A">
+
+<header>
+  <div class="hdr-title">
+    <h1>Manancial</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">F#m7 D</div><div class="ly">Senhor, estou aqui para te adorar</div></div>
+  <div class="bl"><div class="ch">A/C# Bm7 E4 E</div><div class="ly">Em tua pre------sença desejo estar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu sei que nada sou</div></div>
+  <div class="bl"><div class="ch">E F#m7</div><div class="ly">Mas vim me humilhar</div></div>
+  <div class="bl"><div class="ch">D Bm7 E9</div><div class="ly">Preciso de Ti Vem me restaurar</div></div>
+  <div class="bl"><div class="ch">A9</div><div class="ly">Eu quero ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como um jardim fe------chado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Regado e cui---dado</div></div>
+  <div class="bl"><div class="ch">F#m7 E4</div><div class="ly">Pelo Teu Espírito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Flua em mim</div></div>
+  <div class="bl"><div class="ch">E F#m7</div><div class="ly">Como um manancial</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Do meu interior</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com águas vi----vas</div></div>
+  <div class="bl"><div class="ch">E4 E</div><div class="ly">Restaura o meu ser</div></div>
+  <div class="bl"><div class="ch">D D9 A9</div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7(4) A/D D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Senhor, estou aqui para te adorar</div></div>
+  <div class="bl"><div class="ch">A/C# Bm7 E4 E</div><div class="ly">Em tua pre------sença desejo estar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu sei que nada sou</div></div>
+  <div class="bl"><div class="ch">E F#m7</div><div class="ly">Mas vim me humilhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D Bm7 E4 D/F# E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preciso de Ti Vem me restaurar</div></div>
+  <div class="bl"><div class="ch">A9</div><div class="ly">Eu quero ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como um jardim fe------chado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Regado e cui---dado</div></div>
+  <div class="bl"><div class="ch">F#m7 E4</div><div class="ly">Pelo Teu Espírito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Flua em mim</div></div>
+  <div class="bl"><div class="ch">E F#m7</div><div class="ly">Como um manancial</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Do meu interior</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com águas vi----vas</div></div>
+  <div class="bl"><div class="ch">E4 E</div><div class="ly">Restaura o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/E A9 D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch">A9</div><div class="ly">Eu quero ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como um jardim fe------chado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Regado e cui---dado</div></div>
+  <div class="bl"><div class="ch">F#m7 E4</div><div class="ly">Pelo Teu Espírito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Flua em mim</div></div>
+  <div class="bl"><div class="ch">E F#m7</div><div class="ly">Como um manancial</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Do meu interior</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com águas vi----vas</div></div>
+  <div class="bl"><div class="ch">E4 E</div><div class="ly">Restaura o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/E A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch">E4 E</div><div class="ly">Restaura o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/E A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A9 A4/9 )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A9 A4/9 )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Dm7 C/E F )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( C/E F G4 G)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C/D C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu te farei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como um jardim fechado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E Dm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Regado e cui---dado</div></div>
+  <div class="bl"><div class="ch">Am7 G4</div><div class="ly">Pelo meu Espírito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu fluirei</div></div>
+  <div class="bl"><div class="ch">G Am7</div><div class="ly">Como um manancial</div></div>
+  <div class="bl"><div class="ch">Dm7</div><div class="ly">Do teu interior</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com águas vi---vas</div></div>
+  <div class="bl"><div class="ch">G4 G</div><div class="ly">Te restaurarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/G C F/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para o meu louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C/D C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu te farei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como um jardim fechado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E Dm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Regado e cui---dado</div></div>
+  <div class="bl"><div class="ch">Am7 G4</div><div class="ly">Pelo meu Espírito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu fluirei</div></div>
+  <div class="bl"><div class="ch">G Am7</div><div class="ly">Como um manancial</div></div>
+  <div class="bl"><div class="ch">Dm7</div><div class="ly">Do teu interior</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com águas vi---vas</div></div>
+  <div class="bl"><div class="ch">G4 G</div><div class="ly">Te restaurarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/G C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para o meu louvor</div></div>
+  <div class="bl"><div class="ch">G4 G</div><div class="ly">Restaura o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/G C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch">G4 G</div><div class="ly">Te restaurarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/G C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para o meu louvor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

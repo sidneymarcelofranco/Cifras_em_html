@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vim Para Adorar-Te</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Vim Para Adorar-Te</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">D5 A4 Em7(11)/B G9</div>
+  <div class="co">D5 A4 Em7(11)/B G9</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D5 A4</div><div class="ly">Luz do mundo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7(11)/B G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Viestes à Terra</div></div>
+  <div class="bl"><div class="ch">D9 A4</div><div class="ly">Pra que eu pudesse</div></div>
+  <div class="bl"><div class="ch">G9</div><div class="ly">Te ver</div></div>
+  <div class="bl"><div class="ch">D5 A4</div><div class="ly">Tua beleza me</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7(11)/B G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Leva a adorar-te</div></div>
+  <div class="bl"><div class="ch">D5 A4</div><div class="ly">Quero contigo</div></div>
+  <div class="bl"><div class="ch">G9</div><div class="ly">Viver</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D5</div><div class="ly">Vim para adorar-te</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Vim para prostrar-me</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vim para dizer que és meu Deus</div></div>
+  <div class="bl"><div class="ch">D5</div><div class="ly">És totalmente amável</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Totalmente digno</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tão maravilhoso para mim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D5 A4</div><div class="ly">Eterno rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7(11)/B G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Exaltado nas alturas</div></div>
+  <div class="bl"><div class="ch">D5 A4 G9</div><div class="ly">Glorioso nos céus</div></div>
+  <div class="bl"><div class="ch">D5 A4</div><div class="ly">Humilde vieste</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7(11)/B G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">À terra que criaste</div></div>
+  <div class="bl"><div class="ch">D5 A4</div><div class="ly">Por amor pobre</div></div>
+  <div class="bl"><div class="ch">G9</div><div class="ly">Se fez</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D5</div><div class="ly">Vim para adorar-te</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Vim para prostrar-me</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vim para dizer que és meu Deus</div></div>
+  <div class="bl"><div class="ch">D5</div><div class="ly">És totalmente amável</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Totalmente digno</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tão maravilhoso para mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A4 D/F# G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu nunca sabe__rei o preço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A4 D/F# G9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dos meus pecados lá na cruz</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

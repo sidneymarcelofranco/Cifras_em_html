@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teus Sonhos</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="G">
+
+<header>
+  <div class="hdr-title">
+    <h1>Teus Sonhos</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">G D A</div>
+  <div class="co">Bm A</div>
+  <div class="bl"><div class="ch">Em G</div><div class="ly">Guarda o meu coração oh Deus</div></div>
+  <div class="bl"><div class="ch">Em G</div><div class="ly">Guarda o meu coração</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">De fazer minha vontade</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De viver pra mim mesmo</div></div>
+  <div class="bl"><div class="ch">C9 G D</div><div class="ly">Quão insondáveis são os teus caminhos</div></div>
+  <div class="bl"><div class="ch">C9 G D</div><div class="ly">Inescrutáveis são os teus juízos</div></div>
+  <div class="bl"><div class="ch">Em G</div><div class="ly">Minha vontade já deixei</div></div>
+  <div class="bl"><div class="ch">C D</div><div class="ly">O teu Reino já ganhei</div></div>
+  <div class="bl"><div class="ch">Em G</div><div class="ly">Minha vontade já deixei</div></div>
+  <div class="bl"><div class="ch">C D</div><div class="ly">O teu Reino já ganhei</div></div>
+  <div class="bl"><div class="ch">G C D</div><div class="ly">Os teus sonhos são maiores do que os meus</div></div>
+  <div class="bl"><div class="ch">Em C D</div><div class="ly">Os teus caminhos bem mais altos do que os meus</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Toma minha vida</div></div>
+  <div class="bl"><div class="ch">C D</div><div class="ly">Tudo é teu</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Toma minha vida</div></div>
+  <div class="bl"><div class="ch">C D</div><div class="ly">Tudo é teu</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">C Gm7 Dm C</div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">C Gm7 Dm C</div>
+  <div class="bl"><div class="ch">C Gm</div><div class="ly">Venha o teu reino</div></div>
+  <div class="bl"><div class="ch">Dm C</div><div class="ly">Seja feita a tua vontade</div></div>
+  <div class="bl"><div class="ch">Em G</div><div class="ly">Minha vontade já deixei</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

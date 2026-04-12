@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deus Fiel</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="G">
+
+<header>
+  <div class="hdr-title">
+    <h1>Deus Fiel</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">Em7 D/F# G C9 D9 D4</div><div class="ly">Minhas lágrimas serão colhidas por um Deus fiel</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Então eu vou Te chamar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em Teus braços me lançar</div></div>
+  <div class="bl"><div class="ch">Em7 D/F# G C9 D9 D4</div><div class="ly">Mesmo sem enxergar, confio em um Deus fiel.</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Refrão:</div></div>
+  <div class="bl"><div class="ch">Em7 D/F# G C9</div><div class="ly">Deus fiel, minha vida está em Ti</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">meus dias em Tuas mãos</div></div>
+  <div class="bl"><div class="ch">Em7 D/F# G C9 D9</div><div class="ly">Posso crer, meu Deus é o fogo que me defenderá</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F# G Em7 D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus fiel Deus fiel.</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F# G Em7 D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Hoje podes curar e demônios expulsar</div></div>
+  <div class="bl"><div class="ch">Em7 D/F# G C9 D9 D4</div><div class="ly">se eu apenas confiar no poder de um Deus fiel</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 D/F# G Em7 D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louvarei até chegar o dia que o Senhor virá</div></div>
+  <div class="bl"><div class="ch">Em7 D/F# G C9 D9 D4</div><div class="ly">o inimigo cairá diante do meu Deus fiel. Refrão</div></div>
+  <div class="bl"><div class="ch">C9 Em7 D9/F# G</div><div class="ly">Eu sei Tu és meu e eu sou Teu, eu sou Teu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 Em7 D9/F# Em7 D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu sei que és fiel para sempre, para sempre Refrão</div></div>
+  <div class="bl"><div class="ch">C9 D Em7 D/F#</div><div class="ly">Meu Deus é fiel, Tu és fiel, Tu és fiel (5x)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Em7 D/F# G )</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

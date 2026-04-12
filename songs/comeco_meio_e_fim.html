@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Começo, Meio e Fim</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="E">
+
+<header>
+  <div class="hdr-title">
+    <h1>Começo, Meio e Fim</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A A2 E</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G#m C#m G#m/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És a fonte, o meu destino</div></div>
+  <div class="bl"><div class="ch">A A2 E</div><div class="ly">És começo, meio e fim</div></div>
+  <div class="bl"><div class="ch">G#m</div><div class="ly">Tu és muito além</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">Do que eu posso imaginar</div></div>
+  <div class="bl"><div class="ch">A A2 E</div><div class="ly">Tu és tudo para mim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E quando eu penso em parar</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">Lembro que me amou</div></div>
+  <div class="bl"><div class="ch">B A A2</div><div class="ly">Sem olhar para trás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E quando eu penso em desistir</div></div>
+  <div class="bl"><div class="ch">C#m B A</div><div class="ly">Lembro que tu és por mim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nem a morte, nem a vida</div></div>
+  <div class="bl"><div class="ch">C#m B A</div><div class="ly">Nem o presente ou o porvir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vão me separar de ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O teu amor me atraiu</div></div>
+  <div class="bl"><div class="ch">C#m B</div><div class="ly">E eu não quero mais fugir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como eu preciso estar aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( E B C#m B A )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">E B</div><div class="ly">E quando eu penso em parar</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">Lembro que me amou</div></div>
+  <div class="bl"><div class="ch">B A A2</div><div class="ly">Sem olhar para trás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E quando eu penso em desistir</div></div>
+  <div class="bl"><div class="ch">C#m B A</div><div class="ly">Lembro que tu és por mim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nem a morte, e nem a vida</div></div>
+  <div class="bl"><div class="ch">C#m B A</div><div class="ly">Nem o presente ou o porvir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vão me separar de ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O teu amor me atraiu</div></div>
+  <div class="bl"><div class="ch">C#m B</div><div class="ly">E eu não quero mais fugir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como eu preciso estar aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nem a morte, e nem a vida</div></div>
+  <div class="bl"><div class="ch">C#m B A</div><div class="ly">Nem o presente ou o porvir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vão me separar de ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O teu amor me atraiu</div></div>
+  <div class="bl"><div class="ch">C#m B</div><div class="ly">E eu não quero mais fugir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como eu preciso estar aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( E A E )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( C#m7 B4 B )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">E A</div><div class="ly">Mais perto quero estar</div></div>
+  <div class="bl"><div class="ch">E C#m7 B</div><div class="ly">Meu Deus de ti</div></div>
+  <div class="bl"><div class="ch">E A</div><div class="ly">Ainda que seja a dor</div></div>
+  <div class="bl"><div class="ch">E B E B7</div><div class="ly">Que me una a ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E A/E E A/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sempre hei de suplicar</div></div>
+  <div class="bl"><div class="ch">E C#m7 B4 B</div><div class="ly">Mais perto quero estar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mais perto quero estar</div></div>
+  <div class="bl"><div class="ch">E B E B7</div><div class="ly">Meu Deus de ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E A/E E A/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sempre hei de suplicar</div></div>
+  <div class="bl"><div class="ch">E C#m7 B4 B</div><div class="ly">Mais perto quero estar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mais perto quero estar</div></div>
+  <div class="bl"><div class="ch">B4 B E</div><div class="ly">Meu Deus de ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G#m/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nem a morte, e nem a vida</div></div>
+  <div class="bl"><div class="ch">C#m B A</div><div class="ly">Nem o presente ou o porvir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vão me separar de ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O teu amor me atraiu</div></div>
+  <div class="bl"><div class="ch">C#m B</div><div class="ly">E eu não quero mais fugir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como eu preciso estar aqui</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

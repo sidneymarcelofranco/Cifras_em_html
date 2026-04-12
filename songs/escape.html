@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escape</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Escape</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">Escape</div><div class="ly">Renascer Praise</div></div>
+  <div class="co">Tom: DAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">D D4 D D4</div>
+  <div class="co">D D4 D D4</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D D4</div><div class="ly">O inimigo tenta laços e embaraços</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pra me envergonhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas não vai</div></div>
+  <div class="bl"><div class="ch">D D4</div><div class="ly">Porque eu não estou sozinho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nessa guerra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Está comigo o braço forte do Senhor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Aquele que acalma o vento</div></div>
+  <div class="bl"><div class="ch">D4</div><div class="ly">Aquele que aquieta o mar</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Que tira a força do fogo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E faz o leão jejuar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Deus que derruba as muralhas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Da estéril, faz mãe de filhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É o mesmo que brada do alto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não temas, sou contigo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus já tem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um caminho aberto pelas águas</div></div>
+  <div class="bl"><div class="ch">A Bm</div><div class="ly">Faz romper muitas fontes em meio</div></div>
+  <div class="bl"><div class="ch">A (Frase)</div><div class="ly">Ao deserto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ha_ve____rá nuvens que trazem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Chuvas de bênçãos</div></div>
+  <div class="bl"><div class="ch">A Bm</div><div class="ly">Ouça a voz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus te dá escape e livramento</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D D4</div><div class="ly">O inimigo tenta laços e embaraços</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pra me envergonhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas não vai</div></div>
+  <div class="bl"><div class="ch">Bm D4</div><div class="ly">Porque eu não estou sozinho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nessa guerra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/A A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Está comigo o braço forte do Senhor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Aquele que acalma o vento</div></div>
+  <div class="bl"><div class="ch">D4</div><div class="ly">Aquele que aquieta o mar</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Que tira a força do fogo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E faz o leão jejuar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Deus que derruba as muralhas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Da estéril, faz mãe de filhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É o mesmo que brada do alto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não temas, sou contigo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus já tem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um caminho aberto pelas águas</div></div>
+  <div class="bl"><div class="ch">A Bm</div><div class="ly">Faz romper muitas fontes em meio</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ao deserto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ha_ve____rá nuvens que trazem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Chuvas de bênçãos</div></div>
+  <div class="bl"><div class="ch">A Bm</div><div class="ly">Ouça a voz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus te dá escape e livramento</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus já tem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um caminho aberto pelas águas</div></div>
+  <div class="bl"><div class="ch">A Bm</div><div class="ly">Faz romper muitas fontes em meio</div></div>
+  <div class="bl"><div class="ch">A (Frase)</div><div class="ly">Ao deserto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ha_ve____rá nuvens que trazem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Chuvas de bênçãos</div></div>
+  <div class="bl"><div class="ch">A Bm</div><div class="ly">Ouça a voz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus te dá escape e livramento</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Aquele que acalma o vento</div></div>
+  <div class="bl"><div class="ch">D4</div><div class="ly">Aquele que aquieta o mar</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Que tira a força do fogo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E faz o leão jejuar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Deus que derruba as muralhas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Da estéril, faz mãe de filhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É o mesmo que brada do alto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não temas, sou contigo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus já tem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um caminho aberto pelas águas</div></div>
+  <div class="bl"><div class="ch">A Bm</div><div class="ly">Faz romper muitas fontes em meio</div></div>
+  <div class="bl"><div class="ch">A (Frase)</div><div class="ly">Ao deserto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ha_ve____rá nuvens que trazem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Chuvas de bênçãos</div></div>
+  <div class="bl"><div class="ch">A Bm</div><div class="ly">Ouça a voz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus te dá escape e livramento</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bm C7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Leão da Tribo de Judá</div></div>
+  <div class="bl"><div class="ch">Em7 F#7(5-)</div><div class="ly">Rei dos Reis reina para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G7M C7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Leão da Tribo de Judá</div></div>
+  <div class="bl"><div class="ch">Em7 F#7(5-)</div><div class="ly">Rei dos Reis reina para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm C7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Leão da Tribo de Judá</div></div>
+  <div class="bl"><div class="ch">Em7 F#7(5-)</div><div class="ly">Rei dos Reis reina para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm C7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Leão da Tribo de Judá</div></div>
+  <div class="bl"><div class="ch">Em7 F#7(5-) Bm G/B</div><div class="ly">Rei dos Reis reina para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/A A/C# Bm G/B D/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Reina para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Reina para sempre</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus já tem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um caminho aberto pelas águas</div></div>
+  <div class="bl"><div class="ch">G A Bm</div><div class="ly">Faz romper muitas fontes em meio</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ao deserto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ha_ve____rá nuvens que trazem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Chuvas de bênçãos</div></div>
+  <div class="bl"><div class="ch">G A Bm</div><div class="ly">Ouça a voz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus te dá escape e livramento</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rei da Glória</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Rei da Glória</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">C9 G4 C/E F</div>
+  <div class="co">C9 G4 C/E F</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">C9 G4 C/E F C9 G4 C/E F</div><div class="ly">As estrelas incontáveis Tu conheces todas pelo nome</div></div>
+  <div class="bl"><div class="ch">Am G/B C F Am G/B C F</div><div class="ly">Todo o universo desenhado foi em Tua majestade</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Dm C9</div><div class="ly">A Tua Glória, brilha aqui</div></div>
+  <div class="bl"><div class="ch">F Am G4</div><div class="ly">E quanto mais Te vejo, eu Te amo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C9</div><div class="ly">Rei da Glória, maravilhoso és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não há outro além de Ti</div></div>
+  <div class="bl"><div class="ch">Am F</div><div class="ly">Rei da Glória, dono do meu coração</div></div>
+  <div class="bl"><div class="ch">G4 F G4 Am C/E C F</div><div class="ly">E quanto mais Te vejo, eu amo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu respondo ao Teu amor que diz a mim</div></div>
+  <div class="bl"><div class="ch">F C C/E C F</div><div class="ly">Que não há outro Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am G/B C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Misericórdia e bondade me acolhem</div></div>
+  <div class="bl"><div class="ch">F Am C/E C F</div><div class="ly">Em Tua santidade</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Dm C9</div><div class="ly">A Tua Glória, brilha aqui</div></div>
+  <div class="bl"><div class="ch">F Am G4</div><div class="ly">E quanto mais Te vejo, eu Te amo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C9</div><div class="ly">Rei da Glória, maravilhoso és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não há outro além de Ti</div></div>
+  <div class="bl"><div class="ch">Am F</div><div class="ly">Rei da Glória, dono do meu coração</div></div>
+  <div class="bl"><div class="ch">G4 F G4</div><div class="ly">E quanto mais Te vejo, eu amo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( C9 G4 C/E F )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Am G4 C/E F )</div></div>
+  <div class="bl"><div class="ch">Am C C/E F</div><div class="ly">Quanto mais eu te conheço, eu te amo</div></div>
+  <div class="bl"><div class="ch">Am C C/E F</div><div class="ly">Quanto mais eu te percebo, eu te quero</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C9</div><div class="ly">Rei da Glória, maravilhoso és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não há outro além de Ti</div></div>
+  <div class="bl"><div class="ch">Am F G4</div><div class="ly">Rei da Glória, dono do meu coração</div></div>
+  <div class="bl"><div class="ch">F G4</div><div class="ly">Quanto mais Te vejo, eu amo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C9</div><div class="ly">Rei da Glória, maravilhoso és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não há outro além de Ti</div></div>
+  <div class="bl"><div class="ch">Am F</div><div class="ly">Rei da Glória, dono do meu coração</div></div>
+  <div class="bl"><div class="ch">G4 F G4</div><div class="ly">E quanto mais Te vejo, eu amo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B C/E F</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

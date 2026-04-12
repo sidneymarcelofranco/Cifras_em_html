@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canção do Apocalipse</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="G">
+
+<header>
+  <div class="hdr-title">
+    <h1>Canção do Apocalipse</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">D</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Digno é o Cordeiro que foi morto</div></div>
+  <div class="bl"><div class="ch">C9 G9</div><div class="ly">Santo, Santo Ele é</div></div>
+  <div class="bl"><div class="ch">D9 Am7</div><div class="ly">Um novo cântico ao que se assenta</div></div>
+  <div class="bl"><div class="ch">C9 G9</div><div class="ly">Sobre o trono do céu</div></div>
+  <div class="bl"><div class="ch">D9 Am7</div><div class="ly">Digno é o Cordeiro que foi morto</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Santo, Santo Ele é</div></div>
+  <div class="bl"><div class="ch">D9 Am7</div><div class="ly">Um novo cântico ao que se assenta</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Sobre o trono do céu</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D9</div><div class="ly">Santo, Santo, Santo</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Que era e é e há de vir</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Com a criação eu canto</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Louvores ao Rei dos reis</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">És tudo para mim</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">E eu Te adorarei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">Am7 C9 G</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D9 Am7</div><div class="ly">Está vestido do arco-íris</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Sons de trovão, luzes, relâmpagos</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Louvores, honra e glória</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Força e poder pra sempre</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Ao único Rei eternamente</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D9</div><div class="ly">Santo, Santo, Santo</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Que era e é e há de vir</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Com a criação eu canto</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Louvores ao Rei dos reis</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">És tudo para mim</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">E eu Te adorarei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo 2</div><div class="bd">
+  <div class="co">Am7 C9 G</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Terceira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D9 Am7</div><div class="ly">Maravilhado, extasiado</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Eu fico ao ouvir Teu nome</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo 3</div><div class="bd">
+  <div class="co">Am7 F C9 G</div>
+  <div class="co">Am7 F C9 G</div>
+  <div class="bl"><div class="ch">D9 Am7</div><div class="ly">Maravilhado, extasiado</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Eu fico ao ouvir Teu nome</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Jesus, Teu nome é força</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">É fôlego de vida</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Misteriosa água viva</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo 4</div><div class="bd">
+  <div class="co">Am7 F C9 G</div>
+  <div class="co">Am7 F C9 G</div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D9</div><div class="ly">Santo, Santo, Santo</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Que era e é e há de vir</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Com a criação eu canto</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Louvores ao Rei dos reis</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">És tudo para mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E eu Te adorarei</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Santo, Santo, Santo</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Que era e é e há de vir</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Com a criação eu canto</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Louvores ao Rei dos reis</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">És tudo para mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E eu Te adorarei</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Santo, Santo, Santo</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Que era e é e há de vir</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Com a criação eu canto</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Louvores ao Rei dos reis</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">És tudo para mim</div></div>
+  <div class="bl"><div class="ch">G D9</div><div class="ly">E eu Te adorarei</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

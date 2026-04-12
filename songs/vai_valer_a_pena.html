@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vai Valer a Pena</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Vai Valer a Pena</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">C9 G/B Am7 F</div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não compreendo teus caminhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas te darei a minha canção</div></div>
+  <div class="bl"><div class="ch">Dm7 C C4 C</div><div class="ly">Doces palavras te darei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me sustentas em minha dor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E isso me leva mais perto de ti</div></div>
+  <div class="bl"><div class="ch">Dm7 C C4 C</div><div class="ly">Mais perto dos teus caminhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B Am</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E ao redor de cada esquina</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em cima de cada montanha</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu não procuro por coroas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ou pelas águas das fontes</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Desesperado eu te busco</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Frenético eu acredito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que a visão da tua face é tudo que eu preciso</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">E eu te direi</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que vai valer a pena</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Vai valer pena</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am/G F C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vai valer a pena mesmo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sim vai valer a pena</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Vai valer a pena</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am/G F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vai valer a pena mesmo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não compreendo teus caminhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas te darei a minha canção</div></div>
+  <div class="bl"><div class="ch">Dm7 C C4 C</div><div class="ly">Doces palavras te darei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me sustentas em minha dor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E isso me leva mais perto de ti</div></div>
+  <div class="bl"><div class="ch">Dm7 C C4 C</div><div class="ly">Mais perto dos teus caminhos</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">E ao redor de cada esquina</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em cima de cada montanha</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu não procuro por coroas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ou pelas águas das fontes</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Desesperado eu te busco</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Frenético eu acredito</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que a visão da tua face é tudo que eu preciso</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">E eu te direi</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que vai valer a pena</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Vai valer pena</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am/G F C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vai valer a pena mesmo eu sei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que vai valer a pena</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Vai valer a pena</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am/G F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vai valer a pena eu sei que vai</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">O grande dia haverá de chegar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quando eu e você eu e você se encontraremos com ele</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Naquele dia</div></div>
+  <div class="bl"><div class="ch">C9 G/B Am7 F</div><div class="ly">E eu e você, eu e você cantaremos em uma só voz, a ele, a ele, a ele</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Senhor, valeu a pena</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Senhor, valeu a pena</div></div>
+  <div class="bl"><div class="ch">Am7 F</div><div class="ly">Senhor, valeu, valeu, valeu, valeu, valeu</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Senhor, valeu a pena</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Senhor, valeu a pena</div></div>
+  <div class="bl"><div class="ch">Am7 F</div><div class="ly">Eu haverei de cantar ao meu senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quando o grande dia chegar</div></div>
+  <div class="bl"><div class="ch">Am7 F</div><div class="ly">Quando o grande dia chegar, e ele vem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quando o grande dia chegar</div></div>
+  <div class="bl"><div class="ch">Am7 F</div><div class="ly">Eu cantarei, eu cantarei, eu cantarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus, sim, sim, sim</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Sim, sim, sim</div></div>
+  <div class="bl"><div class="ch">F C9</div><div class="ly">Jesus, valeu, valeu, valeu, valeu, valeu, valeu, valeu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Viver pra ti</div></div>
+  <div class="bl"><div class="ch">Am7 F</div><div class="ly">Morrer pra ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( C9 G/B Am7 F )</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

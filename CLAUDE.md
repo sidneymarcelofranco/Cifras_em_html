@@ -96,6 +96,12 @@ Cifras_em_html/
 
 ## Acervo atual — database/songs.js
 
+163 músicas no total. As 13 originais foram criadas manualmente; as demais foram importadas
+via `converter.py` a partir de arquivos `.docx` em `G:\Meu Drive\Cifras`.
+O conversor pode ser re-executado com `python3 converter.py` na raiz do projeto.
+
+### Tabela resumida (originais manuais)
+
 | Artista                              | Título                          | Tom |
 |--------------------------------------|---------------------------------|-----|
 | Aline Barros                         | Santidade                       | Bb  |

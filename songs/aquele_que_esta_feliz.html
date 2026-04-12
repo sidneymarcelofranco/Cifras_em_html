@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquele que está feliz</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="A">
+
+<header>
+  <div class="hdr-title">
+    <h1>Aquele que está feliz</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A Bm C#m Bm</div>
+  <div class="bl"><div class="ch">A Bm C#m</div><div class="ly">Aquele que está feliz</div></div>
+  <div class="bl"><div class="ch">Bm A Bm C#m Bm</div><div class="ly">Diga: amém!</div></div>
+  <div class="bl"><div class="ch">A Bm C#m</div><div class="ly">Aquele que está feliz</div></div>
+  <div class="bl"><div class="ch">Bm A Bm C#m Bm</div><div class="ly">Grite: aleluia!</div></div>
+  <div class="bl"><div class="ch">A Bm C#m</div><div class="ly">Aquele que está feliz</div></div>
+  <div class="bl"><div class="ch">Bm A Bm C#m Bm</div><div class="ly">Bata palma assim</div></div>
+  <div class="bl"><div class="ch">A Bm C#m</div><div class="ly">Aquele que está feliz</div></div>
+  <div class="bl"><div class="ch">Bm A</div><div class="ly">Dance comigo assim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G# F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com Jesus no coração</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">A gente é feliz</div></div>
+  <div class="bl"><div class="ch">D Bm</div><div class="ly">Com Jesus na condução</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo é muito bom!</div></div>
+  <div class="bl"><div class="ch">A F#m</div><div class="ly">Jesus é alegria, euforia</div></div>
+  <div class="bl"><div class="ch">D Bm</div><div class="ly">Companhia todo dia!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus é o motivo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Da nossa alegria!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm C#m Bm )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A Bm C#m Bm )</div></div>
+  <div class="bl"><div class="ch">A Bm C#m</div><div class="ly">Aquele que está feliz</div></div>
+  <div class="bl"><div class="ch">Bm A Bm C#m Bm</div><div class="ly">Diga: amém!</div></div>
+  <div class="bl"><div class="ch">A Bm C#m</div><div class="ly">Aquele que está feliz</div></div>
+  <div class="bl"><div class="ch">Bm A Bm C#m Bm</div><div class="ly">Grite: aleluia!</div></div>
+  <div class="bl"><div class="ch">A Bm C#m</div><div class="ly">Aquele que está feliz</div></div>
+  <div class="bl"><div class="ch">Bm A Bm C#m Bm</div><div class="ly">Bata palma assim</div></div>
+  <div class="bl"><div class="ch">A Bm C#m</div><div class="ly">Aquele que está feliz</div></div>
+  <div class="bl"><div class="ch">Bm A</div><div class="ly">Dance comigo assim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G# F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com Jesus no coração</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">A gente é feliz</div></div>
+  <div class="bl"><div class="ch">D Bm</div><div class="ly">Com Jesus na condução</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo é muito bom!</div></div>
+  <div class="bl"><div class="ch">A F#m</div><div class="ly">Jesus é alegria, euforia</div></div>
+  <div class="bl"><div class="ch">D Bm</div><div class="ly">Companhia todo dia!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus é o motivo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Da nossa alegria!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G# F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com Jesus no coração</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">A gente é feliz</div></div>
+  <div class="bl"><div class="ch">D Bm</div><div class="ly">Com Jesus na condução</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo é muito bom!</div></div>
+  <div class="bl"><div class="ch">A F#m</div><div class="ly">Jesus é alegria, euforia</div></div>
+  <div class="bl"><div class="ch">D Bm</div><div class="ly">Companhia todo dia!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus é o motivo</div></div>
+  <div class="bl"><div class="ch">A F#m Bm</div><div class="ly">Da nossa alegria!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus é o motivo</div></div>
+  <div class="bl"><div class="ch">A F#m Bm</div><div class="ly">Da nossa alegria!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus é o motivo</div></div>
+  <div class="bl"><div class="ch">F G A</div><div class="ly">Da nossa alegria!</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

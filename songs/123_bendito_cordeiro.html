@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>123 - Bendito Cordeiro</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>123 - Bendito Cordeiro</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Bm Em A7 D G D A</div>
+  <div class="bl"><div class="ch">D F#m Bm Em A4 A</div><div class="ly">Seja bendito o Cordeiro Que na cruz por nós padeceu</div></div>
+  <div class="bl"><div class="ch">D F#m Bm Em A D C/E D/F#</div><div class="ly">Seja bendito o seu sangue que por nós pecadores verteu</div></div>
+  <div class="bl"><div class="ch">G D Am D7 G E/G# A4 A</div><div class="ly">Eis, nesse sangue lavados, com roupas que tão alvas são</div></div>
+  <div class="bl"><div class="ch">D F#m B7 Em A D A G/B A/C#</div><div class="ly">Os pecadores remidos, que perante seu Deus hoje estão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# A/E A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Alvo mais que a neve</div></div>
+  <div class="bl"><div class="ch">Em A7 D D#º Em A7</div><div class="ly">Alvo mais que a ne - ve</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G Em Fº D/D# Em A7 D G D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sim, nesse sangue lavado, mais alvo que a neve serei</div></div>
+  <div class="bl"><div class="ch">D F#m Bm Em A4 A</div><div class="ly">Quão espinhosa coroa Que Jesus por nós suportou</div></div>
+  <div class="bl"><div class="ch">D F#m Bm Em A D C/E D/F#</div><div class="ly">Oh! Quão profundas as chagas Que nos provam o quanto Ele amou</div></div>
+  <div class="bl"><div class="ch">G D Am D7 G E/G# A4 A</div><div class="ly">Eis, nessas chagas, pureza Para o mais torpe pecador!</div></div>
+  <div class="bl"><div class="ch">D F#m B7 Em A D A G/B A/C#</div><div class="ly">Pois que, mais alvo que a neve O Teu sangue nos torna, Senhor!</div></div>
+  <div class="bl"><div class="ch">D F#m Bm Em A4 A</div><div class="ly">Se nós a ti confessarmos E seguirmos na tua luz</div></div>
+  <div class="bl"><div class="ch">D F#m Bm Em A D C/E D/F#</div><div class="ly">Tu não somente perdoas Purificas também, ó Jesus!</div></div>
+  <div class="bl"><div class="ch">G D Am D7 G E/G# A4 A</div><div class="ly">Sim, e de todo pecado! Que maravilha desse amor!</div></div>
+  <div class="bl"><div class="ch">D F#m B7 Em A D A G/B A/C#</div><div class="ly">Pois que, mais alvos que a neve O Teu sangue nos torna, Senhor!</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

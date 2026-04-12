@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poder Pra Salvar - Hillsong United</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Poder Pra Salvar - Hillsong United</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">D9 A</div><div class="ly">Todos necessitam</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">De um amor perfeito</div></div>
+  <div class="bl"><div class="ch">E D9</div><div class="ly">Perdão e compaixão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Todos necessitam</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">De graça e esperança</div></div>
+  <div class="bl"><div class="ch">E D E D E</div><div class="ly">De um Deus que salva</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Refrão</div></div>
+  <div class="bl"><div class="ch">D9 A</div><div class="ly">Me aceitas com meus medos</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Falhas e temores</div></div>
+  <div class="bl"><div class="ch">E D9</div><div class="ly">Enche meu viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha vida entrego</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Pra seguir Teus passos</div></div>
+  <div class="bl"><div class="ch">E D E D E</div><div class="ly">A ti me rendo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Refrão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cristo move as montanhas</div></div>
+  <div class="bl"><div class="ch">D A</div><div class="ly">E tem poder pra salvar</div></div>
+  <div class="bl"><div class="ch">F#m7 E</div><div class="ly">Tem poder pra salvar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pra sempre, autor da salvação</div></div>
+  <div class="bl"><div class="ch">D A</div><div class="ly">Jesus a morte venceu</div></div>
+  <div class="bl"><div class="ch">F#m7 E D A F#m7 E</div><div class="ly">Sobre a morte venceu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">interludio ( D9 A E ) 2x</div></div>
+  <div class="bl"><div class="ch">D A E F#m</div><div class="ly">Possa o mundo ver brilhar a luz</div></div>
+  <div class="bl"><div class="ch">D A E</div><div class="ly">Cantamos para a glória do Senhor Jesus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

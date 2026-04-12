@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eu e Minha Casa</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Eu e Minha Casa</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A# C Dm7 F9</div>
+  <div class="bl"><div class="ch">F9</div><div class="ly">Bendita Será nossa casa</div></div>
+  <div class="bl"><div class="ch">Dm7</div><div class="ly">Benditos Serão nossos filhos</div></div>
+  <div class="bl"><div class="ch">A# F9</div><div class="ly">E nós Glorificaremos ao Senhor</div></div>
+  <div class="bl"><div class="ch">F9</div><div class="ly">Minha casa Não será abalada</div></div>
+  <div class="bl"><div class="ch">Dm7</div><div class="ly">Em Cristo Está alicerçada</div></div>
+  <div class="bl"><div class="ch">A# F9</div><div class="ly">E nós Glorificaremos ao Senhor</div></div>
+  <div class="bl"><div class="ch">A# C9</div><div class="ly">A rocha em quem minha casa está firmada</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">É Ele, é Ele</div></div>
+  <div class="bl"><div class="ch">A# C9</div><div class="ly">O amor que alcançou a minha casa</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">É Ele, é Ele</div></div>
+  <div class="bl"><div class="ch">A# C9</div><div class="ly">A rocha em quem minha casa está firmada</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">É Ele, é Ele</div></div>
+  <div class="bl"><div class="ch">A# C9</div><div class="ly">O amor que alcançou a minha casa</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">É Ele, é Ele</div></div>
+  <div class="bl"><div class="ch">F9</div><div class="ly">Meu Jesus</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Eu Te entrego minha vida</div></div>
+  <div class="bl"><div class="ch">Dm7</div><div class="ly">Te dou meu lar, minha família</div></div>
+  <div class="bl"><div class="ch">A#</div><div class="ly">Eu e minha casa, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te serviremos com amor</div></div>
+  <div class="bl"><div class="ch">F9</div><div class="ly">Meu Jesus</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Eu Te entrego minha vida</div></div>
+  <div class="bl"><div class="ch">Dm7</div><div class="ly">Te dou meu lar, minha família</div></div>
+  <div class="bl"><div class="ch">A#</div><div class="ly">Eu e minha casa, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te serviremos com amor</div></div>
+  <div class="bl"><div class="ch">F9 Gm7 F/A A#</div><div class="ly">Ô-ô-ô-ô (Te serviremos, Senhor)</div></div>
+  <div class="bl"><div class="ch">F9 Gm7 F/A A#</div><div class="ly">Ô-ô-ô-ô (Te serviremos, Te glorificaremos, Senhor)</div></div>
+  <div class="bl"><div class="ch">A# C9</div><div class="ly">A rocha em quem minha casa está firmada</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">É Ele, é Ele</div></div>
+  <div class="bl"><div class="ch">A# C9</div><div class="ly">O amor que alcançou a minha casa</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">É Ele, é Ele</div></div>
+  <div class="bl"><div class="ch">F9</div><div class="ly">Meu Jesus</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Eu Te entrego minha vida</div></div>
+  <div class="bl"><div class="ch">Dm7</div><div class="ly">Te dou meu lar, minha família</div></div>
+  <div class="bl"><div class="ch">A#</div><div class="ly">Eu e minha casa, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te serviremos com amor</div></div>
+  <div class="bl"><div class="ch">F9</div><div class="ly">Meu Jesus</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Eu Te entrego minha vida</div></div>
+  <div class="bl"><div class="ch">Dm7</div><div class="ly">Te dou meu lar, minha família</div></div>
+  <div class="bl"><div class="ch">A#</div><div class="ly">Eu e minha casa, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te serviremos com amor</div></div>
+  <div class="bl"><div class="ch">F9 Gm7 F/A A#</div><div class="ly">Ô-ô-ô-ô (Te amamos, Senhor)</div></div>
+  <div class="bl"><div class="ch">F9 Gm7 F/A A#</div><div class="ly">Ô-ô-ô-ô (Te amamos, Senhor)</div></div>
+  <div class="bl"><div class="ch">A# C9</div><div class="ly">A rocha em quem minha casa está firmada</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">É Ele, é Ele</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

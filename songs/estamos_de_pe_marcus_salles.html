@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estamos de Pé - Marcus Salles</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Estamos de Pé - Marcus Salles</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A Em7 G D</div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pressionados Mas não desanimados</div></div>
+  <div class="bl"><div class="ch">F#m</div><div class="ly">Perplexos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas não desesperados</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos de pé</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Perseguidos Mas não abandonados</div></div>
+  <div class="co">F#m</div>
+  <div class="co">Abatidos</div>
+  <div class="bl"><div class="ch">D2</div><div class="ly">Mas não destruídos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos de pé</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Não caminha__mos</div></div>
+  <div class="bl"><div class="ch">E6 E</div><div class="ly">Pelo que ve__mos</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">O que nos move</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É o que nós cremos</div></div>
+  <div class="bl"><div class="ch">A4 A E6 E</div><div class="ly">Nação San_ta, somos a igre__ja</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">Vivemos por Fé</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos de pé arpejo mi si do# la si mi</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Perseguidos Mas não abandonados</div></div>
+  <div class="co">F#m</div>
+  <div class="co">Abatidos</div>
+  <div class="bl"><div class="ch">D2</div><div class="ly">Mas não destruídos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos de pé</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Não caminha__mos</div></div>
+  <div class="bl"><div class="ch">E6 E</div><div class="ly">Pelo que ve__mos</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">O que nos move</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É o que nós cremos</div></div>
+  <div class="bl"><div class="ch">A4 A E6 E</div><div class="ly">Nação San_ta, somos a igre__ja</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">Vivemos por Fé</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos de pé</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">A Em7</div><div class="ly">A perseguição não parou a igreja</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O coliseu não parou a igreja</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Os leões não pararam</div></div>
+  <div class="bl"><div class="ch">D2</div><div class="ly">A igreja do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O inferno não pode prevalecer</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">Vamos avançar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não vamos parar de crescer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ninguém pode parar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A igreja do Senhor</div></div>
+  <div class="bl"><div class="ch">A Em7</div><div class="ly">A perseguição não parou a igreja</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O coliseu não parou a igreja</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Os leões não pararam</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A igreja do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O inferno não pode prevalecer</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">Vamos avançar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não vamos parar de crescer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ninguém pode parar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A igreja do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A A4 A so teclado voz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não caminha__mos</div></div>
+  <div class="bl"><div class="ch">E6 E</div><div class="ly">Pelo que ve__mos</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">O que nos move</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É o que nós cremos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Entra banda</div></div>
+  <div class="bl"><div class="ch">A4 A E6 E</div><div class="ly">Nação San_ta, somos a igre__ja</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">Vivemos por Fé</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos de pé</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">A Em7</div><div class="ly">A perseguição não parou a igreja</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O coliseu não parou a igreja</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Os leões não pararam</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A igreja do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A parada e repique notas re mi mi</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O inferno não pode prevalecer</div></div>
+  <div class="bl"><div class="ch">Em7</div><div class="ly">Vamos avançar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não vamos parar de crescer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ninguém pode parar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A igreja do Senhor</div></div>
+  <div class="bl"><div class="ch">A Em7</div><div class="ly">A perseguição não parou a igreja</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O coliseu não parou a igreja</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Os leões não pararam</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A igreja do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O inferno não pode prevalecer</div></div>
+  <div class="bl"><div class="ch">Em7 (notas re mi mi)</div><div class="ly">Vamos avançar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não vamos parar de crescer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ninguém pode parar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A igreja do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">la si Do# | la si Do# |</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">re sol | re sol |</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">re do# si la | fa# sol# la |</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">A Em7 G D</div>
+  <div class="co">A Em7 G D D</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

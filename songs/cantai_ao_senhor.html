@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cantai Ao Senhor</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="A">
+
+<header>
+  <div class="hdr-title">
+    <h1>Cantai Ao Senhor</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Tom: AAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A A4</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">A A4 A A4</div><div class="ly">Cantai ao Senhor um cântico novo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7 C#m/E B/D# D9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantai ao Senhor todas as terras</div></div>
+  <div class="bl"><div class="ch">C#m7 D9 C#m7 D9</div><div class="ly">Cantai ao Senhor, Bendizei o Seu nome</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm Bm/A G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Proclamai a Sua salvação</div></div>
+  <div class="bl"><div class="ch">A A4 A A4</div><div class="ly">Anunciai entre as nações as Suas obras</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m C#m/E B/D# D9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Entre todos os povos as Suas maravilhas</div></div>
+  <div class="bl"><div class="ch">C#m7 D9</div><div class="ly">Porque grande é o Senhor</div></div>
+  <div class="bl"><div class="ch">C#m7 D9</div><div class="ly">Mui Digno de ser louvado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm Bm/A G E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mais temível do que falsos deuses</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A A4 A A4</div><div class="ly">Glória e majestade estão diante d'Ele</div></div>
+  <div class="bl"><div class="ch">A A9 E/G# F#m7 G E</div><div class="ly">Força e for- mo- sura no Seu santuário</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">A A4 A</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

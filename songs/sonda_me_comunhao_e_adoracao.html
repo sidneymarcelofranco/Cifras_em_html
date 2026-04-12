@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonda-me - Comunhão e Adoração</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Sonda-me - Comunhão e Adoração</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch">Dm Am Bb Dm</div><div class="ly">C/E D#7+ C#7+ C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/A C/Bb Bb F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Senhor tú me sondas e me conheces</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 Gm7/F Csus F C#7+ Csus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sabes quando assento e levanto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 F/A C/Bb Bb F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Esquadrinhas meu andar e o meu deitar</div></div>
+  <div class="bl"><div class="ch">Gm7 F Csus F C#7+ Csus</div><div class="ly">Conheces todos os meus caminhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Cm/D# D4 D7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ainda a palavra não me chegou a boca</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 Gm/F Eb7+ Csus C#º Dm7 F/A Bb F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tú já conheces Senhor, tu me cercas por trás e por diante</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 Gm/F D#7+ C#7+ C7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E sobre mim põe tua mão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/A Bb C C#º</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sonda me oh Deus, conhece o meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm7 G/B C C/Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Prova me os pensamentos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 Dm7 Dm/C Bb F/A Gm7 Gm/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vê se há em mim algum ca minho mal</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F/A Gm C F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E guia me pelo caminho eterno</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">G# C#/G# Fm7 D# C#</div>
+  <div class="bl"><div class="ch">G#/C A#m D# C#</div><div class="ly">G#/C A#m G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G# G#/C D#/C# C# G#/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Senhor tú me sondas e me conheces</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A#m7 G# D#/G G# F#7+ E7+</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sabes quando assento e levanto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#/D# G#/C D#/C# C# G#/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Esquadrinhas meu andar e o meu deitar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A#m7 G# D#/G G# F#7+ E7+</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Conheces todos os meus caminhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#/D# D#/G D#m/F# F F/G F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ainda a palavra não me chegou a boca</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A#m7 A#m/G# F#7+ D# Eº Fm7 G#/C C# G#/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tú já conheces Senhor, tu me cercas por trás e por diante</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A#m7 A#m/G# F#7+ E7+ D#7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E sobre mim põe tua mão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G# G#/C C# D# Eº</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sonda me oh Deus, conhece o meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm7 A#/D D# D#/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Prova me os pensamentos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm7 Fm7 Fm/D# C# G#/C A#m7 A#m/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vê se há em mim algum ca minho mal</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D#/G G#/C A#m D# G# ( F#7+ E7+ )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E guia me pelo caminho eterno</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G# G#/C C# D# Eº</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sonda me oh Deus, conhece o meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm7 A#/D D# D#/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Prova me os pensamentos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm7 Fm7 Fm/D# C# G#/C A#m7 A#m/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vê se há em mim algum ca minho mal</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D#/G G#/C A#m D# G# ( F#7+ E7+ )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E guia me pelo caminho eterno</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D#/G G#/C A#m D# Eº Fm7 A#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E guia me pelo caminho eter no</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D# Eº Fm7 D# C#7+</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eterno 8x vai para E guia me pelo caminho eterno</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

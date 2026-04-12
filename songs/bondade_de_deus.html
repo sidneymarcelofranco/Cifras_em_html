@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bondade de Deus</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Bondade de Deus</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Te amo, Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M/C C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tua graça nunca falha</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Todos os dias</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M G6</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu estou em Tuas mãos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 F7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Desde quando me levanto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Até eu me deitar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M G6 C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu cantarei da bondade de Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És fiel em todo tempo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M C G6</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em todo tempo Tu és tão, tão bom</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com todo fôlego que tenho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M G6 C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu cantarei da bondade de Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tua doce voz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que me guia em meio ao fogo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Na escuri_dão</div></div>
+  <div class="bl"><div class="ch">F G6</div><div class="ly">Tua presença me conforta</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 F7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sei que és meu Pai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que amigo és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M G C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vivo na bon_dade de Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tua bondade me seguirá</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">Me seguirá Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tua bondade me seguirá</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">Me seguirá Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu me rendo a Ti, te dou o meu ser</div></div>
+  <div class="bl"><div class="ch">G Am7</div><div class="ly">Entrego tudo a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tua bondade me seguirá</div></div>
+  <div class="bl"><div class="ch">G C</div><div class="ly">Me seguirá Senhor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

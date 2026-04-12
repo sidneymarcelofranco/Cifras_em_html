@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Em Teus Braços Estou Seguro</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="E">
+
+<header>
+  <div class="hdr-title">
+    <h1>Em Teus Braços Estou Seguro</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">És meu tesouro</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">És meu abrigo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Minha esperança és</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Meu melhor amigo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Inigualável</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">O que tenho eu além de Ti?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Minha herança és</div></div>
+  <div class="bl"><div class="ch">A Am</div><div class="ly">És tudo para mim</div></div>
+  <div class="bl"><div class="ch">B C#m B A</div><div class="ly">E não tenho outro bem além de Ti</div></div>
+  <div class="bl"><div class="ch">B C#m B A</div><div class="ly">E não tenho outro bem além de Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em Teus braços eu estou seguro</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">Em Tuas asas eu vou descansar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Porque Tu és fiel</div></div>
+  <div class="bl"><div class="ch">A Am</div><div class="ly">O meu Deus é fiel</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">Posso crer mesmo estando no escuro</div></div>
+  <div class="bl"><div class="ch">G#m</div><div class="ly">Sobre mim Tua luz brilhará</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Porque Tu és fiel</div></div>
+  <div class="bl"><div class="ch">A Am</div><div class="ly">O meu Deus é fiel</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

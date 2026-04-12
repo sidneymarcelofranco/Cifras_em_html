@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diante da Cruz</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Diante da Cruz</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Aline Barros</div>
+  <div class="co">Tom: DAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">D/F# G A G</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D/F# G A Bm</div><div class="ly">Ó Deus, me sondas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G A4</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Conheces-me</div></div>
+  <div class="bl"><div class="ch">D/F# G A2 Bm</div><div class="ly">Mesmo quando fa_lho</div></div>
+  <div class="bl"><div class="ch">G A6(4) A</div><div class="ly">Eu sei, me a_____mas</div></div>
+  <div class="bl"><div class="ch">D/F# G A Bm</div><div class="ly">Estás presente</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A me cercar</div></div>
+  <div class="bl"><div class="ch">D/F# G A Bm</div><div class="ly">Em todo tempo</div></div>
+  <div class="bl"><div class="ch">G A6(4) A</div><div class="ly">Eu sei, me a_____mas</div></div>
+  <div class="bl"><div class="ch">G A6(4) A</div><div class="ly">Eu sei, me a_____mas</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Prostro-me diante da cruz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vejo o sangue de Jesus</div></div>
+  <div class="bl"><div class="ch">A2</div><div class="ly">Nunca houve amor assim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sobre a morte já venceu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sua glória o céu encheu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada irá me separar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Em G A Bm )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Em G A )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D/F# G A2 Bm</div><div class="ly">Tu és meu gui___a</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G A2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu protetor</div></div>
+  <div class="bl"><div class="ch">D/F# G A2 Bm</div><div class="ly">Tua mão me fir_ma</div></div>
+  <div class="bl"><div class="ch">G A6 A</div><div class="ly">Eu sei, me a__mas</div></div>
+  <div class="bl"><div class="ch">G A6 A</div><div class="ly">Eu sei, me a__mas</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Prostro-me diante da cruz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vejo o sangue de Jesus</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Nunca houve amor a_ssim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sobre a morte já venceu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sua glória o céu encheu</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Nada irá me separar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Prostro-me diante da cruz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vejo o sangue de Jesus</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Nunca houve amor a_ssim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sobre a morte já venceu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sua glória o céu encheu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada irá me separar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">G A Bm</div><div class="ly">O véu rasgou, o caminho abriu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G G/B A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo consumado está</div></div>
+  <div class="bl"><div class="ch">G A Bm</div><div class="ly">O véu rasgou, o caminho abriu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G G/B A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo consumado está</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Terceira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D/F# G A Bm</div><div class="ly">E quando tu_do</div></div>
+  <div class="bl"><div class="ch">D/F# G A G</div><div class="ly">Se aca_bar</div></div>
+  <div class="bl"><div class="ch">D/F# G A Bm</div><div class="ly">Estarei segu_ro</div></div>
+  <div class="bl"><div class="ch">G A6 A</div><div class="ly">Pois sei, me a__mas</div></div>
+  <div class="bl"><div class="ch">G A6 A</div><div class="ly">Pois sei, me a__mas</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Prostro-me diante da cruz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vejo o sangue de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nunca houve amor assim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C# Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sobre a morte já venceu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sua glória o céu encheu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada irá me separar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E B/D# C#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Prostro-me diante da cruz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vejo o sangue de Jesus</div></div>
+  <div class="bl"><div class="ch">B4 B</div><div class="ly">Nunca houve amor a_ssim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E B/D# C#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sobre a morte já venceu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sua glória o céu encheu</div></div>
+  <div class="bl"><div class="ch">B4 B</div><div class="ly">Nada irá me separar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">A B A B</div>
+  <div class="co">A B A E</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

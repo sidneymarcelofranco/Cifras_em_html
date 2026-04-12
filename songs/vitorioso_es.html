@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitorioso És</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="Eb">
+
+<header>
+  <div class="hdr-title">
+    <h1>Vitorioso És</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Lutamos com armas de fé</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">E nada irá resistir</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Enquanto adoramos</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Em meio às tribulações</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O nosso Deus é vencedor</div></div>
+  <div class="bl"><div class="ch">G2 Em7(11)</div><div class="ly">Nós o adoramos</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bm7 G2</div><div class="ly">Vitorioso és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Na tempestade estás</div></div>
+  <div class="bl"><div class="ch">A4 Bm7</div><div class="ly">Teu nome infalível é</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Os reinos vêm e vão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Teu trono acima está</div></div>
+  <div class="bl"><div class="ch">A4 G2</div><div class="ly">Teu nome imutável é</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">O inferno não prevaleceu</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">E nada irá me impedir</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Eu Te adorarei</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Muralhas vão estremecer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D5</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cadeias irão se romper</div></div>
+  <div class="bl"><div class="ch">G2 Em7(11)</div><div class="ly">Enquanto adoramos</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bm7 G2</div><div class="ly">Vitorioso és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Na tempestade estás</div></div>
+  <div class="bl"><div class="ch">A4 Bm7</div><div class="ly">Teu nome infalível é</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Os reinos vêm e vão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Teu trono acima está</div></div>
+  <div class="bl"><div class="ch">A4 G2</div><div class="ly">Teu nome imutável é</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Imutável é</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Passagem</div><div class="bd">
+  <div class="co">Bm7 F#m7</div>
+  <div class="co">G2 A4 Bm7 F#m7</div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">G2</div><div class="ly">Como um trovão</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Impetuoso</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Poderoso és</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Grandioso és</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Que venha o céu</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Nós proclamamos</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Poderoso és</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Grandioso és</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Como um trovão</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Impetuoso</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Poderoso és</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Grandioso és</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Que venha o céu</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Nós proclamamos</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Poderoso és</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Grandioso és</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bm7 G2</div><div class="ly">Vitorioso és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Na tempestade estás</div></div>
+  <div class="bl"><div class="ch">A4 Bm7</div><div class="ly">Teu nome infalível é</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Os reinos vêm e vão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Teu trono acima está</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Teu nome imutável é</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">G2</div><div class="ly">Como um trovão</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Impetuoso</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Poderoso és</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Grandioso és</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Que venha o céu</div></div>
+  <div class="bl"><div class="ch">A4</div><div class="ly">Nós proclamamos</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Poderoso és</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Grandioso és</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">G2 A4 Bm7 F#m7</div>
+  <div class="co">G2 A4 Bm7 A4</div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">Bm7 G2</div><div class="ly">Vitorioso és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Na tempestade estás</div></div>
+  <div class="bl"><div class="ch">A4 Bm7</div><div class="ly">Teu nome infalível é</div></div>
+  <div class="bl"><div class="ch">G2</div><div class="ly">Os reinos vêm e vão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Teu trono acima está</div></div>
+  <div class="bl"><div class="ch">A4 G2</div><div class="ly">Teu nome imutável é</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Move As Águas</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="G">
+
+<header>
+  <div class="hdr-title">
+    <h1>Move As Águas</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Am7 D G D/F# Em7 Am7 D Cm/G G</div>
+  <div class="bl"><div class="ch">G Am7</div><div class="ly">Quanto tempo esperei, chegou a minha vez</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sei que hoje é meu dia Jesus está aqui</div></div>
+  <div class="bl"><div class="ch">Am7 D G D/F# Em7</div><div class="ly">Move as águas senhor, move as á......guas</div></div>
+  <div class="bl"><div class="ch">Am7 D C/G G</div><div class="ly">Vou mergulhar, vou restaurar a minha vi..da</div></div>
+  <div class="bl"><div class="ch">Am7 D G D/F# Em7</div><div class="ly">Move as águas senhor, move as á......guas</div></div>
+  <div class="bl"><div class="ch">Am7 D</div><div class="ly">Vou mergulhar, me libertar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm/G G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sim move as á...guas</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

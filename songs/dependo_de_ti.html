@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dependo de Ti</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C#m">
+
+<header>
+  <div class="hdr-title">
+    <h1>Dependo de Ti</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">C#m7 B11</div><div class="ly">Louvar-te é bem mais</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#9/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Do que eu mereço</div></div>
+  <div class="bl"><div class="ch">A6</div><div class="ly">Adorar-te mais profundo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Do que eu pensei</div></div>
+  <div class="bl"><div class="ch">C#m7 B11</div><div class="ly">Servir-te é tudo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que eu espero</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#9/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que mais quero</div></div>
+  <div class="bl"><div class="ch">A6 A</div><div class="ly">É estar mais junto a Ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C#m7 B4</div><div class="ly">Derramar perante Ti os meus anseios</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Minha oferta nessa hora</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É a verdade, sinceridade</div></div>
+  <div class="bl"><div class="ch">C#m7 B4 B</div><div class="ly">E Te mostrar os meus pequenos sonhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ah Senhor, como eu dependo de Ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Para me curar</div></div>
+  <div class="bl"><div class="ch">B9</div><div class="ly">Para me ensinar</div></div>
+  <div class="bl"><div class="ch">C#m7 A9</div><div class="ly">O caminho em que devo seguir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Podes me usar Senhor</div></div>
+  <div class="bl"><div class="ch">B9</div><div class="ly">Como Tu bem queres</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Abro o meu coração</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">Bbm7 Ab6</div><div class="ly">Louvar-te é bem mais</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Do que eu mereço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Adorar-te mais profundo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Do que eu pensei</div></div>
+  <div class="bl"><div class="ch">Bbm7 Ab6</div><div class="ly">Servir-te é tudo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que eu espero</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O que mais quero</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É estar mais junto a Ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bbm7 Ab6</div><div class="ly">Derramar perante Ti os meus anseios</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Db/F Gb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Minha oferta nessa hora é a verdade</div></div>
+  <div class="bl"><div class="ch">Bbm7 Ab</div><div class="ly">E Te mostrar os meus pequenos sonhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Db/F Gb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ah Senhor, como eu dependo de Ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Db</div><div class="ly">Para me curar</div></div>
+  <div class="bl"><div class="ch">Ab6</div><div class="ly">Para me ensinar</div></div>
+  <div class="bl"><div class="ch">Bbm7 Gb9</div><div class="ly">O caminho em que devo seguir</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">Podes me usar Senhor</div></div>
+  <div class="bl"><div class="ch">Ab6</div><div class="ly">Como Tu bem queres</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Db/F Gb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Abro o meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bm7 Bm7/A E/G# G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bm7 Bm7/A E/G# G )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Para me curar</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Para me ensinar</div></div>
+  <div class="bl"><div class="ch">Bm7 G9</div><div class="ly">O caminho em que devo seguir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Podes me usar Senhor</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Como Tu bem queres</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Abro o meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para me curar</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Para me ensinar</div></div>
+  <div class="bl"><div class="ch">Bm7 G9</div><div class="ly">O caminho em que devo seguir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Podes me usar Senhor</div></div>
+  <div class="bl"><div class="ch">A4 A</div><div class="ly">Como Tu bem queres</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Abro o meu coração</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imensurável</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="Cm">
+
+<header>
+  <div class="hdr-title">
+    <h1>Imensurável</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Cm Ab Eb Bb</div>
+  <div class="co">Cm Ab Eb Bb</div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Herdeiro me tornei</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Sou filho desse amor</div></div>
+  <div class="bl"><div class="ch">Cm Bb Ab</div><div class="ly">Manifestado em Jesus na cruz</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Nele está o amor</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Que me faz viver</div></div>
+  <div class="bl"><div class="ch">Cm Bb Ab</div><div class="ly">Meu nome está escrito em suas mãos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Ab Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Imensurável amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Ab Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que me atraiu, me salvou</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Eu conheci um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Eu conheci um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Oh, oh, oh, oh, oh</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Amor que lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Oh, oh, oh, oh, oh</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Ab Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Imensurável amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Ab Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que me atraiu, me salvou</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Eu conheci um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Eu conheci um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Me amou primeiro</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Que amor perfeito</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Sua graça me alcançou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Não mais escravo</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Agora, herdeiro</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Jesus me libertou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Me amou primeiro</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Que amor perfeito</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Sua graça me alcançou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Não mais escravo</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Agora, herdeiro</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Jesus me libertou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Me amou primeiro</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Que amor perfeito</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Sua graça me alcançou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não mais escravo</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Agora, herdeiro</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Jesus me libertou</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Eu conheci um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Gm</div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Cm Ab/C Eb Bb</div><div class="ly">Eu conheci um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Gm</div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Eu conheci um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm Ab/C Eb/Bb Gm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Oh, oh, oh, oh, oh</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Gm Ab</div><div class="ly">Oh, oh, oh, oh, oh</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">(Ab)</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb</div><div class="ly">Eu conheci um amor tão grande, tão grande</div></div>
+  <div class="bl"><div class="ch">Cm Ab Eb Bb Ab9</div><div class="ly">Amor que transforma e lança fora todo medo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">(Ab9)</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Me amou primeiro</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Que amor perfeito</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Sua graça me alcançou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Não mais escravo</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Agora, herdeiro</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Jesus me libertou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Me amou primeiro</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Que amor perfeito</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Sua graça me alcançou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Não mais escravo</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Agora, herdeiro</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Jesus me libertou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Me amou primeiro</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Que amor perfeito</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Sua graça me alcançou</div></div>
+  <div class="bl"><div class="ch">Eb Bb</div><div class="ly">Não mais escravo</div></div>
+  <div class="bl"><div class="ch">Cm</div><div class="ly">Agora, herdeiro</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Jesus me libertou</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

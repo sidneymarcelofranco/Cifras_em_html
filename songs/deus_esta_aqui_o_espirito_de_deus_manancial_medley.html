@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deus Está Aqui / o Espírito de Deus / Manancial (Medley)</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="A">
+
+<header>
+  <div class="hdr-title">
+    <h1>Deus Está Aqui / o Espírito de Deus / Manancial (Medley)</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A F#m7</div>
+  <div class="co">A E F#m7</div>
+  <div class="bl"><div class="ch">A F#m</div><div class="ly">Deus está aqui</div></div>
+  <div class="bl"><div class="ch">D E A</div><div class="ly">Tão certo como o ar que eu respiro</div></div>
+  <div class="bl"><div class="ch">D E A F#m</div><div class="ly">Tão certo como o amanhã que se levanta</div></div>
+  <div class="bl"><div class="ch">D E A</div><div class="ly">Tão certo como eu te falo e podes me ouvir</div></div>
+  <div class="bl"><div class="ch">A E F#m</div><div class="ly">Deus está aqui</div></div>
+  <div class="bl"><div class="ch">D E A</div><div class="ly">Tão certo como o ar que eu respiro</div></div>
+  <div class="bl"><div class="ch">D E A F#m</div><div class="ly">Tão certo como o amanhã que se levanta</div></div>
+  <div class="bl"><div class="ch">D E A</div><div class="ly">Tão certo como eu te falo e podes me ouvir</div></div>
+  <div class="bl"><div class="ch">D E F#m</div><div class="ly">Os feridos de alma são curados</div></div>
+  <div class="bl"><div class="ch">Bm7 E F#m</div><div class="ly">Os cativos e oprimidos livres são</div></div>
+  <div class="bl"><div class="ch">D E C# F#m</div><div class="ly">Os enfermos e doentes são sarados</div></div>
+  <div class="bl"><div class="ch">Bm7 E A</div><div class="ly">Pois o Espírito de Deus está aqui</div></div>
+  <div class="bl"><div class="ch">D E F#m</div><div class="ly">Os feridos de alma são curados</div></div>
+  <div class="bl"><div class="ch">Bm7 E F#m</div><div class="ly">Os cativos e oprimidos livres são</div></div>
+  <div class="bl"><div class="ch">D E C# F#m</div><div class="ly">Os enfermos e doentes são sarados</div></div>
+  <div class="bl"><div class="ch">Bm E A A</div><div class="ly">Pois o Espírito de Deus está aqui</div></div>
+  <div class="bl"><div class="ch">A D</div><div class="ly">Eu quero ser como um jardim fechado</div></div>
+  <div class="bl"><div class="ch">D Bm A E</div><div class="ly">Regado e cuidado pelo Teu Espírito</div></div>
+  <div class="bl"><div class="ch">E D E F#m</div><div class="ly">Flua em mim como um manancial</div></div>
+  <div class="bl"><div class="ch">Bm A D</div><div class="ly">Do meu interior, com águas vivas</div></div>
+  <div class="bl"><div class="ch">D A D</div><div class="ly">Eu quero ser como um jardim fechado</div></div>
+  <div class="bl"><div class="ch">D Bm A E</div><div class="ly">Regado e cuidado pelo Teu Espírito</div></div>
+  <div class="bl"><div class="ch">E D E F#m</div><div class="ly">Flua em mim como um manancial</div></div>
+  <div class="bl"><div class="ch">Bm A D</div><div class="ly">Do meu interior, com águas vivas</div></div>
+  <div class="bl"><div class="ch">D E</div><div class="ly">Restaura o meu ser</div></div>
+  <div class="bl"><div class="ch">D E</div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch">D E</div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch">D E</div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch">D E</div><div class="ly">Para o Teu louvor</div></div>
+  <div class="bl"><div class="ch">A D</div><div class="ly">Eu quero ser como um jardim fechado</div></div>
+  <div class="bl"><div class="ch">D Bm A E</div><div class="ly">Regado e cuidado pelo Teu Espírito</div></div>
+  <div class="bl"><div class="ch">E D E F#m</div><div class="ly">Flua em mim como um manancial</div></div>
+  <div class="bl"><div class="ch">Bm A D</div><div class="ly">Do meu interior, com águas vivas</div></div>
+  <div class="bl"><div class="ch">D E</div><div class="ly">Restaura o meu ser</div></div>
+  <div class="bl"><div class="ch">E D E</div><div class="ly">Para o Teu louvor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

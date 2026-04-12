@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porque Ele Vive</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Porque Ele Vive</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">F#m D A A4 A F#m D A A4 A</div><div class="ly">Uh, oh, oh... uh, oh, oh... uh, oh, oh... uh, oh, oh</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m D A A4 A F#m D A A4 A F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Acredito no fi..lho, acredito na ressurreição, em seu nome há</div></div>
+  <div class="bl"><div class="ch">D A A4 A A/C# D F#m E5 E</div><div class="ly">Salvação, no poder, do seu san..gue</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D E5 E F#m E/G# A A9 F#m F#m/E E5 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Amém, amém! viverei, viverei, porque ele vive</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D E5 E F#m E/G# A A9 F#m F#m/E E5 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Amém, amém! que o meu louvor seja eterno ao senhor</div></div>
+  <div class="bl"><div class="ch">F#m</div><div class="ly">Porque ele vive</div></div>
+  <div class="bl"><div class="ch">F#m D A A4 A F#m D A A4 A</div><div class="ly">Uh, oh, oh... uh, oh, oh... uh, oh, oh... uh, oh, oh</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m D A A4 A F#m D A A4 A F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em meu túmulo estava... morto em vergonha e dor, quando ouvi o som</div></div>
+  <div class="bl"><div class="ch">D A A4 A A/C# D F#m E5 E</div><div class="ly">Da sua voz, pelo meu nome, ele me chamou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D E5 E F#m E/G# A A9 F#m F#m/E E5 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Amém, amém! viverei, viverei, porque ele vive</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D E5 E F#m E/G# A A9 F#m F#m/E E5 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Amém, amém! que o meu louvor seja eterno ao senhor</div></div>
+  <div class="bl"><div class="ch">A A9 D D9 E5 E A A9 D D9</div><div class="ly">Porque ele vive, posso crer no amanhã, porque ele vive, o medo se</div></div>
+  <div class="bl"><div class="ch">E5 E A A9 A/C# D E5 E D E</div><div class="ly">Esvai, jesus, eu sei, que estou, seguro em tuas mãos</div></div>
+  <div class="bl"><div class="ch">A A9 D D9 E5 E A A9 D D9</div><div class="ly">Porque ele vive, posso crer no amanhã, porque ele vive, o medo se</div></div>
+  <div class="bl"><div class="ch">E5 E A A9 A/C# D E5 E D</div><div class="ly">Esvai, jesus, eu sei, que estou, seguro em tuas mãos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D E5 E F#m E/G# A A9 F#m F#m/E E5 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Amém, amém! viverei, viverei, porque ele vive</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D E5 E F#m E/G# A A9 F#m F#m/E E5 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Amém, amém! que o meu louvor seja eterno ao senhor</div></div>
+  <div class="bl"><div class="ch">F#m</div><div class="ly">Porque ele vive</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m D A A4 A F#m D A A4 A F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Uh, oh, oh... uh, oh, oh... uh, oh, oh... uh, oh, oh</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

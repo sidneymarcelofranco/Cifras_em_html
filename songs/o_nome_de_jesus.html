@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Nome de Jesus</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="G">
+
+<header>
+  <div class="hdr-title">
+    <h1>O Nome de Jesus</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G9 Bm7 C7M C/E D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G9 Bm7 C7M F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O nome de Jesus é poderoso</div></div>
+  <div class="bl"><div class="ch">G9 Bm7 C/E D4 D</div><div class="ly">O nome de Jesus é sobre todos</div></div>
+  <div class="bl"><div class="ch">C9 G/B C Em7(9)</div><div class="ly">Nome mais doce, nome mais lindo</div></div>
+  <div class="bl"><div class="ch">C9 G/B A7 D</div><div class="ly">Nome sublime é o nome de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G9 Bm7 C7M C/E D/F# G ) )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G9 Bm7 C7M F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O nome de Jesus levanta os mortos</div></div>
+  <div class="bl"><div class="ch">G9 Bm7 C7M D4 D</div><div class="ly">O nome de Jesus sara os feridos</div></div>
+  <div class="bl"><div class="ch">C9 G/B A7 Em7</div><div class="ly">Nome mais santo, nome mais puro</div></div>
+  <div class="bl"><div class="ch">C9 G/B Am7 D G</div><div class="ly">Nome bendito é o nome de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G9 Bm7 C7M F C/E G9 Bm7 C7M D4 D ) )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( C9 G/B C Em7(9) C9 G/B Am7 D G E4 E ) )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9 C#m7 D7M G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O nome de Jesus é poderoso</div></div>
+  <div class="bl"><div class="ch">A9 C#m7 D7M E4 E</div><div class="ly">O nome de Jesus é sobre todos</div></div>
+  <div class="bl"><div class="ch">D9 A/C# D9 F#m7(9)</div><div class="ly">Nome mais doce, nome mais lindo</div></div>
+  <div class="bl"><div class="ch">D9 A/C# B7 E</div><div class="ly">Nome sublime é o nome de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9 C#m7 D7M G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O nome de Jesus levanta os mortos</div></div>
+  <div class="bl"><div class="ch">A9 C#m7 C#m7 Bm7 C#m7 D7M E4 E</div><div class="ly">O nome de Jesus sa - ra os fe - ri - dos</div></div>
+  <div class="bl"><div class="ch">D9 A/C# D9 F#m7(9)</div><div class="ly">Nome mais santo, nome mais puro</div></div>
+  <div class="bl"><div class="ch">D9 A/C# Bm7 E A</div><div class="ly">Nome bendito é o nome de Jesus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# E/G# A</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

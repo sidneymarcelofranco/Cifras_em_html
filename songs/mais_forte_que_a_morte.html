@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mais Forte Que a Morte</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="G">
+
+<header>
+  <div class="hdr-title">
+    <h1>Mais Forte Que a Morte</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Tom: GAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F# C9</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F# C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Igual a Ti não há outro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F# C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É impossível</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F# C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Onde está quem o possa confrontar?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F# C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Invencível</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D D4 D D4 D Em C</div><div class="ly">Abriu o mar, parou o sol</div></div>
+  <div class="bl"><div class="ch">G D11/F# D D4 D</div><div class="ly">E o universo com Ele insiste em brilhar</div></div>
+  <div class="bl"><div class="ch">D D4 D Em C</div><div class="ly">E se a noite, me alcançar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me lembrarei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus é mais forte que a morte</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Ele vive para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com Ele eu vou reinar</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Eu quero viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu só vou viver</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Se for para Ele, por Ele</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Terceira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F# C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Teu amor me fez novo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F# C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Rei da glória</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F# C9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Onde está o que possa de Ti me separar?</div></div>
+  <div class="bl"><div class="ch">G5 D/F# C9 C9</div><div class="ly">Não há nada, não a nada, não a nada, Não</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus é mais forte que a morte</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Ele vive para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com Ele eu vou reinar</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Eu quero viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Só quero viver</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Se for para Ele, por Ele, E Nele</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O amor é mais forte que a morte</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Ele vive para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E por Ele eu vou</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Sim eu vou viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu só vou viver</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Se for para Ele</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por Ele</div></div>
+  <div class="bl"><div class="ch">D D4 D D4 D Em C</div><div class="ly">Abriu o mar, parou o sol</div></div>
+  <div class="bl"><div class="ch">G5 D/F# D D4 D</div><div class="ly">E o universo com Ele insiste em brilhar</div></div>
+  <div class="bl"><div class="ch">D D4 D Em C</div><div class="ly">E se a noite, me alcançar</div></div>
+  <div class="bl"><div class="ch">G5</div><div class="ly">Lembrarei</div></div>
+  <div class="bl"><div class="ch">D/F# D D4 D</div><div class="ly">Que com Ele pra sempre eu serei</div></div>
+  <div class="bl"><div class="ch">D4 D Em C G</div><div class="ly">Eu serei, eu serei</div></div>
+  <div class="bl"><div class="ch">D D4 D Em C9</div><div class="ly">Por todo o sempre por todo o sempre</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus é mais forte que a morte</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Ele vive para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com Ele eu vou reinar</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Eu quero viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Só quero viver</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Se for para Ele, por Ele, E Nele</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G5 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O amor é mais forte que a morte</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Ele vive para sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E por Ele eu vou</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Sim eu vou viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu só vou viver</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Se for para Ele</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por Ele</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">G5 D/F# C9 Em D C9</div>
+  <div class="co">G5 D/F# C9 Em D C9</div>
+  <div class="co">G5 D/F# C9 Em D C9</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deus É Deus</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Deus É Deus</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">C G4/B Am7 G</div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm7</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Minha fé não está firmada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nas coisas que podes fazer</div></div>
+  <div class="bl"><div class="ch">C9 F G4 G</div><div class="ly">Eu aprendi a Te adorar pelo que és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm7 F/C G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dele vem o sim e o amém</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Somente dele e mais ninguém</div></div>
+  <div class="bl"><div class="ch">G F G4 F</div><div class="ly">A Deus seja o louvor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se Deus fizer, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Am7 G</div><div class="ly">Se não fizer, Ele é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se a porta abrir, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Dm7 G</div><div class="ly">Mas se fechar, continua sendo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se a doença vier, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Am7 G</div><div class="ly">Se curado eu for, Ele é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se tudo der certo, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Dm7 G</div><div class="ly">Mas se não der, continua sendo Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Minha fé não está firmada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nas coisas que podes fazer</div></div>
+  <div class="bl"><div class="ch">C9 F G4 G</div><div class="ly">Eu aprendi a Te adorar pelo que és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm7 F/C G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dele vem o sim e o amém</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Somente dele e mais ninguém</div></div>
+  <div class="bl"><div class="ch">G F G4 F</div><div class="ly">A Deus seja o louvor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se Deus fizer, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Am7 G</div><div class="ly">Se não fizer, Ele é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se a porta abrir, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Dm7 G</div><div class="ly">Mas se fechar, continua sendo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se a doença vier, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Am7 G</div><div class="ly">Se curado eu for, Ele é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se tudo der certo, Ele é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm7 G C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas se não der, continua sendo Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não o adoro pelo que Ele faz</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">Eu o adoro pelo que Ele é</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Haja o que houver</div></div>
+  <div class="bl"><div class="ch">G F G C/E</div><div class="ly">Sempre será Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não o adoro pelo que Ele faz</div></div>
+  <div class="bl"><div class="ch">Dm7 Am7</div><div class="ly">Eu o adoro pelo que Ele é</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Haja o que houver</div></div>
+  <div class="bl"><div class="ch">G F G</div><div class="ly">Sempre será Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se Deus fizer, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Am7 G</div><div class="ly">Se não fizer, Ele é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se a porta abrir, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Dm7 G</div><div class="ly">Mas se fechar, continua sendo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se a doença vier, Ele é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#º Am7 D7/F# Gm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se curado eu for, Ele é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se tudo der certo, Ele é Deus</div></div>
+  <div class="bl"><div class="ch">Dm7 G</div><div class="ly">Mas se não der, continua sendo Deus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Deus é Deus</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus é Deus</div></div>
+  <div class="bl"><div class="ch">F G</div><div class="ly">Deus é Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus é Deus</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus é Deus</div></div>
+  <div class="bl"><div class="ch">F G4</div><div class="ly">Deus é Deus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

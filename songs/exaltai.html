@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exaltai</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Exaltai</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Db Bbm Eb</div>
+  <div class="co">Bbm Cm Db Eb</div>
+  <div class="co">Gm C Gm C</div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Entrarei em Tua presença</div></div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Com sacrifícios de louvor</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Com canções eu Te exaltarei</div></div>
+  <div class="bl"><div class="ch">Bbm C</div><div class="ly">Bendito seja o Senhor</div></div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Toda glória eu Te darei</div></div>
+  <div class="bl"><div class="ch">Gm C C# C Bbm</div><div class="ly">Do pecado me livraste</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Agora estou justificado</div></div>
+  <div class="bl"><div class="ch">Bbm C</div><div class="ly">Bendito seja o Senhor</div></div>
+  <div class="co">F Dm</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Engrandecei Seu nome</div></div>
+  <div class="co">Am Dm</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Gm C Gb F</div><div class="ly">Ao Senhor louvai</div></div>
+  <div class="co">F Dm</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Engrandecei Seu nome</div></div>
+  <div class="bl"><div class="ch">Gm C Gm F</div><div class="ly">A Ele sim louvai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Gm C Bbm C F )</div></div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Entrarei em Tua presença</div></div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Com sacrifícios de louvor</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Com canções eu Te exaltarei</div></div>
+  <div class="bl"><div class="ch">Bbm C</div><div class="ly">Bendito seja o Senhor</div></div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Toda glória eu Te darei</div></div>
+  <div class="bl"><div class="ch">Gm C C# C Bbm</div><div class="ly">Do pecado me livraste</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Agora estou justificado</div></div>
+  <div class="bl"><div class="ch">Bbm C</div><div class="ly">Bendito seja o Senhor</div></div>
+  <div class="co">F Dm</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Engrandecei Seu nome</div></div>
+  <div class="co">Am Dm</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Gm (C Gb F)</div><div class="ly">Ao Senhor louvai</div></div>
+  <div class="co">F Dm</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Gm C</div><div class="ly">Engrandecei Seu nome</div></div>
+  <div class="bl"><div class="ch">Gm C Gm F</div><div class="ly">A Ele sim louvai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bbm Cm Db Eb )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Cm Dm Eb F )</div></div>
+  <div class="co">G Em</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Am D</div><div class="ly">Engrandecei Seu nome</div></div>
+  <div class="co">Bm Em</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Am D Ab G</div><div class="ly">Ao Senhor louvai</div></div>
+  <div class="co">G Em</div>
+  <div class="co">Exaltai</div>
+  <div class="bl"><div class="ch">Am D</div><div class="ly">Engrandecei Seu nome</div></div>
+  <div class="bl"><div class="ch">Am D Am G</div><div class="ly">A Ele sim louvai</div></div>
+  <div class="bl"><div class="ch">Eb F</div><div class="ly">A Ele sim louvai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D B D )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G F# F )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( E Eb D )</div></div>
+  <div class="co">Exaltai</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

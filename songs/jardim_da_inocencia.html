@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jardim da Inocência</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Jardim da Inocência</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch">B9 F#/A# G#m7(9) F# E9</div><div class="ly">Si do# Re# do# | sib si do# si | Si do# Re# do# | sib sol#</div></div>
+  <div class="bl"><div class="ch">B9 G#m7(9)</div><div class="ly">Ah! que saudade, que saudade</div></div>
+  <div class="bl"><div class="ch">E9 B9</div><div class="ly">De ouvir tua voz ao entardecer</div></div>
+  <div class="bl"><div class="ch">G#m7(9)</div><div class="ly">Ah! que vontade, que vontade</div></div>
+  <div class="bl"><div class="ch">E9 B9</div><div class="ly">De voltar ao jardim da inocência</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F#/A# G#m7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se eu pudesse voltaria atrás</div></div>
+  <div class="bl"><div class="ch">F# E B9</div><div class="ly">E não faria novamente o que fiz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Troquei a minha comunhão</div></div>
+  <div class="bl"><div class="ch">G#m7(9)</div><div class="ly">Pela escuridão da noite</div></div>
+  <div class="bl"><div class="ch">E9</div><div class="ly">Em trevas tornei os meus dias</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">B9 G#m7(9)</div><div class="ly">Ah! que saudade, que saudade</div></div>
+  <div class="bl"><div class="ch">E9 B9</div><div class="ly">De ouvir tua voz ao entardecer</div></div>
+  <div class="bl"><div class="ch">G#m7(9)</div><div class="ly">Ah! que vontade, que vontade</div></div>
+  <div class="bl"><div class="ch">E9 B9</div><div class="ly">De voltar ao jardim da inocência</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F#/A# G#m7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se eu pudesse voltaria atrás</div></div>
+  <div class="bl"><div class="ch">F# E B9</div><div class="ly">E não faria novamente o que fiz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Troquei a minha comunhão</div></div>
+  <div class="bl"><div class="ch">G#m7(9)</div><div class="ly">Pela escuridão da noite</div></div>
+  <div class="bl"><div class="ch">E9</div><div class="ly">Em trevas tornei os meus dias</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">B9  F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ah! que vontade de andar contigo</div></div>
+  <div class="bl"><div class="ch">G#m7(9) E9</div><div class="ly">Pelo jardim na viração dos dias</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B9 F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pegar em tuas mãos e voar</div></div>
+  <div class="bl"><div class="ch">G#m7(9) E9</div><div class="ly">Pela imensidão da terra e te adorar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B9 F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ah que vontade de dizer a Ti</div></div>
+  <div class="bl"><div class="ch">G#m7(9) Em7</div><div class="ly">Tudo que aprendi, nesse jardim</div></div>
+  <div class="bl"><div class="ch">G#m7</div><div class="ly">Jardim da Inocência</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Sol# sib si do# | re# do# si 3x sib si sol#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E E/F# F/G</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C9  G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ah! Que vontade de andar contigo</div></div>
+  <div class="bl"><div class="ch">Am7(11) F9 (do re do)</div><div class="ly">Pelo jardim na viração dos dias</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pegar em tuas mãos e voar</div></div>
+  <div class="bl"><div class="ch">Am7(11) Fm6</div><div class="ly">Pela imensidão da terra e te adorar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm6/D C/G Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ah! Que vontade de dizer a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M Fm6/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo que aprendi, nesse jardim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jardim da inocência</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesus Meu Guia É</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Jesus Meu Guia É</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Am9 Dm F/G G7(9/11+)</div>
+  <div class="bl"><div class="ch"></div><div class="ly">G7(9)/B F/C C F</div></div>
+  <div class="co">Dm Bm7(5-) E7(9+)</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Am9 Dm G G7(9/11+) F/C C C/E F7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus meu guia é amigo e protetor ele é</div></div>
+  <div class="bl"><div class="ch">C/E Dm Bm7(5-) E7</div><div class="ly">O meu bom pastor e quando eu sentir temor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# E/G# Am</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nelee con__fia__rei</div></div>
+  <div class="bl"><div class="ch">Dm G</div><div class="ly">Nele confiarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C/E F C/E Dm Bm7(5-) E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fraco sou, mas Deus me dá seu poder, seu amor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

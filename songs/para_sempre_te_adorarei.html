@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Sempre Te Adorarei</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Para Sempre Te Adorarei</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Aline Barros</div>
+  <div class="co">Tom: DAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">F#m7 Bm7 C A7(4) A7</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D D7M G/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Rei dos reis aqui estou</div></div>
+  <div class="bl"><div class="ch">A/C# A D4 D F#4</div><div class="ly">Rendo a Ti o meu louvor e adoração</div></div>
+  <div class="bl"><div class="ch">F#7 Bm</div><div class="ly">Pois Tu és Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm/A E/G# E7 C A7(4) A7 A/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Acima dos céus, acima de nós</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F Bb/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O universo se formou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com a Tua voz</div></div>
+  <div class="bl"><div class="ch">F Em7 A7 Dm</div><div class="ly">O mundo inteiro veio a existir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm/C G/B G A4 A A/G A7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Verbo de Deus, Princípio e Fim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D F#m G D F#m Bm C A7(4) A7</div><div class="ly">E eu te louvarei Senhor, levantando a Ti minhas mãos</div></div>
+  <div class="bl"><div class="ch">D F#m G D F#m Aº Em A7</div><div class="ly">Com canções de amor Te exaltarei, ministrando com meu coração</div></div>
+  <div class="bl"><div class="ch">Em Em/D A7 A7(4) A7</div><div class="ly">Para sempre Te adorarei</div></div>
+  <div class="bl"><div class="ch">Em Gm6 D ( A A/G )</div><div class="ly">Para sempre Te adorarei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D D7M G/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Rei dos reis aqui estou</div></div>
+  <div class="bl"><div class="ch">A/C# A D4 D F#4 F#7</div><div class="ly">Rendo a Ti o meu louvor e adoração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bm Bm/A E/G# E7 )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( C A7(4) A7 )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F Bb/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O universo se formou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com a Tua voz</div></div>
+  <div class="bl"><div class="ch">F Em7 A7 Dm</div><div class="ly">O mundo inteiro veio a existir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm/C G/B G A4 A A/G A7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Verbo de Deus, Princípio e Fim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D F#m G D F#m Bm C A7(4) A7</div><div class="ly">E eu te louvarei Senhor, levantando a Ti minhas mãos</div></div>
+  <div class="bl"><div class="ch">D F#m G D F#m Aº Em A7</div><div class="ly">Com canções de amor Te exaltarei, ministrando com meu coração</div></div>
+  <div class="bl"><div class="ch">Em Em/D A7 A7(4) A7</div><div class="ly">Para sempre Te adorarei</div></div>
+  <div class="bl"><div class="ch">Em Gm6 D ( A A/G )</div><div class="ly">Para sempre Te adorarei</div></div>
+  <div class="bl"><div class="ch">F4 F G4 G A4 A</div><div class="ly">Nada pode calar, nada pode deter, minha consagração</div></div>
+  <div class="bl"><div class="ch">D F#m G D F#m Bm C A7(4) A7</div><div class="ly">E eu te louvarei Senhor, levantando a Ti minhas mãos</div></div>
+  <div class="bl"><div class="ch">D F#m G D F#m Aº Em A7</div><div class="ly">Com canções de amor Te exaltarei, ministrando com meu coração</div></div>
+  <div class="bl"><div class="ch">Em Em/D A7 A7(4) A7</div><div class="ly">Para sempre Te adorarei</div></div>
+  <div class="bl"><div class="ch">Em Gm6 D ( A A/G )</div><div class="ly">Para sempre Te adorarei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">G A7(4) A7 D</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

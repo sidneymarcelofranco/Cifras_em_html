@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esperança</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Esperança</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">A esperança de um dia poder vê-lo</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">Em sua presença poder permanecer</div></div>
+  <div class="bl"><div class="ch">G D Am C G D Am C</div><div class="ly">Leva-me a caminhar numa eterna dimensão</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">Com o coração mergulho nesse vôo</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">Nessa aventura o passaporte já vistado</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">Com o sangue do cordeiro,chek inG D Am C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não importa se nunca, jamais provou: é só crer</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">O explosivo brilhar no rosto, pleno de luz</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">Beber da vitória dia após dia conquistar</div></div>
+  <div class="bl"><div class="ch">G D Am C G D Am C</div><div class="ly">Convocado você já está basta apenas abrir o coração</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">Assentar-me na primeira classe da vida</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">Preparado pro mortal a todo o que nele crê</div></div>
+  <div class="bl"><div class="ch">G D Am C G D Am C</div><div class="ly">Acima dos tronos, dominadores potestades do ar.</div></div>
+  <div class="bl"><div class="ch">G D Am C</div><div class="ly">A esperança de um dia poder vê-lo</div></div>
+  <div class="bl"><div class="ch">G D Am C (2x)</div><div class="ly">Em sua presença poder permenecer</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

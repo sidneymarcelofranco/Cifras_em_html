@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coração Igual Ao Teu</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="F">
+
+<header>
+  <div class="hdr-title">
+    <h1>Coração Igual Ao Teu</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb7M Dm7 Eb/G F</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se tu olhares senhor pra dentro de mim</div></div>
+  <div class="bl"><div class="ch">Gm7 C7(4) C7</div><div class="ly">Nada encontrará de bom</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb C/Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas um desejo eu tenho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De ser transformado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preciso tanto do teu perdão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb7M C7(4) C7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me um novo coração</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F F/A Bb9 Gm7 C7</div><div class="ly">Dá-me um coração igual ao teu, meu mes_tre</div></div>
+  <div class="bl"><div class="ch">F Gm7 F/A Bb</div><div class="ly">Dá-me um coração igual ao teu</div></div>
+  <div class="bl"><div class="ch">C C/Bb Am7 Dm7</div><div class="ly">Coração disposto a obede_cer</div></div>
+  <div class="bl"><div class="ch">Am7 Dm7</div><div class="ly">Cumprir todo o teu querer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 F/A Bb9 C7(4) Bb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me um cora___ção igual ao teu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F/C F/A Dm7 Am7 )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bb7M Dm7 Eb/G F )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb7M F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se tu olhares senhor pra dentro de mim</div></div>
+  <div class="bl"><div class="ch">Gm7 C4 C7</div><div class="ly">Nada encontrará de bom</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 C/Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas um desejo eu tenho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De ser transformado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preciso tanto do teu perdão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb7M Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me um novo coração</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F F/A Bb9 Gm7 C7</div><div class="ly">Dá-me um coração igual ao teu, meu mes_tre</div></div>
+  <div class="bl"><div class="ch">F Gm7 F/A Bb</div><div class="ly">Dá-me um coração igual ao teu</div></div>
+  <div class="bl"><div class="ch">C C/Bb Am7 Dm7</div><div class="ly">Coração disposto a obede_cer</div></div>
+  <div class="bl"><div class="ch">Am7 Dm7</div><div class="ly">Cumprir todo o teu querer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 F/A Bb9 C7(4) Bb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me um cora___ção igual ao teu</div></div>
+  <div class="bl"><div class="ch">F F/A Bb9 Gm7 C7</div><div class="ly">Dá-me um coração igual ao teu, meu mes_tre</div></div>
+  <div class="bl"><div class="ch">F Gm7 F/A Bb</div><div class="ly">Dá-me um coração igual ao teu</div></div>
+  <div class="bl"><div class="ch">C C/Bb Am7 Dm7</div><div class="ly">Coração disposto a obede_cer</div></div>
+  <div class="bl"><div class="ch">Am7 Dm7</div><div class="ly">Cumprir todo o teu querer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 F/A Bb9 C7(4) Bb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me um cora___ção igual ao teu</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C/E Dm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ensina-me a amar o meu irmão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A olhar com teus olhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Perdoar com teu perdão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb C/Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Enche-me com teu espírito</div></div>
+  <div class="bl"><div class="ch">Am7 Dm7</div><div class="ly">Endireita os meus caminhos</div></div>
+  <div class="bl"><div class="ch">C Bb</div><div class="ly">Oh Deus, dai-me</div></div>
+  <div class="bl"><div class="ch">C F F7</div><div class="ly">Um novo coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb C/Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Enche-me com teu espírito</div></div>
+  <div class="bl"><div class="ch">Am7 Dm7</div><div class="ly">Endireita os meus caminhos</div></div>
+  <div class="bl"><div class="ch">C Bb</div><div class="ly">Oh Deus, dai-me</div></div>
+  <div class="bl"><div class="ch">C D7(4) D7</div><div class="ly">Um novo coração</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G Am7 G/B C9 Am7 D7</div><div class="ly">Dá-me um coração igual ao teu, meu mes_tre</div></div>
+  <div class="bl"><div class="ch">G Am7 G/B C</div><div class="ly">Dá-me um coração igual ao teu</div></div>
+  <div class="bl"><div class="ch">D D/C Bm7 Em7</div><div class="ly">Coração disposto a obede_cer</div></div>
+  <div class="bl"><div class="ch">Bm7 Em7</div><div class="ly">Cumprir todo o teu querer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am G/B C D7(9) Em Em7/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me um cora_ção igual ao teu</div></div>
+  <div class="bl"><div class="ch">G Am7 G/B C9 Am7 D7</div><div class="ly">Dá-me um coração igual ao teu, meu mes_tre</div></div>
+  <div class="bl"><div class="ch">G Am7 G/B C</div><div class="ly">Dá-me um coração igual ao teu</div></div>
+  <div class="bl"><div class="ch">D D/C Bm7 Em7</div><div class="ly">Coração disposto a obede_cer</div></div>
+  <div class="bl"><div class="ch">Bm7 Em7</div><div class="ly">Cumprir todo o teu querer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am G/B C D7(9) Em Em7/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me um cora_ção igual ao teu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C/D G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dá-me um coração igual ao teu</div></div>
+  <div class="bl"><div class="ch">D D/C Bm7 Em7</div><div class="ly">Coração disposto a obede_cer</div></div>
+  <div class="bl"><div class="ch">Bm7 Em7</div><div class="ly">Cumprir todo o teu querer</div></div>
+  <div class="bl"><div class="ch">Am7 C/D D7 G</div><div class="ly">Dá-me um coração igual ao teu</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

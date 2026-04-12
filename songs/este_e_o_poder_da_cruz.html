@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Este É o Poder da Cruz</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Este É o Poder da Cruz</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Gm Gm/A A# A#</div>
+  <div class="bl"><div class="ch">Cm Dm D# Dm</div><div class="ly">Cm Cm/D# F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Gm/A A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">1. Quiser a alva ver</div></div>
+  <div class="bl"><div class="ch">A# Cm Dm</div><div class="ly">do dia mais sombrio</div></div>
+  <div class="bl"><div class="ch">D# Dm Cm Cm/D#F</div><div class="ly">Rumo ao calvário Cristo vai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Gm/A A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Julgado em mãos tão vis</div></div>
+  <div class="bl"><div class="ch">A# Cm Dm</div><div class="ly">Escárnio suportou</div></div>
+  <div class="bl"><div class="ch">D# Dm D# F</div><div class="ly">e então cravado a cruz</div></div>
+  <div class="bl"><div class="ch">Dm D# F A#</div><div class="ly">Este é o poder da cruz</div></div>
+  <div class="bl"><div class="ch">Dm D# F A#</div><div class="ly">Jesus se fez maldição</div></div>
+  <div class="bl"><div class="ch">Dm D# D#dim F</div><div class="ly">Tomou a culpa, toda a ira</div></div>
+  <div class="bl"><div class="ch">F/A A# D# F A#</div><div class="ly">Seu sangue nos comprou perdão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Gm/A A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">2. Quisera ver a dor</div></div>
+  <div class="bl"><div class="ch">A# Cm Dm</div><div class="ly">marcando sua feição</div></div>
+  <div class="bl"><div class="ch">D# Dm Cm Cm/D# F</div><div class="ly">peso tão grande é o meu pecar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Gm/A A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cada vil pensar</div></div>
+  <div class="bl"><div class="ch">A# Cm Dm</div><div class="ly">cada ação atroz</div></div>
+  <div class="bl"><div class="ch">D# Dm D# F</div><div class="ly">Sua fronte em sangue a coroar</div></div>
+  <div class="bl"><div class="ch">Dm D# F A#</div><div class="ly">Este é o poder da cruz</div></div>
+  <div class="bl"><div class="ch">Dm D# F A#</div><div class="ly">Jesus se fez maldição</div></div>
+  <div class="bl"><div class="ch">Dm D# D#dim F</div><div class="ly">Tomou a culpa, toda a ira</div></div>
+  <div class="bl"><div class="ch">F/A A# D# F A#</div><div class="ly">Seu sangue nos comprou perdão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Gm/A A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">3. Densa escuridão</div></div>
+  <div class="bl"><div class="ch">A# Cm Dm</div><div class="ly">treme o chão dos pés</div></div>
+  <div class="bl"><div class="ch">D# Dm Cm Cm/D# F</div><div class="ly">Pende sem vida o Criador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Gm/A A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O véu rasgado em dois</div></div>
+  <div class="bl"><div class="ch">A# Cm Dm</div><div class="ly">mortos a viver</div></div>
+  <div class="bl"><div class="ch">D# Dm D# F</div><div class="ly">'Consumado Está' bradou!</div></div>
+  <div class="bl"><div class="ch">Dm D# F A#</div><div class="ly">Este é o poder da cruz</div></div>
+  <div class="bl"><div class="ch">Dm D# F A#</div><div class="ly">Jesus se fez maldição</div></div>
+  <div class="bl"><div class="ch">Dm D# D#dim F</div><div class="ly">Tomou a culpa, toda a ira</div></div>
+  <div class="bl"><div class="ch">F/A A# D# F A#</div><div class="ly">Seu sangue nos comprou perdão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Gm/A A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">4. Quiser as chagas ver</div></div>
+  <div class="bl"><div class="ch">A# Cm Dm</div><div class="ly">com meu nome ali</div></div>
+  <div class="bl"><div class="ch">D# Dm Cm Cm/D#F</div><div class="ly">Seu sofrimento livra-me</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Gm/A A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A morte a cruz matou</div></div>
+  <div class="bl"><div class="ch">A# Cm Dm</div><div class="ly">e vida assim ganhei</div></div>
+  <div class="bl"><div class="ch">D# Dm D# F</div><div class="ly">Por seu amor servil</div></div>
+  <div class="bl"><div class="ch">Dm D# F A#</div><div class="ly">Este é o poder da cruz</div></div>
+  <div class="bl"><div class="ch">Dm D# F A#</div><div class="ly">O próprio Deus por nós morreu</div></div>
+  <div class="bl"><div class="ch">Dm D# D#dim F</div><div class="ly">Quanto amor, o que custou</div></div>
+  <div class="bl"><div class="ch">F/A A# D# F A#</div><div class="ly">Seu sangue nos comprou perdão</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

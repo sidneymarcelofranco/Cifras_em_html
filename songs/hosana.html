@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosana</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Hosana</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">C#m E7M F#m7 G#m7</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Eu vejo o Rei da Glória</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Vindo com Seu poder</div></div>
+  <div class="bl"><div class="ch">F#m7 B9 C#m7</div><div class="ly">A terra vai estremecer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu vejo a Sua graça</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Os pecados perdoar</div></div>
+  <div class="bl"><div class="ch">F#m7 B9 C#m7</div><div class="ly">A terra vai então cantar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">E/G# A B9 C#m</div><div class="ly">Hosa____na, hosa__na</div></div>
+  <div class="bl"><div class="ch">A C#m B9</div><div class="ly">Hosana nas altu___ras</div></div>
+  <div class="bl"><div class="ch">E/G# A B9 C#m</div><div class="ly">Hosa____na, hosa__na</div></div>
+  <div class="bl"><div class="ch">A B9 C#m7</div><div class="ly">Hosana nas altu___ras</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Eu vejo um povo eleito</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Assumindo o seu lugar</div></div>
+  <div class="bl"><div class="ch">F#m7 B9</div><div class="ly">Pra sua fé compartilhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu vejo um avivamento</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Quando o Teu povo orar</div></div>
+  <div class="bl"><div class="ch">F#m7 B9</div><div class="ly">E Te buscar, e Te buscar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">E/G# A B9 C#m</div><div class="ly">Hosa____na, hosa__na</div></div>
+  <div class="bl"><div class="ch">A C#m B9</div><div class="ly">Hosana nas altu___ras</div></div>
+  <div class="bl"><div class="ch">E/G# A B9 C#m</div><div class="ly">Hosa____na, hosa__na</div></div>
+  <div class="bl"><div class="ch">A B9 E</div><div class="ly">Hosana nas altu___ras</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">C#m E7M F#m7 G#m7</div>
+  <div class="co">C#m E7M F#m7 G#m7</div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">A B9</div><div class="ly">Limpa o meu coração</div></div>
+  <div class="bl"><div class="ch">E C#m7</div><div class="ly">Abre os meus olhos que eu possa ver</div></div>
+  <div class="bl"><div class="ch">A B9 C#m7</div><div class="ly">Com amor que tens por mim, Te amo!</div></div>
+  <div class="bl"><div class="ch">A B9</div><div class="ly">Quero ser igual a Ti</div></div>
+  <div class="bl"><div class="ch">E C#m7</div><div class="ly">Tudo o que sou é pra Teu louvor</div></div>
+  <div class="bl"><div class="ch">A B9 C#m7</div><div class="ly">Pois contigo eu vou viver, pra sempre</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">E/G# A B9 C#m</div><div class="ly">Hosa____na, hosa__na</div></div>
+  <div class="bl"><div class="ch">A C#m B9</div><div class="ly">Hosana nas altu___ras</div></div>
+  <div class="bl"><div class="ch">E/G# A B9 C#m</div><div class="ly">Hosa____na, hosa__na</div></div>
+  <div class="bl"><div class="ch">A B9 E</div><div class="ly">Hosana nas altu___ras</div></div>
+  <div class="bl"><div class="ch">E/G# A B9 C#m</div><div class="ly">Hosa____na, hosa__na</div></div>
+  <div class="bl"><div class="ch">A C#m B9</div><div class="ly">Hosana nas altu___ras</div></div>
+  <div class="bl"><div class="ch">E/G# A B9 C#m</div><div class="ly">Hosa____na, hosa__na</div></div>
+  <div class="bl"><div class="ch">A B9 C#m</div><div class="ly">Hosana nas altu___ras</div></div>
+  <div class="bl"><div class="ch">A B9 E</div><div class="ly">Hosana nas altu___ras</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

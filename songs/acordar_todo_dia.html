@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acordar Todo Dia</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Acordar Todo Dia</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Am11 Fm7 E7</div>
+  <div class="bl"><div class="ch">Am11</div><div class="ly">Acordar todo dia</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7+9 E7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E entregar-te o louvor é o melhor é o melhor</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Acordar todo dia</div></div>
+  <div class="bl"><div class="ch">Dm7 Em7</div><div class="ly">E entregar-te o louvor é o melhor é o melhor</div></div>
+  <div class="bl"><div class="ch">Dm Am7</div><div class="ly">Saber que o Senhor é o mesmo e não mudará</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 C7 F7+</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E sempre em vitória me conduzirá</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm Am F7+ E°</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Espirito Santo me ensinará, de força e poder me revestirá</div></div>
+  <div class="bl"><div class="ch">C Am</div><div class="ly">A Ti toda honra, glória e louvor</div></div>
+  <div class="bl"><div class="ch">Fm7 G E7</div><div class="ly">Poder, majestade e adoração</div></div>
+  <div class="bl"><div class="ch">Am7 Gm7 Fm7</div><div class="ly">Entrego a ti de todo coração</div></div>
+  <div class="bl"><div class="ch">Dm G C#</div><div class="ly">Aquele que é Rei, é Santo e meu Salvador</div></div>
+  <div class="bl"><div class="ch">Bbm F# D#m Fm</div><div class="ly">Acordar todo dia, e entregar-te o louvor é o melhor é o melhor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

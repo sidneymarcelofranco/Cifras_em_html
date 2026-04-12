@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Louvemos Ao Senhor</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="F">
+
+<header>
+  <div class="hdr-title">
+    <h1>Louvemos Ao Senhor</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Gm7(9) Am7(9) Gm7(9) Bb7M/C</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7(9) Bb7M/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louvemos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7(9) Bb7M/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louvemos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Bb9/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Adoremos no seu santo monte</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/C Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nosso amado pai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7(5-) Bb7M/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Seu nome é Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( C Bb A Gm7(9) )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb7M/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louvemos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7(9) Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louvemos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Bb/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Adoremos no seu santo monte</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/C Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nosso amado pai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm7(5-) Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Seu nome é Santo</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F7M(9) Dm7(9) Gm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louva____________mos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/C F Dm7(9) Gm7(9) Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois seu nome é Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M(9) Dm7(9) Gm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louva____________mos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/C F Dm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois seu nome é Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Gm7 F9/A Bb/C )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">F Am7 Dm7 Gm7(9) Bb/C</div><div class="ly">Magnifiquemos ao Senhor</div></div>
+  <div class="bl"><div class="ch">F Am7 Dm7 Gm7(9) Bb/C</div><div class="ly">Ao rei que é digno de Louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Gm7 F/A Bb B° Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Excelso, Supremo, e mui dig__no de Louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Gm7 F/A Bb B° Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Excelso, Supremo, e mui dig__no de Louvor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F7M(9) Dm7(9) Gm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louva____________mos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/C F Dm7(9) Gm7(9) Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois seu nome é Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M(9) Dm7(9) Gm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louva____________mos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/C F Dm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois seu nome é Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Gm7 F/A Bb/C )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Terceira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F F/D# Bb Bb/C F Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Hosana, Hosana, Hosana ao nosso Rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F D#/F Bb Gm7 Bb/C F Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Hosana, Hosana, Hosa__na ao nosso Rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/A Dm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cristo é a nossa vida, o motivo do louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A Gm Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em nosso novo coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/A Dm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois morreu a nossa morte pra vivermos sua vida</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nos trouxe grande salvação</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F7M(9) Dm7(9) Gm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louva____________mos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/C F Dm7(9) Gm7(9) Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois seu nome é Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M(9) Dm7(9) Gm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louva____________mos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/C F Dm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois seu nome é Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Gm7 F9/A Bb/C )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F7M(9) Dm7(9) Gm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louva____________mos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/C F Dm7(9) Gm7(9) Bb/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois seu nome é Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F7M(9) Dm7(9) Gm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louva____________mos ao Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/C F Dm7(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois seu nome é Santo</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

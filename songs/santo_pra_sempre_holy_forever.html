@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santo Pra Sempre (Holy Forever)</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="Ab">
+
+<header>
+  <div class="hdr-title">
+    <h1>Santo Pra Sempre (Holy Forever)</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Db Eb Cm Fm Eb</div>
+  <div class="bl"><div class="ch">Ab Db Ab</div><div class="ly">As muitas gerações, rendidas em louvor</div></div>
+  <div class="bl"><div class="ch">Fm Eb Db</div><div class="ly">Cantando ao cordeiro uma canção</div></div>
+  <div class="bl"><div class="ch">Ab Db Ab</div><div class="ly">Os que em ti se foram e os que hão de crer</div></div>
+  <div class="bl"><div class="ch">Fm Eb Db</div><div class="ly">Cantando ao cordeiro uma canção</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">Teu nome é o mais alto</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Teu nome é o maior</div></div>
+  <div class="bl"><div class="ch">Fm Db</div><div class="ly">Teu nome é sobre todos</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">Os tronos e domínios</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Governos e poderes</div></div>
+  <div class="bl"><div class="ch">Fm Bbm</div><div class="ly">Teu nome é sobre todos</div></div>
+  <div class="bl"><div class="ch">Db Fm Eb</div><div class="ly">E os anjos clamam, San____to</div></div>
+  <div class="bl"><div class="ch">Cm Fm</div><div class="ly">Toda criação, Santo</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Exaltado És, Santo</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Santo pra sempre</div></div>
+  <div class="bl"><div class="ch">Ab Db Ab</div><div class="ly">Quem foi perdoado e redimido foi</div></div>
+  <div class="bl"><div class="ch">Fm Eb Db</div><div class="ly">Cante ao cordeiro uma canção</div></div>
+  <div class="bl"><div class="ch">Ab Db Ab</div><div class="ly">Aquele que é livre e leva o seu nome</div></div>
+  <div class="bl"><div class="ch">Fm Eb Db</div><div class="ly">Cante ao cordeiro uma canção</div></div>
+  <div class="bl"><div class="ch">Fm Eb Db</div><div class="ly">Cantaremos para sempre, amém</div></div>
+  <div class="bl"><div class="ch">Db Fm Eb</div><div class="ly">E os anjos clamam, San____to</div></div>
+  <div class="bl"><div class="ch">Cm Fm</div><div class="ly">Toda criação, Santo</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Exaltado És, Santo</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Santo pra sempre</div></div>
+  <div class="bl"><div class="ch">Db Fm Eb</div><div class="ly">O teu povo canta, San____to</div></div>
+  <div class="bl"><div class="ch">Cm Fm</div><div class="ly">Sim, ao rei dos reis, Santo</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Tu sempre serás Santo</div></div>
+  <div class="bl"><div class="ch">Ab Ab4 Ab</div><div class="ly">Santo pra sempre</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">Teu nome é o mais alto</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Teu nome é o maior</div></div>
+  <div class="bl"><div class="ch">Fm Db</div><div class="ly">Teu nome é sobre todos</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">Os tronos e domínios</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Governos e poderes</div></div>
+  <div class="bl"><div class="ch">Fm Bbm</div><div class="ly">Teu nome é sobre todos</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">Teu nome é o mais alto</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Teu nome é o maior</div></div>
+  <div class="bl"><div class="ch">Fm Db</div><div class="ly">Teu nome é sobre todos</div></div>
+  <div class="bl"><div class="ch">Db</div><div class="ly">Os tronos e domínios</div></div>
+  <div class="bl"><div class="ch">Eb</div><div class="ly">Governos e poderes</div></div>
+  <div class="bl"><div class="ch">Fm Bbm</div><div class="ly">Teu nome é sobre todos</div></div>
+  <div class="bl"><div class="ch">Db Fm Eb</div><div class="ly">E os anjos clamam, San____to</div></div>
+  <div class="bl"><div class="ch">Cm Fm</div><div class="ly">Toda criação, Santo</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Exaltado És, Santo</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Santo pra sempre</div></div>
+  <div class="bl"><div class="ch">Db Fm Eb</div><div class="ly">O teu povo canta, San____to</div></div>
+  <div class="bl"><div class="ch">Cm Fm</div><div class="ly">Sim, ao rei dos reis, Santo</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Tu sempre serás Santo</div></div>
+  <div class="bl"><div class="ch">Ab Ab4 Ab</div><div class="ly">Santo pra sempre</div></div>
+  <div class="bl"><div class="ch">Bbm Eb</div><div class="ly">Tu sempre serás Santo</div></div>
+  <div class="bl"><div class="ch">Ab Ab4 Ab</div><div class="ly">Santo pra sempre</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

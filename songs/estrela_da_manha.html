@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estrela da Manhã</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Estrela da Manhã</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C Bm7 E7/G# Am7 G#m7 Gm7 C7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És a nossa estrela da manhã</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm7 F/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cordeiro Santo que nos trouxe a paz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C Bm7 E7/G# Am7 G#m7 Gm7 C7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em tuas mãos está todo o vencer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm7 F/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Resposta a todo aquele que o clamar</div></div>
+  <div class="bl"><div class="ch">E E7 Am7 D/F#</div><div class="ly">A verdade é tua palavra que não pode mentir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm7 C/E F F/G D/F# E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso estamos aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A A/C# D A/C# Bm A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te louvamos oh Senhor</div></div>
+  <div class="bl"><div class="ch">E/G# A D E D A</div><div class="ly">Pelo teu imenso amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A A/C# D A/C# Bm D/A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Manifesta o teu perdão e poder</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C#m7 F#m7 Bm A/C# D D/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E assim vamos te adorar para sempre</div></div>
+  <div class="bl"><div class="ch">E A</div><div class="ly">Para sempre oh meu Deus!</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

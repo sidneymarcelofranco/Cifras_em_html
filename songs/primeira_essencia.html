@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primeira Essência</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Primeira Essência</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Aline Barros</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Am F</div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B F/A Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estou no meu jardim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tranquei a porta</div></div>
+  <div class="bl"><div class="ch">Dm G4</div><div class="ly">Abri meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B F/A Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Reguei minhas raízes</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com minhas lágrimas</div></div>
+  <div class="bl"><div class="ch">G4</div><div class="ly">Gotas de adoração</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F G</div><div class="ly">Senhor, não quero que os meus olhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Percam o brilho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Do primeiro amor por Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm7/C G/B Passagem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não quero que em mim se perca</div></div>
+  <div class="bl"><div class="ch">F Dm G4</div><div class="ly">O desejo de te adorar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem, Se__nhor e me resgata</div></div>
+  <div class="bl"><div class="ch">F C/E Dm G4</div><div class="ly">Todos os dias, só pra te adorar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que_ro ser teu bom perfume</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Primeira essência</div></div>
+  <div class="bl"><div class="ch">Dm G4 C</div><div class="ly">Jardim particular</div></div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Interlúdio</div><div class="bd">
+  <div class="co">Fm</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B F/A Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estou no meu jardim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tranquei a porta</div></div>
+  <div class="bl"><div class="ch">Dm G4</div><div class="ly">Abri meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B F/A Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Reguei minhas raízes</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com minhas lágrimas</div></div>
+  <div class="bl"><div class="ch">G4</div><div class="ly">Gotas de adoração</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F G</div><div class="ly">Senhor, não quero que os meus olhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Percam o brilho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E Dm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Do primeiro amor por Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm7/C G/B Passagem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não quero que em mim se perca</div></div>
+  <div class="bl"><div class="ch">F Dm G4</div><div class="ly">O desejo de te adorar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem, Se__nhor e me resgata</div></div>
+  <div class="bl"><div class="ch">F C/E Dm G4</div><div class="ly">Todos os dias, só pra te adorar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que_ro ser teu bom perfume</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Primeira essência</div></div>
+  <div class="bl"><div class="ch">Dm G4 F G</div><div class="ly">Jardim particular</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">Am</div><div class="ly">Te adoro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te adoro</div></div>
+  <div class="bl"><div class="ch">C F C</div><div class="ly">Vem sobre mim, Senhor</div></div>
+  <div class="bl"><div class="ch">Am9 G</div><div class="ly">Vem sobre mim, Senhor</div></div>
+  <div class="bl"><div class="ch">G Am G</div><div class="ly">Vem sobre mim, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem sobre mim, Senhor</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Te adoro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te adoro</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem, Se__nhor e me resgata</div></div>
+  <div class="bl"><div class="ch">F C/E Dm G4</div><div class="ly">Todos os dias, só pra te adorar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que_ro ser teu bom perfume</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Primeira essência</div></div>
+  <div class="bl"><div class="ch">Dm G4 Am G</div><div class="ly">Jardim particular</div></div>
+  <div class="bl"><div class="ch">F G4 C</div><div class="ly">Jardim particular</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

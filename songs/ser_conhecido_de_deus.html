@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ser Conhecido de Deus</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="A">
+
+<header>
+  <div class="hdr-title">
+    <h1>Ser Conhecido de Deus</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">F#m7 E D9</div>
+  <div class="co">F#m7 E D9</div>
+  <div class="co">F#m7 E D9</div>
+  <div class="co">F#m7 E D9</div>
+  <div class="bl"><div class="ch">A E F#m7</div><div class="ly">Quero me apresentar a Ti ó Deus</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Te ofertar em louvor</div></div>
+  <div class="bl"><div class="ch">A E</div><div class="ly">Me entregar, me derramar</div></div>
+  <div class="bl"><div class="ch">F#m7 E D9</div><div class="ly">Os Teus planos cumprir</div></div>
+  <div class="bl"><div class="ch">A E F#m7</div><div class="ly">Que possas achar em mim a voz</div></div>
+  <div class="bl"><div class="ch">D9 A E</div><div class="ly">O que deseja ouvir, que toca o espírito, abre os céus</div></div>
+  <div class="bl"><div class="ch">F#m7 E D9</div><div class="ly">E enche o Teu coração</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Ser reconhecido, marcado por transformação</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Aprovado pelo fogo, habilitado pela unção</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Sabe todos os meus dias que pra vida e para morte</div></div>
+  <div class="bl"><div class="ch">Bm7 E4 E</div><div class="ly">Eu vou andar com Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Senhor, conhece os que são seus</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Ouve a voz sincera de um adorador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me separou, me marcou</div></div>
+  <div class="bl"><div class="ch">F#m7 E D9</div><div class="ly">No Seu altar, para servir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Senhor, conhece os que são seus</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Ouve a voz sincera de um adorador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me separou, me marcou</div></div>
+  <div class="bl"><div class="ch">F#m7 E D9</div><div class="ly">No Seu altar, para servir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F#m7 E D9 F#m7 E D9 )</div></div>
+  <div class="bl"><div class="ch">A E F#m7</div><div class="ly">Quero me apresentar a Ti ó Deus</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Te ofertar em louvor</div></div>
+  <div class="bl"><div class="ch">A E</div><div class="ly">Me entregar, me derramar</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Os Teus planos cumprir</div></div>
+  <div class="bl"><div class="ch">A E F#m7</div><div class="ly">Que possas achar em mim a voz</div></div>
+  <div class="bl"><div class="ch">D9 A E</div><div class="ly">O que deseja ouvir, que toca o espírito, abre os céus</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">E enche o Teu coração</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Ser reconhecido, marcado por transformação</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Aprovado pelo fogo, habilitado pela unção</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Sabe todos os meus dias que pra vida e para morte</div></div>
+  <div class="bl"><div class="ch">Bm7 E4 E</div><div class="ly">Eu vou andar com Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Senhor, conhece os que são seus</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Ouve a voz sincera de um adorador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me separou, me marcou</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">No Seu altar, para servir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Senhor, conhece os que são seus</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Ouve a voz sincera de um adorador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me separou, me marcou</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">No Seu altar, para servir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Senhor, conhece os que são seus</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Ouve a voz sincera de um adorador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me separou, me marcou</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">No Seu altar, para servir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Senhor, conhece os que são seus</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">Ouve a voz sincera de um adorador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me separou, me marcou</div></div>
+  <div class="bl"><div class="ch">F#m7 D9</div><div class="ly">No Seu altar, para servir</div></div>
+  <div class="bl"><div class="ch">F#m7 E D9</div><div class="ly">Para servir</div></div>
+  <div class="bl"><div class="ch">F#m7 E D9</div><div class="ly">Para servir</div></div>
+  <div class="bl"><div class="ch">F#m7 E D9</div><div class="ly">Para servir</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maravilhado</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Maravilhado</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">A C#m7 F#m7 D2</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Tu reinas no trono dos céus</div></div>
+  <div class="bl"><div class="ch">A E4</div><div class="ly">A criação se prostra aos Teus pés</div></div>
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Tu reinas vestido de glória</div></div>
+  <div class="bl"><div class="ch">A E4</div><div class="ly">Os anjos Te adoram aos Teus pés</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Pra sempre governarás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Teu reino não passará</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus fico maravilhado</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Tu és muito mais</div></div>
+  <div class="bl"><div class="ch">D2</div><div class="ly">Do que eu possa expressar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quebro o vaso de alabastro</div></div>
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Sobre o Deus que sabe me maravilhar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Tu és totalmente amável</div></div>
+  <div class="bl"><div class="ch">A E</div><div class="ly">Tesouro desejável que eu procuro</div></div>
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Tu és um fogo apaixonado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu sou do meu amado e Tu és meu</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Pra sempre governarás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Teu reino não passará</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus fico maravilhado</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Tu és muito mais</div></div>
+  <div class="bl"><div class="ch">D2</div><div class="ly">Do que eu possa expressar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quebro o vaso de alabastro</div></div>
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Sobre o Deus que sabe me maravilhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus fico maravilhado</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Tu és muito mais</div></div>
+  <div class="bl"><div class="ch">D2</div><div class="ly">Do que eu possa expressar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quebro o vaso de alabastro</div></div>
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Sobre o Deus que sabe me maravilhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A E/G# F#m7 )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A E/G# F#m7 )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">A E/G# F#m7 D2 A</div><div class="ly">Derramo o meu louvor sobre Ti</div></div>
+  <div class="bl"><div class="ch">E/G# F#m7 D2 A</div><div class="ly">Derramo o meu amor sobre Ti</div></div>
+  <div class="bl"><div class="ch">E/G# F#m7 D2 A</div><div class="ly">Derramo o meu louvor sobre Ti</div></div>
+  <div class="bl"><div class="ch">E/G# F#m7 D2 A</div><div class="ly">Derramo o meu amor sobre Ti</div></div>
+  <div class="bl"><div class="ch">E/G# F#m7 D2 A</div><div class="ly">Derramo o meu louvor sobre Ti</div></div>
+  <div class="bl"><div class="ch">E/G# F#m7 D2 A</div><div class="ly">Derramo o meu amor sobre Ti</div></div>
+  <div class="bl"><div class="ch">E/G# F#m7 D2 A</div><div class="ly">Derramo o meu louvor sobre Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# F#m7 D2</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Derramo o meu amor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus fico maravilhado</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Tu és muito mais</div></div>
+  <div class="bl"><div class="ch">D2</div><div class="ly">Do que eu possa expressar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quebro o vaso de alabastro</div></div>
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Sobre o Deus que sabe me maravilhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus fico maravilhado</div></div>
+  <div class="bl"><div class="ch">F#m7</div><div class="ly">Tu és muito mais</div></div>
+  <div class="bl"><div class="ch">D2</div><div class="ly">Do que eu possa expressar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Santo Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quebro o vaso de alabastro</div></div>
+  <div class="bl"><div class="ch">F#m7 D2</div><div class="ly">Sobre o Deus que sabe me maravilhar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">A E/G# F#m7 D2</div>
+  <div class="co">A E/G# F#m7 D2 A</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nenhuma Condenação Há</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Nenhuma Condenação Há</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Bm7 F#m Em7(5-) D</div>
+  <div class="bl"><div class="ch">Bm G F#m A/E</div><div class="ly">De todas as provas</div></div>
+  <div class="bl"><div class="ch">Bm7</div><div class="ly">Que eu já passei</div></div>
+  <div class="bl"><div class="ch">G A9</div><div class="ly">É bem difícil, Senhor</div></div>
+  <div class="bl"><div class="ch">D D/F# Bm7 G</div><div class="ly">A gente ter que ouvir acusações</div></div>
+  <div class="bl"><div class="ch">A9</div><div class="ly">Do vil tentador</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7</div><div class="ly">Lembranças do passado vêm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E querem me fazer parar</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7</div><div class="ly">Ou mesmo palavras de alguém</div></div>
+  <div class="bl"><div class="ch">G A9</div><div class="ly">Que não quer na gente acreditar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G D/F# Em )</div></div>
+  <div class="bl"><div class="ch">D Bm7</div><div class="ly">E quase parando, sem forças</div></div>
+  <div class="bl"><div class="ch">G A9</div><div class="ly">E vigor, a gente lê a palavra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E encontra bastante</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Poder pra vencer</div></div>
+  <div class="bl"><div class="ch">G A9</div><div class="ly">E continuar a jornada</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7</div><div class="ly">E ver que o passado ficou pra trás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois Cristo na cruz tudo já venceu</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7</div><div class="ly">E saber que dele não lembra mais</div></div>
+  <div class="bl"><div class="ch">G A9</div><div class="ly">Eu canto pra glória de Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G D/F# Em )</div></div>
+  <div class="bl"><div class="ch">D Bm7</div><div class="ly">Nenhuma condenação há</div></div>
+  <div class="bl"><div class="ch">G A9</div><div class="ly">Para quem está em Ti, Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cuja vida coberta está pelo</div></div>
+  <div class="bl"><div class="ch">G A9</div><div class="ly">Sangue que desceu na cruz</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B D/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É certo que provas virão</div></div>
+  <div class="bl"><div class="ch">G A7</div><div class="ly">Investidas de um vil tentador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Bm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mas nenhuma condenação há</div></div>
+  <div class="bl"><div class="ch">G A9</div><div class="ly">Para quem está em Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Querido Senhor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

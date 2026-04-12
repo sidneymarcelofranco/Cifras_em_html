@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>João Viu</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>João Viu</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Não era um sonho, era realidade</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">João viu a cidade santa</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb C C4 C Bb/D C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para os crentes sendo preparada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">João viu</div></div>
+  <div class="bl"><div class="ch">Am Dm</div><div class="ly">Milhares e milhares de anjos</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Que voavam ao redor do trono</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">Que voavam ao redor do trono</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Que voavam ao redor do trono</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C Bb/D C/E</div></div>
+  <div class="co">De Deus</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">João viu</div></div>
+  <div class="bl"><div class="ch">Am Dm</div><div class="ly">Os sete castiçais de ouro</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">E no meio dos sete castiçais</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">Um semelhante ao Filho do Homem</div></div>
+  <div class="bl"><div class="ch">Gm Bb</div><div class="ly">Quem era esse homem?</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C Bb/D C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Era Jesus de Nazaré</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Não era um sonho, era realidade</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">João viu a cidade santa</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb C/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Para os crentes sendo preparada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quem tem ouvidos ouça</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">O que o Espírito diz às igrejas</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Jesus Cristo está voltando</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/F C/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Se prepare pra que tu O vejas</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parta</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">João viu</div></div>
+  <div class="bl"><div class="ch">Am Dm</div><div class="ly">E não mais pôde suportar</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Todas essas maravilhas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preparadas para os Seus filhos</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">Herdará todas essas bênçãos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C4 C Bb/D C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quem vencer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">João viu</div></div>
+  <div class="bl"><div class="ch">Am Dm</div><div class="ly">E eu também espero ver</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">O que foi morto e reviveu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E a morte Ele venceu</div></div>
+  <div class="bl"><div class="ch">Gm Bb</div><div class="ly">E com isto a vida eterna</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C C4 C Bb/D C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ele nos concedeu</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Não era um sonho, era realidade</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">João viu a cidade santa</div></div>
+  <div class="bl"><div class="ch">Bb C</div><div class="ly">Para os crentes sendo preparada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quem tem ouvidos ouça</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">O que o Espírito diz às igrejas</div></div>
+  <div class="bl"><div class="ch">Gm</div><div class="ly">Jesus Cristo está voltando</div></div>
+  <div class="bl"><div class="ch">Bb C</div><div class="ly">Se prepare pra que tu O vejas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am/G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não haverá mais noite a____li</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F# Em</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não haverá nenhum clamor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am/G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Verei os olhos de Je___sus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B4 B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tocarei Seu corpo enfim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am/G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não haverá mais noite a____li</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F# Em</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Não haverá nenhum clamor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am/G D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Verei os olhos de Je___sus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B4 B/D# Cº Em</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tocarei Seu corpo enfim</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

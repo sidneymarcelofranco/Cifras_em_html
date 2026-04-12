@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Família</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="G">
+
+<header>
+  <div class="hdr-title">
+    <h1>Família</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G9 G/F C/E Eb7M</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G9 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço pela minha família</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E por Tua presença no meu lar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço pelo pão de cada dia</div></div>
+  <div class="bl"><div class="ch">C9 D D4 D</div><div class="ly">Que o Senhor nunca deixou faltar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G9 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço pela nossa harmonia</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Só em Ti Senhor podemos confiar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Já Te agradeço pelas Tuas maravilhas</div></div>
+  <div class="bl"><div class="ch">C9 C9/E D4 D</div><div class="ly">E os milagres que ainda há de operar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G9 G/B C/E D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é benção do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/C G/B C9 D4 D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me ensina a tratar minha família com amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 G/B C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Edifica minha casa para o teu louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/D C/D G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é um presente do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G/F C/E Eb7M )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G9 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço pela minha família</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E por Tua presença no meu lar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço pelo pão de cada dia</div></div>
+  <div class="bl"><div class="ch">C9 D D4 D</div><div class="ly">Que o Senhor nunca deixou faltar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G9 D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço pela nossa harmonia</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/F C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Só em Ti Senhor podemos confiar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Já Te agradeço pelas Tuas maravilhas</div></div>
+  <div class="bl"><div class="ch">C9 C9/E D4 D</div><div class="ly">E os milagres que ainda há de operar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">G9 G/B C/E D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é benção do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/C G/B C9 D4 D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me ensina a tratar minha família com amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 G/B C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Edifica minha casa para o teu louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/D C/D G C/E D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é um presente do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G9 C/E D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é benção do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/C G/B C9 D4</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me ensina a tratar minha família com amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D Em7 G/B C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Edifica minha casa para o teu louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/D C/D G/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é um presente do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G9 G/B C/E D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é benção do Senhor</div></div>
+  <div class="bl"><div class="ch">G/B C9 D4 D</div><div class="ly">Me ensina a tratar minha família com amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Edifica minha casa para o teu louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/D C/D G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é um presente do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G/B C/E C9 D/F# Am )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B C/E D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é benção do Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/C G/B C9 D4 D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me ensina a tratar minha família com amor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em7 G/B C9 G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Edifica minha casa para o teu louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G/D C/D G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A minha família é um presente do Senhor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esperança - Aline Barros</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Esperança - Aline Barros</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Bb F Cm7 D#</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb Bb7M Gm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo posso em Ti, fortaleza minha</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu espero em Ti, firme nas promessas</div></div>
+  <div class="bl"><div class="ch">D# F4 F Bb</div><div class="ly">Tudo vai passar, mas a Tua palavra permanecerá</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F4 F )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb Bb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Me rendi a Ti, rasguei meu coração</div></div>
+  <div class="bl"><div class="ch">Gm Bb7</div><div class="ly">Fiel permaneci, mesmo quando o sol se pôs</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D# Bb/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu Te louvei, Te adorei</div></div>
+  <div class="bl"><div class="ch">Cm7 F4 F Bb D#/F Bb</div><div class="ly">Minha vida é Tua, meu coração Te dei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Cm Gm7 F Bb Cm</div><div class="ly">Os ventos podem até soprar contra mim</div></div>
+  <div class="bl"><div class="ch">Gm7 F4 F</div><div class="ly">Mas eu não deixo de crer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D# Bb/D F/A Gm Cm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tuas promessas protegi, guardei no coração</div></div>
+  <div class="bl"><div class="ch">Cm/Bb F4 F Bb</div><div class="ly">E da Tua Pa__lavra não abro mão</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A Gm Dm/F D# Bb/D Cm F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sinto florescer ao cheiro das águas minha es_____perança</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És meu Redentor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Dm/F D# Bb/D Cm7 Cm/Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Porque vives minha fé não mor____rerá</div></div>
+  <div class="bl"><div class="ch">Cm7 F4 F Bb D#/F Bb</div><div class="ly">O Senhor não fa__lhará</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bb D#/F Bb )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Cm Gm F Bb Cm</div><div class="ly">Os ventos podem até soprar contra mim</div></div>
+  <div class="bl"><div class="ch">Gm7 F4 F</div><div class="ly">Mas eu não deixo de crer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D# Bb/D F/A Gm Cm7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tuas promessas protegi, guardei no coração</div></div>
+  <div class="bl"><div class="ch">Cm/Bb F4 F Bb</div><div class="ly">E da Tua Pa__lavra não abro mão</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A Gm Dm/F D# Bb/D Cm F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sinto florescer ao cheiro das águas minha es_____perança</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És meu Redentor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Dm/F D# Bb/D Cm7 Cm/Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Porque vives minha fé não mor____rerá</div></div>
+  <div class="bl"><div class="ch">D# F4 Bb</div><div class="ly">O Senhor não falhará</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Pós - Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bb</div><div class="ly">Estou mais perto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De ti estou mais perto</div></div>
+  <div class="bl"><div class="ch">Cm D#</div><div class="ly">Meu prazer é te ver, és o meu Redentor</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">Estou mais perto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De ti estou mais perto</div></div>
+  <div class="bl"><div class="ch">Cm D#</div><div class="ly">Meu prazer é te ver, és o meu Redentor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">Bb D# Bb/D Cm F</div><div class="ly">Sinto florescer ao cheiro das águas minha es_____perança</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És meu Redentor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm Dm/F D# Bb/D Cm7 Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Porque vives minha fé não mor____rerá</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C D D# D#/F D#/F Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Sen__hor não fa________lhará</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

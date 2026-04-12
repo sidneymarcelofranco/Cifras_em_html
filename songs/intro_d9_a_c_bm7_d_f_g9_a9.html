@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INTRO: | D9 A/C# Bm7 | D/F# G9 | A9 |</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>INTRO: | D9 A/C# Bm7 | D/F# G9 | A9 |</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">D/F# G9 A9 Bm7 G9 A9</div><div class="ly">MESMO QUANDO FALHO...! EU SEI... ME AMAS...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9 A9 Bm7 D/F# G9 A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">ES....TÁS PRESENTE...! A ME CERCAR...!</div></div>
+  <div class="bl"><div class="ch">D/F# G9 A9 Bm7 G9 A9 G9 A9</div><div class="ly">EM TODO TEMPO...! EU SEI... ME AMAS...! EU SEI... ME AMAS...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">REFRÃO:</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D9 | A/C# Bm7 | | D/F# G9 | A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">PROSTRO-ME DIANTE DA CRUZ... VEJO O SANGUE DE JESUS, NUNCA HOUVE AMOR ASSIM...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D9 | A/C# Bm7 | | D/F# G9 | A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">SOBRE A MORTE JÁ VENCEU... SUA GLÓRIA O CÉU ENCHEU, NADA IRÁ ME SEPARAR...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">1ªX INTERLÚDIO: | Em7 G9 A9 | Em7 G9 A4 A9 |</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9 A9 Bm7 D/F# G9 A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">TU... ÉS MEU GUI...A...! MEU PROTETOR...</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9 A9 Bm7 G9 A9 G9 A9 | REFRÃO 2X |</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">TUA MÃO ME FIRMA...! EU SEI... ME AMAS...! EU SEI... ME AMAS...!</div></div>
+  <div class="bl"><div class="ch">G9 A9 Bm7 G9 Bm7 A9</div><div class="ly">O VÉU RASGOU, O CAMINHO ABRIU... TUDO CONSUMADO ESTÁ...</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G9 A9 Bm7 G9 Bm7 A9 | Em7 G9 A4 A9 |</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O VÉU RASGOU, O CAMINHO ABRIU... TUDO CONSUMADO ESTÁ...</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9 A9 Bm7 D/F# G9 A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E QUANDO TUDO...! SE... ACABAR...!</div></div>
+  <div class="bl"><div class="ch">D/F# G9 A9 Bm7 G9 A9 G9 A9</div><div class="ly">ESTAREI SEGURO...! POIS SEI... ME AMAS...! POIS EU SEI... ME AMAS...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">REFRÃO:</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D9 | A/C# Bm7 | | D/F# G9 | A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">PROSTRO-ME DIANTE DA CRUZ... VEJO O SANGUE DE JESUS, NUNCA HOUVE AMOR ASSIM...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D9 | A/C# Bm7 | | D/F# G9 | A9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">SOBRE A MORTE JÁ VENCEU... SUA GLÓRIA O CÉU ENCHEU, NADA IRÁ ME SEPARAR...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">SOBE UM TOM REFRÃO:</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E9 | B/D# C#m7 | | E/G# A9 | B9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">PROSTRO-ME DIANTE DA CRUZ... VEJO O SANGUE DE JESUS, NUNCA HOUVE AMOR ASSIM...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E9 | B/D# C#m7 | | E/G# A9 | | C#m7 B9 |</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">SOBRE A MORTE JÁ VENCEU... SUA GLÓRIA O CÉU ENCHEU, NADA IRÁ ME SEPARAR...!</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">FINAL: | F#m7 A9 B9 | F#m7 A9 B4 B9 | E... |</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

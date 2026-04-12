@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrega</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Entrega</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">D9 A9 Em7 G</div>
+  <div class="co">D9 A9 Em7 G D9</div>
+  <div class="bl"><div class="ch">D9 A9</div><div class="ly">Te dou meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tudo que há em mim</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Entrego meu viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por amor a Ti, meu Rei</div></div>
+  <div class="bl"><div class="ch">D A</div><div class="ly">Meus sonhos rendo a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E meus direitos dou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O orgulho vou trocar pela vida do Senhor</div></div>
+  <div class="bl"><div class="ch">Bm A/C# D G D Bm7 A G</div><div class="ly">E eu entrego tudo a Ti, tudo a Ti</div></div>
+  <div class="bl"><div class="ch">Bm A/C# D G D Bm7 A G</div><div class="ly">E eu entrego tudo a Ti, tudo a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D A G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D A G )</div></div>
+  <div class="bl"><div class="ch">D9 A9</div><div class="ly">Te dou meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tudo que há em mim</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Entrego meu viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por amor a Ti, meu Rei</div></div>
+  <div class="bl"><div class="ch">D A</div><div class="ly">Meus sonhos rendo a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E meus direitos dou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O orgulho vou trocar pela vida do Senhor</div></div>
+  <div class="bl"><div class="ch">Bm A/C# D G D Bm7 A G</div><div class="ly">E eu entrego tudo a Ti, tudo a Ti</div></div>
+  <div class="bl"><div class="ch">Bm A/C# D G D Bm7 A G</div><div class="ly">E eu entrego tudo a Ti, tudo a Ti</div></div>
+  <div class="bl"><div class="ch">D A</div><div class="ly">Eu canto esta canção</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De entrega a Ti, Jesus</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">E o que o mundo dá</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu deixo aos pés da cruz</div></div>
+  <div class="bl"><div class="ch">D A</div><div class="ly">Por conhecer a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Teu nome dar louvor</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Sentir Tua alegria</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Partilhando Tua dor</div></div>
+  <div class="bl"><div class="ch">Bm A/C# D G D Bm7 A G</div><div class="ly">E eu entrego tudo a Ti, tudo a Ti</div></div>
+  <div class="bl"><div class="ch">Bm A/C# D G D Bm7 A G</div><div class="ly">E eu entrego tudo a Ti, tudo a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D A Em G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D/F# A/C# )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G Bm A/C# )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D A Em G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D/F# A/C# G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Bm A/C# )</div></div>
+  <div class="bl"><div class="ch">D F#m B4 B7</div><div class="ly">A Deus toda a glória</div></div>
+  <div class="bl"><div class="ch">Em Gm7 A</div><div class="ly">A Deus toda a glória</div></div>
+  <div class="bl"><div class="ch">F#4 F# Bm7 Bm7/A</div><div class="ly">A Deus toda a glória</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# A4 A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que por nós tanto fez</div></div>
+  <div class="bl"><div class="ch">D F#m B4 B7</div><div class="ly">Foi na cruz que salvou-me</div></div>
+  <div class="bl"><div class="ch">Em Gm7 A9</div><div class="ly">Seu poder restaurou-me</div></div>
+  <div class="bl"><div class="ch">F#4 F# Bm7 E/G#</div><div class="ly">A Deus toda a glória</div></div>
+  <div class="bl"><div class="ch">A4 A D B4 B</div><div class="ly">Para Sempre Amém</div></div>
+  <div class="bl"><div class="ch">E G#m C#4 C#7</div><div class="ly">A Deus toda a glória</div></div>
+  <div class="bl"><div class="ch">F#m Am7 B9</div><div class="ly">A Deus toda a glória</div></div>
+  <div class="bl"><div class="ch">G#4 G# C#m7 C#m7/B</div><div class="ly">A Deus toda a glória</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#/A# B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que por nós tanto fez</div></div>
+  <div class="bl"><div class="ch">E G#m C#4 C#7</div><div class="ly">Foi na cruz que salvou-me</div></div>
+  <div class="bl"><div class="ch">F#m G G# Am7 B9</div><div class="ly">Seu poder restaurou-me</div></div>
+  <div class="bl"><div class="ch">G#4 G# C#m7 F#/A#</div><div class="ly">A Deus toda a glória</div></div>
+  <div class="bl"><div class="ch">B E</div><div class="ly">Para Sempre Amém</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

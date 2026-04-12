@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesus, o Plano Perfeito</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Jesus, o Plano Perfeito</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">E9 C#m7 G#m7 A 2x</div>
+  <div class="bl"><div class="ch">E9</div><div class="ly">Um plano pra salvar,</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Um pacto pra selar</div></div>
+  <div class="bl"><div class="ch">G#m7 A9</div><div class="ly">Silêncio no céu</div></div>
+  <div class="bl"><div class="ch">E9</div><div class="ly">Resgate e salvação,</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">Encheu Seu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ele nem hesitou</div></div>
+  <div class="bl"><div class="ch">F#m D</div><div class="ly">No palco do amor, o autor anunciou</div></div>
+  <div class="bl"><div class="ch">B E</div><div class="ly">A vida e salvação</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D# C#m7 G#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo que Ele fez foi obedecer</div></div>
+  <div class="bl"><div class="ch">A9 Am Am6</div><div class="ly">O plano que Deus escreveu</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E7M(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E quando a minha história</div></div>
+  <div class="bl"><div class="ch">C#m7 G#m7</div><div class="ly">Parecia ter chegado ao fim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A9 E7M(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Sua graça me alcançou</div></div>
+  <div class="bl"><div class="ch">C#m7</div><div class="ly">E quando tudo parecia estar</div></div>
+  <div class="bl"><div class="ch">G#m7</div><div class="ly">Perdido naquela cruz</div></div>
+  <div class="bl"><div class="ch">A F#7 A</div><div class="ly">O Seu sangue me libertou</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E7M(9) C#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus o plano perfeito</div></div>
+  <div class="bl"><div class="ch">G#m7 A9</div><div class="ly">Mistério da graça que me transformou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E7M(9) C#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Seu nome é Jesus, Nome sobre todos</div></div>
+  <div class="bl"><div class="ch">G#m7 A9</div><div class="ly">Veio pra salvar, Ele me salvou</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">( F#m7 G#m7 A9 )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">E7M(9) C#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus o plano perfeito</div></div>
+  <div class="bl"><div class="ch">G#m7 A9</div><div class="ly">Mistério da graça que me transformou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E7M(9) C#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Seu nome é Jesus, Nome sobre todos</div></div>
+  <div class="bl"><div class="ch">G#m7 A9</div><div class="ly">Veio pra salvar, Ele me salvou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E7M(9) C#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus o plano perfeito</div></div>
+  <div class="bl"><div class="ch">G#m7 A9</div><div class="ly">Mistério da graça que me transformou</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E7M(9) C#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Seu nome é Jesus, Nome sobre todos</div></div>
+  <div class="bl"><div class="ch">G#m7 A9</div><div class="ly">Veio pra salvar, Ele me salvou</div></div>
+  <div class="bl"><div class="ch">F#7 A</div><div class="ly">Te adoramos</div></div>
+  <div class="bl"><div class="ch">F#7 A</div><div class="ly">Te adoramos</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

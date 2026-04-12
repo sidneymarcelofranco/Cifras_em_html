@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medley Te Agradeço</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Medley Te Agradeço</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch">D G</div><div class="ly">Por tudo o que tens feito</div></div>
+  <div class="bl"><div class="ch">D A</div><div class="ly">Por tudo que vais fazer</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por Tuas promessas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tudo o que És</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G9 A4</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu quero Te agradecer</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">Com todo o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço por me libertar e salvar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por ter morrido em meu lugar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agrade_ço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus, Te agrade_ço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu Te agrade_ço</div></div>
+  <div class="bl"><div class="ch">A D</div><div class="ly">Te agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agradeço por me libertar e salvar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por ter morrido em meu lugar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agrade - ço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus, Te agrade - ço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu Te agrade - ço</div></div>
+  <div class="bl"><div class="ch">A D</div><div class="ly">Te agradeço</div></div>
+  <div class="bl"><div class="ch">A D</div><div class="ly">Te agradeço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A4 G/A D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te agrade______ço</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Digno é o Cordeiro</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Que foi morto</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Santo, Santo Ele é</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um novo cântico</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Ao que se assenta</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Sobre o trono do céu</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Está vestido</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Ao arco-íris</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Sons de trovão, luzes, relâmpagos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Louvores, honra e glória</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Força e poder pra sempre</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Ao único Rei eternamente</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Santo, Santo, Santo</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Que era e é, e há de vir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com a criação eu canto</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Louvores ao Rei dos reis</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És tudo para mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E eu Te adorarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D Am7 C G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Maravilhado</div></div>
+  <div class="co">Am7</div>
+  <div class="co">Extasiado</div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Eu fico ao ouvir Teu nome</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus, Teu nome é força</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">É fôlego de vida</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Misteriosa água viva</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Am7 F C G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Am7 F C G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Santo, Santo, Santo</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Deus Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Que era e é, e há de vir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com a criação eu canto</div></div>
+  <div class="bl"><div class="ch">Am7</div><div class="ly">Louvores ao Rei dos reis</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">És tudo para mim</div></div>
+  <div class="bl"><div class="ch">G D</div><div class="ly">E eu Te adorarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D7M/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">Bm7 A4</div><div class="ly">Que era e há de vir</div></div>
+  <div class="bl"><div class="ch">Digno</div><div class="ly">D7M/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De receber a glória</div></div>
+  <div class="bl"><div class="ch">G Bm A4</div><div class="ly">A honra e o louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Santo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D7M/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Todo Poderoso</div></div>
+  <div class="bl"><div class="ch">Bm7 A4</div><div class="ly">Que era e há de vir</div></div>
+  <div class="bl"><div class="ch">Digno</div><div class="ly">D7M/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">De receber a glória</div></div>
+  <div class="bl"><div class="ch">G Bm A4</div><div class="ly">A honra e o louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dia e noite, sem cessar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nossa voz subirá</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Digno é o Cordeiro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Digno é o Cordeiro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dia e noite, sem cessar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nossa voz subirá</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Digno é o Cordeiro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Digno é o Cordeiro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dia e noite, sem cessar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nossa voz subirá</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Digno é o Cordeiro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Digno é o Cordeiro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dia e noite, sem cessar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nossa voz subirá</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Digno é o Cordeiro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Digno é o Cordei - ro</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G Bm A Bm7 D/F# )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G Bm A Bm7 D/F# )</div></div>
+  <div class="co">Exaltado</div>
+  <div class="co">Em</div>
+  <div class="bl"><div class="ch">Exaltado</div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch">Exaltado</div><div class="ly">Oh Senhor</div></div>
+  <div class="co">Exaltado</div>
+  <div class="co">Em</div>
+  <div class="bl"><div class="ch">Exaltado</div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch">Exaltado</div><div class="ly">G/B A/C# D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Senhor</div></div>
+  <div class="co">Exaltado</div>
+  <div class="co">Em</div>
+  <div class="bl"><div class="ch">Exaltado</div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch">Exaltado</div><div class="ly">Oh Senhor</div></div>
+  <div class="co">Exaltado</div>
+  <div class="co">Em</div>
+  <div class="bl"><div class="ch">Exaltado</div><div class="ly">D/F# G</div></div>
+  <div class="bl"><div class="ch">Exaltado</div><div class="ly">G/B A/C# A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A# Am A# Am )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A# Am C# Cm )</div></div>
+  <div class="bl"><div class="ch">Fm D#/G G# C# D#</div><div class="ly">A E - le a Glória</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G# D#/G Fm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Ele a gló________ria</div></div>
+  <div class="bl"><div class="ch">C# Cm</div><div class="ly">A Ele a glória</div></div>
+  <div class="bl"><div class="ch">Fm</div><div class="ly">Pra sempre, amém</div></div>
+  <div class="bl"><div class="ch">Fm D#/G G# C# D#</div><div class="ly">A E - le a Glória</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G# D#/G Fm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Ele a gló________ria</div></div>
+  <div class="bl"><div class="ch">C# Cm</div><div class="ly">A Ele a glória</div></div>
+  <div class="bl"><div class="ch">C# Cm</div><div class="ly">Glória</div></div>
+  <div class="bl"><div class="ch">C# C</div><div class="ly">Glória</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pra sempre, amém</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

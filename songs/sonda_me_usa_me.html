@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonda-me, Usa-me</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Sonda-me, Usa-me</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Aline Barros</div>
+  <div class="co">Tom: CAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">C G/B F9 G Em</div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am7/G F9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B C4 C</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sonda-me, Senhor, e me conhece</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 C/E Dm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quebranta o meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Transforma-me conforme a Tua palavra</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F9 G/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E enche-me até que em mim</div></div>
+  <div class="bl"><div class="ch">Em7 Am</div><div class="ly">Se ache só a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7/G F9 G F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">En____tão, usa-me, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Usa-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como farol que brilha a noite</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como ponte sobre as águas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como abrigo no deserto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/A G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como flecha que acerta o alvo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu quero ser usado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Da maneira que Te agrade</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em qualquer hora e em qualquer lugar</div></div>
+  <div class="bl"><div class="ch">F9 G</div><div class="ly">Eis aqui a minha vida</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Usa-me, Senhor</div></div>
+  <div class="bl"><div class="ch">F G</div><div class="ly">Usa-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sonda-me, Senhor, e me conhece</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 C/E Dm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quebranta o meu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Transforma-me conforme a Tua palavra</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F9 G/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E enche-me até que em mim</div></div>
+  <div class="bl"><div class="ch">Em7 Am</div><div class="ly">Se ache só a Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7/G F9 G F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">En____tão, usa-me Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Usa-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como farol que brilha a noite</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como ponte sobre as águas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como abrigo no deserto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/A G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como flecha que acerta o alvo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu quero ser usado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Da maneira que Te agrade</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em qualquer hora e em qualquer lugar</div></div>
+  <div class="bl"><div class="ch">F9 G</div><div class="ly">Eis aqui a minha vida</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Usa-me, Senhor</div></div>
+  <div class="bl"><div class="ch">F G</div><div class="ly">Usa-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">C Am F9</div><div class="ly">Sonda-me, quebranta-me, transforma-me</div></div>
+  <div class="bl"><div class="ch">Dm F9 G</div><div class="ly">Enche-me e usa-me</div></div>
+  <div class="bl"><div class="ch">C Am F9</div><div class="ly">Sonda-me, quebranta-me, transforma-me</div></div>
+  <div class="bl"><div class="ch">Dm F9 G</div><div class="ly">Enche-me e usa-me, Senhor</div></div>
+  <div class="bl"><div class="ch">C Am F9</div><div class="ly">Sonda-me, quebranta-me, transforma-me</div></div>
+  <div class="bl"><div class="ch">Dm F9 G</div><div class="ly">Enche-me e usa-me</div></div>
+  <div class="bl"><div class="ch">C Am F9</div><div class="ly">Sonda-me, quebranta-me, transforma-me</div></div>
+  <div class="bl"><div class="ch">Dm F9 G Am G/B</div><div class="ly">Enche-me e usa-me, Senhor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como farol que brilha a noite</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como ponte sobre as águas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como abrigo no deserto</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/A G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Como flecha que acerta o alvo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu quero ser usado</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am Am7/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Da maneira que Te agrade</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9 C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em qualquer hora e em qualquer lugar</div></div>
+  <div class="bl"><div class="ch">F9 G</div><div class="ly">Eis aqui a minha vida</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Usa-me, Senhor</div></div>
+  <div class="bl"><div class="ch">F G</div><div class="ly">Usa-me</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">C Am F9</div><div class="ly">Sonda-me, quebranta-me, transforma-me</div></div>
+  <div class="bl"><div class="ch">Dm F9 G</div><div class="ly">Enche-me e usa-me</div></div>
+  <div class="bl"><div class="ch">C Am F9</div><div class="ly">Sonda-me, quebranta-me, transforma-me</div></div>
+  <div class="bl"><div class="ch">Dm F9 G Am G</div><div class="ly">Enche-me e usa-me, Senhor</div></div>
+  <div class="bl"><div class="ch">F9 G C</div><div class="ly">E usa-me, Senhor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

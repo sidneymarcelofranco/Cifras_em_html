@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espírito, Enche a Minha Vida / Jesus Em Tua Presença / Maravilhoso</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Espírito, Enche a Minha Vida / Jesus Em Tua Presença / Maravilhoso</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Aline Barros</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">D E A/C# D fa# sol# la sol# | fa# mi la sol# mi fa#</div></div>
+  <div class="bl"><div class="ch">A D E</div><div class="ly">Espírito, enche a minha vida</div></div>
+  <div class="bl"><div class="ch">F#m(fa# sol# la) E (sol# fa# mi)</div><div class="ly">Enche-me do Teu poder</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois de Ti, eu quero ser</div></div>
+  <div class="bl"><div class="ch">Bm E</div><div class="ly">Espírito, enche o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( D E D E ) (F# C# A B E G# | F# C# F# E)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G# D/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Espírito, enche a minha vida</div></div>
+  <div class="bl"><div class="ch">F#m (fa# sol# la) E (sol# fa# mi)</div><div class="ly">Enche-me do Teu poder</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois de Ti, eu quero ser</div></div>
+  <div class="bl"><div class="ch">Bm E A (crescendo)</div><div class="ly">Espírito, enche o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D D/E A9/C# F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">As minhas mãos eu quero levantar</div></div>
+  <div class="bl"><div class="ch">D E F#m A</div><div class="ly">E em louvor, te adorar</div></div>
+  <div class="bl"><div class="ch">D E A9/C# D9</div><div class="ly">Meu coração eu quero derramar</div></div>
+  <div class="bl"><div class="ch">Bm E F#m E</div><div class="ly">Diante do Teu altar</div></div>
+  <div class="bl"><div class="ch">Bm E A E/G# F#m</div><div class="ly">Diante do Teu altar</div></div>
+  <div class="bl"><div class="ch">Bm E</div><div class="ly">Diante do Teu altar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Interlúdio</div><div class="bd">
+  <div class="co">D E D E (fa# la fa# sol# | fa# la fa# mi )</div>
+  <div class="co">G#m F# E F# (si do# si do# si re# si do# )</div>
+  <div class="bl"><div class="ch">B E</div><div class="ly">Jesus, em Tua presença</div></div>
+  <div class="bl"><div class="ch">F# G#m</div><div class="ly">Reunimo-nos aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Contemplamos Tua face</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F# B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E rendemo-nos a Ti</div></div>
+  <div class="bl"><div class="ch">G#m D#m</div><div class="ly">Pois um dia Tua morte</div></div>
+  <div class="bl"><div class="ch">E B</div><div class="ly">Trouxe vida a todos nós</div></div>
+  <div class="bl"><div class="ch">B E</div><div class="ly">E nos deu completo acesso</div></div>
+  <div class="bl"><div class="ch">F# B</div><div class="ly">Ao coração do Pai</div></div>
+  <div class="bl"><div class="ch">G#m D#m</div><div class="ly">E o véu que separava</div></div>
+  <div class="bl"><div class="ch">C#m D#m E</div><div class="ly">Já não separa mais</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#m G#m/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A luz que outrora apagada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Agora brilha</div></div>
+  <div class="bl"><div class="ch">F# G#4 G#</div><div class="ly">E cada dia brilha mais</div></div>
+  <div class="bl"><div class="ch">E C#m G#m B</div><div class="ly">Só pra Te adorar</div></div>
+  <div class="bl"><div class="ch">E F# G#m B</div><div class="ly">E fazer Teu nome grande</div></div>
+  <div class="bl"><div class="ch">E F# G#m F# Db/F</div><div class="ly">E Te dar o louvor que é devido</div></div>
+  <div class="bl"><div class="ch">C#m7 F# B</div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch">G#m D#m</div><div class="ly">E o véu que separava</div></div>
+  <div class="bl"><div class="ch">C#m D#m E</div><div class="ly">Já não separa mais</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#m G#m/F#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A luz que outrora apagada</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Agora brilha</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F# G#4 F#/A# G#/C G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E cada dia brilha mais</div></div>
+  <div class="bl"><div class="ch">E C#m G#m B</div><div class="ly">Só pra Te adorar</div></div>
+  <div class="bl"><div class="ch">E F# G#m B</div><div class="ly">E fazer Teu nome grande</div></div>
+  <div class="bl"><div class="ch">E F# G#m F# Db/F</div><div class="ly">E Te dar o louvor que é devido</div></div>
+  <div class="bl"><div class="ch">C#m7 F# G#m F#</div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch">C#m</div><div class="ly">Estamos nós aqui</div></div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Interlúdio</div><div class="bd">
+  <div class="co">B C# (si do# si do# re# | mi re# mi sol# fa#)</div>
+  <div class="bl"><div class="ch">F#m9 Am6 (do# mi sol# sol# la sol# fa# mi do la)</div><div class="ly">E B/D# B/A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão formoso és, Rei do universo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G# F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tua glória enche a terra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E B9/D# A/C# F#º/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E enche os céus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E B/D# B/A E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quão formoso és, Rei do universo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A E/G# F#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tua glória enche a terra</div></div>
+  <div class="bl"><div class="ch">E B4 B</div><div class="ly">E enche os céus</div></div>
+  <div class="bl"><div class="ch">A B</div><div class="ly">Tua glória enche a terra</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#7/C C#m</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tua glória enche os céus</div></div>
+  <div class="bl"><div class="ch">F#m B E</div><div class="ly">Tua glória enche minha vida, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A/C# B/D#)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D# E E/G# A Db/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Maravilhoso é estar em tua presença</div></div>
+  <div class="bl"><div class="ch">F#m E B/D# (A/C#) B</div><div class="ly">Maravilhoso é poder te adorar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">(B/A) G#m G#/C C#m (B) F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Maravilhoso é tocar nas tuas vestes</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m B A/C# Am/C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Maravilhoso é te contemplar, Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E E/G# A Db/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Maravilhoso é estar em tua presença</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m E B/D# A/C# B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Maravilhoso é poder te adorar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/A G#m G#/C C#m B F#/A# (fa# mi do# fa# sol# do#)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Maravilhoso é tocar nas tuas vestes</div></div>
+  <div class="bl"><div class="ch">F#m B C#m B</div><div class="ly">Maravilhoso é te contemplar, Senhor</div></div>
+  <div class="bl"><div class="ch">F#m B</div><div class="ly">Maravilhoso é te contemplar, Senhor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">A E/G# F#m E (do# re# mi | si re# mi | la re# mi | sol#)</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eu Me Rendo</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="B">
+
+<header>
+  <div class="hdr-title">
+    <h1>Eu Me Rendo</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Tom: BAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">B2 B7M(9) E9 F#4</div>
+  <div class="co">B2 B7M(9) E9 F#4</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">B2 B7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Ti eu vou clamar</div></div>
+  <div class="bl"><div class="ch">E9</div><div class="ly">Pois tudo vem de Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tudo está em Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B2 B7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por Ti vou caminhar</div></div>
+  <div class="bl"><div class="ch">E9</div><div class="ly">Tu és a direção</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O sol a me guiar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">C#m7 F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo pode passar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B B/D# E B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O teu amor jamais me deixará</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C#m7 F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sempre há de existir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Novo amanhã</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D# E E5-</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preparado pra mim</div></div>
+  <div class="bl"><div class="ch">E F#</div><div class="ly">Preparado pra mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B2 B7M(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Ti eu vou clamar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E9/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pois tudo vem de Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tudo está em Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B2 B7M(9)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por Ti vou caminhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tu és a direção</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O sol a me guiar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C#m7 F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo pode passar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B B/D# E B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O Teu amor jamais me deixará</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C#m7 F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sempre há de existir</div></div>
+  <div class="bl"><div class="ch">B2</div><div class="ly">Novo amanhã</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D# E E5-</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preparado pra mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E E5-</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preparado pra mim</div></div>
+  <div class="bl"><div class="ch">E F#</div><div class="ly">Preparado pra mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Ti Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B2 B7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A Ti eu vou clamar</div></div>
+  <div class="bl"><div class="ch">E9</div><div class="ly">Pois tudo vem de Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E tudo está em Ti</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B2 B7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por Ti vou caminhar</div></div>
+  <div class="bl"><div class="ch">E9</div><div class="ly">Tu és a direção</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O sol a me guiar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C#m7 F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tudo pode passar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B B/D# E B/D#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O teu amor jamais me deixará</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C#m7 F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sempre há de existir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Novo amanhã</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B/D# E E5-</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preparado pra mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E E5-</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Preparado pra mim</div></div>
+  <div class="bl"><div class="ch">E F#</div><div class="ly">Preparado pra mim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">B F#</div><div class="ly">Eu me rendo aos Teus pés</div></div>
+  <div class="bl"><div class="ch">G#m E</div><div class="ly">És tudo que eu preciso pra viver</div></div>
+  <div class="bl"><div class="ch">B F#</div><div class="ly">Eu me lanço aos Teus braços</div></div>
+  <div class="bl"><div class="ch">G#m E</div><div class="ly">Onde encontro, meu refúgio</div></div>
+  <div class="bl"><div class="ch">B F#</div><div class="ly">Eu me rendo aos Teus pés</div></div>
+  <div class="bl"><div class="ch">G#m E</div><div class="ly">És tudo que eu preciso pra viver</div></div>
+  <div class="bl"><div class="ch">B F#</div><div class="ly">Eu me lanço aos Teus braços</div></div>
+  <div class="bl"><div class="ch">G#m E</div><div class="ly">Onde encontro, meu refúgio</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B B7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">G#m7 E9</div><div class="ly">Eis-me aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B B7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">G#m7 E9</div><div class="ly">Eis-me aqui</div></div>
+  <div class="bl"><div class="ch">B F#</div><div class="ly">Eu me rendo aos Teus pés</div></div>
+  <div class="bl"><div class="ch">G#m E9</div><div class="ly">És tudo que eu preciso pra viver</div></div>
+  <div class="bl"><div class="ch">B F#</div><div class="ly">Eu me lanço aos Teus braços</div></div>
+  <div class="bl"><div class="ch">G#m E9</div><div class="ly">Onde encontro, meu refúgio</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu me rendo aos Teus pés</div></div>
+  <div class="bl"><div class="ch">G#m E</div><div class="ly">És tudo que eu preciso pra viver</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu me lanço aos Teus braços</div></div>
+  <div class="bl"><div class="ch">G#m E</div><div class="ly">Onde encontro, meu refúgio</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">G#m7 E9</div><div class="ly">Eis-me aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">G#m7 E9</div><div class="ly">Eis-me aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">G#m7 E9</div><div class="ly">Eis-me aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">B F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus</div></div>
+  <div class="bl"><div class="ch">G#m7 E9 B</div><div class="ly">Eis-me aqui</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="co">G#m F# G#m</div>
+  <div class="co">F# E F#</div>
+  <div class="co">G#m F# G#m</div>
+  <div class="co">F# G#m F#</div>
+  <div class="co">G#m F# E</div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

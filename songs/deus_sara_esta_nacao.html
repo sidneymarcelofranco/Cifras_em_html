@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deus Sara Esta Nação</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Deus Sara Esta Nação</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Com Teu poder, com o óleo da Tua unção</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um dia. Deus olhou para esta nação</div></div>
+  <div class="bl"><div class="ch">Em F G C G</div><div class="ly">E por ela se apaixonou de uma forma especial</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C G/B Am7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Um dia. Deus olhou para esta nação</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em F G C C7. C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E por ela se apaixonou de uma forma especial</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F G/F Em</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Colocou sobre ela a Sua mão</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Am7 Dm G C C7. C/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Derramando a Sua unção, liberando o Seu poder</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Um Nariz Vermelho</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Um Nariz Vermelho</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">D A D G B E</div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">Eles usam seus filhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">DM</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eles usam seus pais</div></div>
+  <div class="bl"><div class="ch">F Em</div><div class="ly">Suas santas ações em orações dominicais</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">E eles usam palavras</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">Que são suas escravas</div></div>
+  <div class="bl"><div class="ch">F Em</div><div class="ly">E eles falam na frente as que jamais dizem por trás</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">Usam nossa saúde</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">E a nossa juventude</div></div>
+  <div class="bl"><div class="ch">F Em</div><div class="ly">Usam nossa inocência carregada de paixão</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">Usam nossa piedade</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">Nossa passividade</div></div>
+  <div class="bl"><div class="ch">F Em A</div><div class="ly">Usam nossa esperança embriagada na ilusão</div></div>
+  <div class="bl"><div class="ch">D F G D F G D</div><div class="ly">E nós usamos um nariz vermelho</div></div>
+  <div class="bl"><div class="ch">D F G D F G D</div><div class="ly">Nós usamos um nariz vermelho</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">E eles usam figuras</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">Usam as escrituras</div></div>
+  <div class="bl"><div class="ch">F Em</div><div class="ly">Usam muitos provérbios mas não ouvem seus conselhos</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">Eles usam estola</div></div>
+  <div class="bl"><div class="ch">Dm</div><div class="ly">Usam fraque e cartola</div></div>
+  <div class="bl"><div class="ch">F Em</div><div class="ly">Um caixão como cama sem reflexo no espelho</div></div>
+  <div class="bl"><div class="ch">D F G D F G D</div><div class="ly">E nós usamos um nariz vermelho</div></div>
+  <div class="bl"><div class="ch">D F G D F G D</div><div class="ly">Nós usamos um nariz vermelho</div></div>
+  <div class="bl"><div class="ch">Bb F</div><div class="ly">Fomos nós que escolhemos</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Fomos nós que os ungimos</div></div>
+  <div class="bl"><div class="ch">Bb F G</div><div class="ly">E beatificamos nos curvamos submergimos</div></div>
+  <div class="bl"><div class="ch">Bb F</div><div class="ly">Fomos nós que elegemos</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Somos nós quem votamos</div></div>
+  <div class="bl"><div class="ch">Bb F G</div><div class="ly">Nós que os esculpimos e agora os carregamos</div></div>
+  <div class="bl"><div class="ch">Bb F</div><div class="ly">Nós que os fabricamos</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">E depois os vendemos</div></div>
+  <div class="bl"><div class="ch">Bb F</div><div class="ly">Foi a nossa ganância nossa infância nosso engenho</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">É que somos tão crentes</div></div>
+  <div class="bl"><div class="ch">Bb F</div><div class="ly">E somos tão carentes</div></div>
+  <div class="bl"><div class="ch">C G</div><div class="ly">Esse é o nosso destino</div></div>
+  <div class="bl"><div class="ch">Bb F</div><div class="ly">Merecemos  e exibimos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O nariz vermelho</div></div>
+  <div class="bl"><div class="ch">D F G D F G D</div><div class="ly">E nós usamos um nariz vermelho</div></div>
+  <div class="bl"><div class="ch">D F G D F G D</div><div class="ly">Nós usamos um nariz vermelho</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

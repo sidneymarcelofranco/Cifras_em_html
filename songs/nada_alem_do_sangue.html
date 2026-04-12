@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nada Além do Sangue</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="Bb">
+
+<header>
+  <div class="hdr-title">
+    <h1>Nada Além do Sangue</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">A F#m7(11) A</div><div class="ly">Teu sangue leva-me além a todas as alturas</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Onde ouço a tua voz</div></div>
+  <div class="bl"><div class="ch">E D9</div><div class="ly">Fala de tua justiça pela minha vida</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A D9/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus, este é o teu sangue</div></div>
+  <div class="bl"><div class="ch">A F#m7(11) A</div><div class="ly">Tua cruz mostra tua graça fala do amor do Pai</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Que prepara para nós</div></div>
+  <div class="bl"><div class="ch">E D9</div><div class="ly">Um caminho para Ele onde posso me achegar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A D9/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Somente pelo sangue</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Que nos lava dos pecados</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">E nos traz restauração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada além do sangue</div></div>
+  <div class="bl"><div class="ch">D9 A D9/F# E</div><div class="ly">Nada além do sangue de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que nos faz brancos como a neve</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Aceitos como amigos de Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada além do sangue</div></div>
+  <div class="bl"><div class="ch">D9 A D9/F# E</div><div class="ly">Nada além do sangue de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( A D9/F# E )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">A F#m7(11) A</div><div class="ly">Tua cruz mostra tua graça fala do amor do Pai</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Que prepara para nós</div></div>
+  <div class="bl"><div class="ch">E D9</div><div class="ly">Um caminho para Ele onde posso me achegar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A D9/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Somente pelo sangue</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Que nos lava dos pecados</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">E nos traz restauração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada além do sangue</div></div>
+  <div class="bl"><div class="ch">D9 A D9/F# E</div><div class="ly">Nada além do sangue de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que nos faz brancos como a neve</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Aceitos como amigos de Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada além do sangue</div></div>
+  <div class="bl"><div class="ch">D9 A D9/F# E</div><div class="ly">Nada além do sangue de Jesus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Final</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Eu sou livre</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Eu sou livre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada além do sangue</div></div>
+  <div class="bl"><div class="ch">D9 A D9/F# E</div><div class="ly">Nada além do sangue de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eu sou livre</div></div>
+  <div class="bl"><div class="ch">F#m7(11)</div><div class="ly">Eu sou livre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nada além do sangue</div></div>
+  <div class="bl"><div class="ch">D9 A D9/F# E</div><div class="ly">Nada além do sangue de Jesus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -7,7 +7,8 @@
       "Bash(sed -i 's|src=\"\"js/cifra.js\"\"|src=\"\"../js/cifra.js\"\"|g' *.html)",
       "Bash(sed -i 's|href=\"\"index.html\"\"|href=\"\"../index.html\"\"|g' *.html)",
       "Bash(grep -l \"cifra.css\" *.html)",
-      "WebFetch(domain:www.cifraclub.com.br)"
+      "WebFetch(domain:www.cifraclub.com.br)",
+      "Bash(python3 converter.py)"
     ]
   }
 }

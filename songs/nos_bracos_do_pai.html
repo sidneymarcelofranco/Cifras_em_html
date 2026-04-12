@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Braços do Pai</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="Bb">
+
+<header>
+  <div class="hdr-title">
+    <h1>Nos Braços do Pai</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F/A Bb F/A Gm7(11)</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A Gm7(11) F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pai, Estou aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A Gm7(11)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Olha para mim</div></div>
+  <div class="bl"><div class="ch">F9 Eb9 Bb/D F4 F</div><div class="ly">Desesperado por mais de Ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/D Eb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A tua presença é o meu sustento</div></div>
+  <div class="bl"><div class="ch">Bb/D Eb9 F Gm7</div><div class="ly">A Tua palavra meu ali_mento</div></div>
+  <div class="bl"><div class="ch">Cm7</div><div class="ly">Preciso ouvir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Eb Eb9/G F9/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A tua Voz dizendo assim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F9 Bb/F F Eb9</div><div class="ly">Vem em meus bra____ços descansar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F/Eb Eb F7(4/9) )</div></div>
+  <div class="bl"><div class="ch">Bb9 Eb/Bb Bb F</div><div class="ly">E bem segu_____ro te conduzirei</div></div>
+  <div class="bl"><div class="ch">Eb9</div><div class="ly">Ao Meu altar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Cm7 Gm7 F9/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ali falarei contigo</div></div>
+  <div class="bl"><div class="ch">Gm7 F9 Eb9</div><div class="ly">Com meu amor te envolverei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Cm7 Bb9/D F9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quero olhar em teus olhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 F/A Eb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tuas feridas sara_rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F Eb9 F/Eb Eb</div><div class="ly">Vem como estás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F Eb9 F/Eb Eb</div><div class="ly">Vem como estás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F/Eb Eb F )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A Gm7(11) F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pai, Estou aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb F/A Gm7(11)</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Olha para mim</div></div>
+  <div class="bl"><div class="ch">F9 Eb9 Bb/D F4 F</div><div class="ly">Desesperado por mais de Ti</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb/D Eb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A tua presença é o meu sustento</div></div>
+  <div class="bl"><div class="ch">Bb/D Eb9 F Gm7</div><div class="ly">A Tua palavra meu ali_mento</div></div>
+  <div class="bl"><div class="ch">Cm7</div><div class="ly">Preciso ouvir</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Eb Eb9/G F9/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A tua Voz dizendo assim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F9 Bb/F F Eb9</div><div class="ly">Vem em meus bra____ços descansar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F/Eb Eb F7(4/9) )</div></div>
+  <div class="bl"><div class="ch">Bb9 Eb/Bb Bb F</div><div class="ly">E bem segu_____ro te conduzirei</div></div>
+  <div class="bl"><div class="ch">Eb9</div><div class="ly">Ao Meu altar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Cm7 Gm7 F9/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ali falarei contigo</div></div>
+  <div class="bl"><div class="ch">Gm7 F9 Eb9</div><div class="ly">Com meu amor te envolverei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Cm7 Bb9/D F9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quero olhar em teus olhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 F/A Eb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tuas feridas sara_rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F9 Bb/F F Eb9</div><div class="ly">Vem em meus bra____ços descansar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F/Eb Eb F7(4/9) )</div></div>
+  <div class="bl"><div class="ch">Bb9 Eb/Bb Bb F</div><div class="ly">E bem segu_____ro te conduzirei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb9 F/Eb Eb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ao Meu altar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Cm7 Gm7 F9/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ali falarei contigo</div></div>
+  <div class="bl"><div class="ch">Gm7 F9 Eb9</div><div class="ly">Com meu amor te envolverei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Cm7 Bb9/D F9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quero olhar em teus olhos</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Gm7 F/A Eb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tuas feridas sara_rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F Eb9 F/Eb Eb</div><div class="ly">Vem como estás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F Eb9</div><div class="ly">Vem como estás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F Eb9 F/Eb Eb</div><div class="ly">Vem como estás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 Eb/Bb Bb9</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Vem filho ama_____do</div></div>
+  <div class="bl"><div class="ch">F Eb9</div><div class="ly">Vem como estás</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9 F9/A Gm7(11) F/A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pai, meu Pai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bb9/D Eb9 Eb/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Papai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F Bb9 Eb9/Bb F/Bb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Aba Pai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( C#/B B C#/B B )</div></div>
+  <div class="bl"><div class="ch">( C#7(4/9) C# C#7(4/9) C# )</div><div class="ly">( Dm7 C/E F/Bb F )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Dm7 C/E F G )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G9/B Am7(11) G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pai, meu Pai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9/E F9 F/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Papai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9 G9/B Am7(11) G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Pai, meu Pai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C9/E F9 F/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Papai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F9/G C9 C</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Aba Pai</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

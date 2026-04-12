@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venho, Senhor, Minha Vida Oferecer</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Venho, Senhor, Minha Vida Oferecer</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Am D/C Bm Em</div>
+  <div class="bl"><div class="ch">Am Bm C C/D</div><div class="ly">G C/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F# Em Em/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Venho senhor minha vida oferecer</div></div>
+  <div class="bl"><div class="ch">C G/B Am D</div><div class="ly">Como oferta de amor e sacrifício</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G D/F# Em Em/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quero a minha vida a ti entregar</div></div>
+  <div class="bl"><div class="ch">C D G (Dm G7)</div><div class="ly">Como oferta viva em teu altar</div></div>
+  <div class="bl"><div class="ch">C D/C Bm Em</div><div class="ly">Pois pra te adoraaaaar</div></div>
+  <div class="bl"><div class="ch">Am D Em</div><div class="ly">Foi que eu nasci</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Cumpra em mim</div></div>
+  <div class="bl"><div class="ch">C Bm7</div><div class="ly">O teu querer</div></div>
+  <div class="bl"><div class="ch">Am7 D G Dm7 G7</div><div class="ly">Faça o que está em teu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C D/C B4 B/D# Em</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E que a cada dia eu queira mais e mais</div></div>
+  <div class="bl"><div class="ch">Am Bm7 C7M D7(4/9) G Dm7 G7</div><div class="ly">Estar ao teu lado, senhor</div></div>
+  <div class="bl"><div class="ch">C D/C Bm Em</div><div class="ly">Pois pra te adoraaaaar</div></div>
+  <div class="bl"><div class="ch">Am D Em</div><div class="ly">Foi que eu nasci</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Cumpra em mim</div></div>
+  <div class="bl"><div class="ch">C Bm7</div><div class="ly">O teu querer</div></div>
+  <div class="bl"><div class="ch">Am7 D G7 Dm7 G7</div><div class="ly">Faça o que está em teu coração</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C D/C B4 B/D# Em</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E que a cada dia eu queira mais e mais</div></div>
+  <div class="bl"><div class="ch">Am Bm7 C7M D7(4/9) G Dm G7</div><div class="ly">Estar ao teu lado, senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C D/C B4 B/D# Em</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E que a cada dia eu queira mais e mais</div></div>
+  <div class="bl"><div class="ch">Am Bm7 C7M D7(4/9)</div><div class="ly">Estar ao teu lado</div></div>
+  <div class="bl"><div class="ch">Am Bm7 C7M D7(4/9) G</div><div class="ly">Estar ao teu lado, senhor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

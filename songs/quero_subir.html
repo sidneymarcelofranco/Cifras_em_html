@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quero Subir</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Quero Subir</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Tom: CAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Am7 Em7 Dm7 Am7</div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dm C/E F C/E Dm7 F/G</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">F/G C Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quero subir ao monte santo de Sião</div></div>
+  <div class="bl"><div class="ch">Am7 Em7</div><div class="ly">E entoar um novo cântico ao meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F G/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mais que palavras</div></div>
+  <div class="bl"><div class="ch">Em7 F</div><div class="ly">Minha vida eu quero entregar</div></div>
+  <div class="bl"><div class="ch">Am7 Em7 Dm7 Em7</div><div class="ly">Purifica o meu coração para entrar em Tua presença</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/G Em/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Contemplar Tua grandeza</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F/G C Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Quero subir ao monte santo de Sião</div></div>
+  <div class="bl"><div class="ch">Am7 Em7</div><div class="ly">E entoar um novo cântico ao meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F G/F</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mais que palavras</div></div>
+  <div class="bl"><div class="ch">Em7 F</div><div class="ly">Minha vida eu quero entregar</div></div>
+  <div class="bl"><div class="ch">Am7 Em7 Dm7 Em7</div><div class="ly">Purifica o meu coração para entrar em Tua presença</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F F/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Contemplar Tua grandeza</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C Am7 Dm7</div><div class="ly">Te adoro Senhor em espírito e em verdade</div></div>
+  <div class="bl"><div class="ch">F/G C Am7 F</div><div class="ly">Me prostro aos teus pés na beleza da santidade</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E Dm7 Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te dou meu louvor que seja um cheiro suave</div></div>
+  <div class="bl"><div class="ch">F Em7 Dm F/G</div><div class="ly">E um som agradável a Ti, pois digno és</div></div>
+  <div class="bl"><div class="ch">C Am7 Dm7</div><div class="ly">Te adoro Senhor em espírito e em verdade</div></div>
+  <div class="bl"><div class="ch">F/G C Am7 F</div><div class="ly">Me prostro aos teus pés na beleza da santidade</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">C/E Dm7 Em7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te dou meu louvor que seja um cheiro suave</div></div>
+  <div class="bl"><div class="ch">F Em7 Dm C Am G G/A</div><div class="ly">E um som agradável a Ti, pois digno és</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">A D F#m7</div><div class="ly">Quero subir ao monte santo de Sião</div></div>
+  <div class="bl"><div class="ch">Bm7 F#m7</div><div class="ly">E entoar um novo cântico ao meu Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G A/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Mais que palavras</div></div>
+  <div class="bl"><div class="ch">F#m7 G</div><div class="ly">Minha vida eu quero entregar</div></div>
+  <div class="bl"><div class="ch">Bm7 F#m7 Em7 F#m7</div><div class="ly">Purifica o meu coração para entrar em Tua presença</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G G/A A</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Contemplar Tua grandeza</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">D Bm7 Em7</div><div class="ly">Te adoro Senhor em espírito e em verdade</div></div>
+  <div class="bl"><div class="ch">G/A D Bm7 G</div><div class="ly">Me prostro aos teus pés na beleza da santidade</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Em7 F#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te dou meu louvor que seja um cheiro suave</div></div>
+  <div class="bl"><div class="ch">G F#m7 Em7 G/A</div><div class="ly">E um som agradável a Ti, pois digno és</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">D Bm7 Em7</div><div class="ly">Te adoro Senhor em espírito e em verdade</div></div>
+  <div class="bl"><div class="ch">G/A D Bm7 G</div><div class="ly">Me prostro aos teus pés na beleza da santidade</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Em7 F#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te dou meu louvor que seja um cheiro suave</div></div>
+  <div class="bl"><div class="ch">G F#m7 Em7 D</div><div class="ly">E um som agradável a Ti, pois digno és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Em7 F#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te dou meu louvor que seja um cheiro suave</div></div>
+  <div class="bl"><div class="ch">G F#m7 Em7 D</div><div class="ly">E um som agradável a Ti, pois digno és</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D/F# Em7 F#m7</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Te dou meu louvor que seja um cheiro suave</div></div>
+  <div class="bl"><div class="ch">G F#m7 Em7 D</div><div class="ly">E um som agradável a Ti, pois digno és</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

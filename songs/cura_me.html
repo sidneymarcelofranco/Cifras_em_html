@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cura-me</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Cura-me</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Fernanda Brum</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Bm A G D/F#</div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em D9/F# Em/B Bm</div></div>
+  <div class="co">G A E4 E</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Bm G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Tanta amargura escondi</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">O medo de não acertar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sonhos coloridos destruí</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Bm G/B</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Que eu não quero mais lembrar</div></div>
+  <div class="bl"><div class="ch">Em7 A4 A</div><div class="ly">Não vou mais chorar, foi o que decidi</div></div>
+  <div class="bl"><div class="ch">Em7 G A4 A Bm</div><div class="ly">Não vou mais sofrer, pra quê viver assim?</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">Com imagens da infância, comecei a chorar</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Caí na caixa das lembranças</div></div>
+  <div class="bl"><div class="ch">G A Bm</div><div class="ly">Lembrei do Teu olhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Enchi meus olhos de esperança, comecei a cantar</div></div>
+  <div class="bl"><div class="ch">Bm Em A Bm</div><div class="ly">Entrei de vez naquela dança pra nunca mais voltar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura - me em minhas lembranças</div></div>
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura o meu altar</div></div>
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura - me, sou Tua criança</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em D9/F# Em/B Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cura - me, cura - me, cura - me</div></div>
+  <div class="bl"><div class="ch">G A E4 E</div><div class="ly">Cura - me, Senhor Jesus</div></div>
+  <div class="bl"><div class="ch">G A Em/B Bm</div><div class="ly">Cura - me, cura - me, cura - me</div></div>
+  <div class="bl"><div class="ch">G A E</div><div class="ly">Cura - me, Senhor Jesus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Com imagens da infância, comecei a chorar</div></div>
+  <div class="bl"><div class="ch">Bm</div><div class="ly">Caí na caixa das lembranças</div></div>
+  <div class="bl"><div class="ch">G A Bm</div><div class="ly">Lembrei do Teu olhar</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Enchi meus olhos de esperança, comecei a cantar</div></div>
+  <div class="bl"><div class="ch">Bm Em A Bm</div><div class="ly">Entrei de vez naquela dança pra nunca mais voltar</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura - me em minhas lembranças</div></div>
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura o meu altar</div></div>
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura - me, sou Tua criança</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em D9/F# Em/B Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cura - me, cura - me, cura - me</div></div>
+  <div class="bl"><div class="ch">G A E4 E</div><div class="ly">Cura - me, Senhor Jesus</div></div>
+  <div class="bl"><div class="ch">G A Em/B Bm</div><div class="ly">Cura - me, cura - me, cura - me</div></div>
+  <div class="bl"><div class="ch">G A E</div><div class="ly">Cura - me, Senhor Jesus</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="bl"><div class="ch">Bm G A</div><div class="ly">Notas Conv ( D E D E D E D E Bb A G E )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura - me em minhas lembranças</div></div>
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura o meu altar</div></div>
+  <div class="bl"><div class="ch">Bm G</div><div class="ly">Cura - me, sou Tua criança</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Em D9/F# Em/B Bm</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cura - me, cura - me, cura - me</div></div>
+  <div class="bl"><div class="ch">G A E4 E</div><div class="ly">Cura - me, Senhor Jesus</div></div>
+  <div class="bl"><div class="ch">G A Em/B Bm</div><div class="ly">Cura - me, cura - me, cura - me</div></div>
+  <div class="bl"><div class="ch">G A E</div><div class="ly">Cura - me, Senhor Jesus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesus Em Tua Presença</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Jesus Em Tua Presença</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">G C9 D G</div><div class="ly">Jesus em tua presença reunimo-nos aqui</div></div>
+  <div class="bl"><div class="ch">G C9 D G D/F#</div><div class="ly">Contemplamos tua face rendemo-nos a ti</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7 C9 G</div><div class="ly">Pois um dia a tua morte trouxe vida a todos nós</div></div>
+  <div class="bl"><div class="ch">G C9 D</div><div class="ly">E nos deu completo acesso ao coração do pai</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G C9 G C9 )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">G C9 D G</div><div class="ly">Jesus em tua presença reunimo-nos aqui</div></div>
+  <div class="bl"><div class="ch">G C9 D G D/F#</div><div class="ly">Contemplamos tua face rendemo-nos a ti</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7 C9 G</div><div class="ly">Pois um dia a tua morte trouxe vida a todos nós</div></div>
+  <div class="bl"><div class="ch">G C9 D G D/F#</div><div class="ly">E nos deu completo acesso ao coração do pai</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Em7 Bm7 C9 D Em7</div><div class="ly">O véu que separava já não separa mais</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7 C9</div><div class="ly">A luz que outrora apagada agora brilha</div></div>
+  <div class="bl"><div class="ch">D E4 E</div><div class="ly">E cada dia brilha mais</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C9 D G D/F# Em7 D9</div><div class="ly">Só pra te adorar</div></div>
+  <div class="bl"><div class="ch">C9 D9 ( Em7 D/F# G ) D</div><div class="ly">E fazer Teu nome grande</div></div>
+  <div class="bl"><div class="ch">C9 D G D/F# A</div><div class="ly">E te dar o louvor que é devido</div></div>
+  <div class="bl"><div class="ch">C9 D G</div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( G C9 G C9 )</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">G C9 D G</div><div class="ly">Jesus em tua presença reunimo-nos aqui</div></div>
+  <div class="bl"><div class="ch">G C9 D G D/F#</div><div class="ly">Contemplamos tua face rendemo-nos a ti</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7 C9 G</div><div class="ly">Pois um dia a tua morte trouxe vida a todos nós</div></div>
+  <div class="bl"><div class="ch">G C9 D G D/F#</div><div class="ly">E nos deu completo acesso ao coração do pai</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Em7 Bm7 C9 D Em7</div><div class="ly">O véu que separava já não separa mais</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7 C9</div><div class="ly">A luz que outrora apagada agora brilha</div></div>
+  <div class="bl"><div class="ch">D E4 E</div><div class="ly">E cada dia brilha mais</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C9 D G D/F# Em7 D9</div><div class="ly">Só pra te adorar</div></div>
+  <div class="bl"><div class="ch">C9 D9 ( Em7 D/F# G ) D</div><div class="ly">E fazer Teu nome grande</div></div>
+  <div class="bl"><div class="ch">C9 D G D/F# A</div><div class="ly">E te dar o louvor que é devido</div></div>
+  <div class="bl"><div class="ch">C9 D G D/F#</div><div class="ly">Estamos nós aqui</div></div>
+</div></div>
+
+<div class="s"><div class="lbl pre">Pré-Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">Em7 Bm7 C9 D Em7</div><div class="ly">O véu que separava já não separa mais</div></div>
+  <div class="bl"><div class="ch">Em7 Bm7 C9</div><div class="ly">A luz que outrora apagada agora brilha</div></div>
+  <div class="bl"><div class="ch">D E4 E</div><div class="ly">E cada dia brilha mais</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">C9 D G D/F# Em7 D9</div><div class="ly">Só pra te adorar</div></div>
+  <div class="bl"><div class="ch">C9 D9 ( Em7 D/F# G ) D</div><div class="ly">E fazer Teu nome grande</div></div>
+  <div class="bl"><div class="ch">C9 D G D/F# A</div><div class="ly">E te dar o louvor que é devido</div></div>
+  <div class="bl"><div class="ch">C9 G</div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch">C9</div><div class="ly">Estamos nós aqui</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Estamos nós aqui</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

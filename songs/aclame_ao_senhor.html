@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aclame Ao Senhor</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="A">
+
+<header>
+  <div class="hdr-title">
+    <h1>Aclame Ao Senhor</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A7M E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Jesus, Salvador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7 E D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Outro igual não há</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M A/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Todos os dias quero louvar</div></div>
+  <div class="bl"><div class="ch">F#m7 G D/F# E4 E</div><div class="ly">As maravilhas de teu amor</div></div>
+  <div class="bl"><div class="ch">A E</div><div class="ly">Consolo, abrigo</div></div>
+  <div class="bl"><div class="ch">F#m7 E D</div><div class="ly">Força e refúgio é o Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com todo o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com tudo o que sou</div></div>
+  <div class="bl"><div class="ch">F#m7 G D/F# E4 E</div><div class="ly">Sempre te ado_ra____rei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Aclame ao Senhor toda a Terra e cantemos</div></div>
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Poder, majestade e louvores ao Rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7 A/E D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Montanhas se prostrem e rujam os mares</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E D/F# E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ao som de teu nome</div></div>
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Alegre te louvo por teus grandes feitos</div></div>
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Firmado estarei, sempre te amarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7 A/E D7M A D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Incomparáveis são tuas promessas pra mim</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch"></div><div class="ly">A7M E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Meu Jesus, Salvador</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7 E D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Outro igual não há</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C# D7M E4</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Todos os dias quero louvar</div></div>
+  <div class="bl"><div class="ch">F#m7 G D/F# E4 E</div><div class="ly">As maravilhas de teu amor</div></div>
+  <div class="bl"><div class="ch">A E</div><div class="ly">Consolo, abrigo</div></div>
+  <div class="bl"><div class="ch">F#m7 E D</div><div class="ly">Força e refúgio é o Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com todo o meu ser</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D A/E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com tudo o que sou</div></div>
+  <div class="bl"><div class="ch">F#m7 G D/F# E4 E</div><div class="ly">Sempre te ado_ra____rei</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Aclame ao Senhor toda a Terra e cantemos</div></div>
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Poder, majestade e louvores ao Rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7 A/E D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Montanhas se prostrem e rujam os mares</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E D/F# E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ao som de teu nome</div></div>
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Alegre te louvo por teus grandes feitos</div></div>
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Firmado estarei, sempre te amarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7 A/E D7M E4 E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Incomparáveis são tuas promessas</div></div>
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Aclame ao Senhor toda a Terra e cantemos</div></div>
+  <div class="bl"><div class="ch">A F#m7 D E4 E</div><div class="ly">Poder, majestade e louvores ao Rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7 A/E D7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Montanhas se prostrem e rujam os mares</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E D/F# E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ao som de teu nome</div></div>
+  <div class="bl"><div class="ch">B G#m7 E F#4 F#</div><div class="ly">Alegre te louvo por teus grandes feitos</div></div>
+  <div class="bl"><div class="ch">B G#m7 E F#4 F#</div><div class="ly">Firmado estarei, sempre te amarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#m7 B/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Incomparáveis são tuas promessas</div></div>
+  <div class="bl"><div class="ch">B G#m7 E F#4 F#</div><div class="ly">Aclame ao Senhor toda a Terra e cantemos</div></div>
+  <div class="bl"><div class="ch">B G#m7 E F#4 F#</div><div class="ly">Poder, majestade e louvores ao Rei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#m7 B/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Montanhas se prostrem e rujam os mares</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F# E/G# F#/A#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Ao som de teu nome</div></div>
+  <div class="bl"><div class="ch">B G#m7 E F#4 F#</div><div class="ly">Alegre te louvo por teus grandes feitos</div></div>
+  <div class="bl"><div class="ch">B G#m7 E F#4 F#</div><div class="ly">Firmado estarei, sempre te amarei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#m7 B/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Incomparáveis são tuas promessas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#m7 B/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Incomparáveis são tuas promessas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#m7 B/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Incomparáveis são tuas promessas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">G#m7 B/F# E</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Incomparáveis são tuas promessas</div></div>
+  <div class="bl"><div class="ch">G#m7 B/F# E B4 B</div><div class="ly">Incomparáveis são tuas promessas pra mim</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosso Deus É Soberano</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="Eb">
+
+<header>
+  <div class="hdr-title">
+    <h1>Nosso Deus É Soberano</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="co">Tom: EbAfinação: E A D G B E</div>
+</div></div>
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">Eb Ab Eb Ab</div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb Bb/Eb</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nosso Deus é sobera--------no</div></div>
+  <div class="bl"><div class="ch">Ab Bb7(4)</div><div class="ly">Ele reina antes da fundação do mundo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Eb Ab/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Nosso Deus é sobera--------no</div></div>
+  <div class="bl"><div class="ch">Ab Bb7(4)</div><div class="ly">Ele reina antes da fundação do mundo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm Bb/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A terra era sem forma e vazia</div></div>
+  <div class="bl"><div class="ch">Fm</div><div class="ly">E o Espírito do nosso Deus</div></div>
+  <div class="bl"><div class="ch">Bb4 Bb</div><div class="ly">Se movia sobre a face das águas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm Eb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Foi Ele quem criou o céu dos céus</div></div>
+  <div class="bl"><div class="ch">Fm</div><div class="ly">E fez separação das águas</div></div>
+  <div class="bl"><div class="ch">Bb4 Bb</div><div class="ly">E da terra seca</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm Eb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Foi Ele quem criou os luminares</div></div>
+  <div class="bl"><div class="ch">Fm</div><div class="ly">E criou a natureza</div></div>
+  <div class="bl"><div class="ch">Bb4</div><div class="ly">E formou o homem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm7(9) Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Glória a Deus por suas maravilhas</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Pelas suas grandezas</div></div>
+  <div class="bl"><div class="ch">Bb4</div><div class="ly">Glória a Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm7(9) Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Glória a Deus por suas maravilhas</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Pelas suas grandezas</div></div>
+  <div class="bl"><div class="ch">Bb4</div><div class="ly">Glória a Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Eb Ab Eb Ab )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm Bb/D</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">A terra era sem forma e vazia</div></div>
+  <div class="bl"><div class="ch">Fm</div><div class="ly">E o Espírito do nosso Deus</div></div>
+  <div class="bl"><div class="ch">Bb4 Bb</div><div class="ly">Se movia sobre a face das águas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm Eb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Foi Ele quem criou o céu dos céus</div></div>
+  <div class="bl"><div class="ch">Fm</div><div class="ly">E fez separação das águas</div></div>
+  <div class="bl"><div class="ch">Bb4 Bb</div><div class="ly">E da terra seca</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cm Eb7M</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Foi Ele quem criou os luminares</div></div>
+  <div class="bl"><div class="ch">Fm</div><div class="ly">E criou a natureza</div></div>
+  <div class="bl"><div class="ch">Bb4</div><div class="ly">E formou o homem</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm7(9) Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Glória a Deus por suas maravilhas</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Pelas suas grandezas</div></div>
+  <div class="bl"><div class="ch">Bb4</div><div class="ly">Glória a Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm7(9) Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Glória a Deus por suas maravilhas</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Pelas suas grandezas</div></div>
+  <div class="bl"><div class="ch">Bb4</div><div class="ly">Glória a Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Oh</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Cm7 Eb Bb )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Cm Eb Bb )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Cm7 Eb Bb )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( Cm Eb Bb )</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm7(9) Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Glória a Deus por suas maravilhas</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Pelas suas grandezas</div></div>
+  <div class="bl"><div class="ch">Bb4</div><div class="ly">Glória a Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Fm7(9) Eb/G</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Glória a Deus por suas maravilhas</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Pelas suas grandezas</div></div>
+  <div class="bl"><div class="ch">Bb4</div><div class="ly">Glória a Deus</div></div>
+  <div class="bl"><div class="ch">Eb Ab</div><div class="ly">Glória a Deus</div></div>
+  <div class="bl"><div class="ch">Eb Ab</div><div class="ly">Glória a Deus</div></div>
+  <div class="bl"><div class="ch">Ab</div><div class="ly">Glória a Deus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

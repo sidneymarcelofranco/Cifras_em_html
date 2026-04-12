@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grande É o Senhor</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Grande É o Senhor</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">A9 D9</div><div class="ly">Grande é o Senhor</div></div>
+  <div class="bl"><div class="ch">A9</div><div class="ly">E mui digno de louvor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">D9 E/G#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Na cidade do nosso Deus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">F#m7(11)/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Seu Santo monte</div></div>
+  <div class="bl"><div class="ch">E Bm11 C#m D6(9) E5</div><div class="ly">Alegria de toda terra</div></div>
+  <div class="bl"><div class="ch">A9 D9</div><div class="ly">Grande é o Senhor</div></div>
+  <div class="bl"><div class="ch">A9</div><div class="ly">Em quem nós temos a vitória</div></div>
+  <div class="bl"><div class="ch">D9</div><div class="ly">Que nos ajuda</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">E/G# F#m7(11)/C#</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Contra o inimigo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Por isso diante Dele</div></div>
+  <div class="bl"><div class="ch">Bm11 C#m D6(9) E5</div><div class="ly">Nos prostramos</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">A9 C#m</div><div class="ly">Queremos o Teu nome engrandecer</div></div>
+  <div class="bl"><div class="ch">D9 C#m</div><div class="ly">E agradecer-Te</div></div>
+  <div class="bl"><div class="ch">Bm11 E</div><div class="ly">Por tua obra em nossas vidas</div></div>
+  <div class="bl"><div class="ch">A9 C#m</div><div class="ly">Confiamos em Teu infinito amor</div></div>
+  <div class="bl"><div class="ch">D9 C#m</div><div class="ly">Pois só Tu és o Deus eterno</div></div>
+  <div class="bl"><div class="ch">Bm11 E D9 E A9</div><div class="ly">Sobre toda terra e Céus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

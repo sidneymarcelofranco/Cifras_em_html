@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genesis</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>Genesis</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl verso">Verso</div><div class="bd">
+  <div class="bl"><div class="ch">G D C</div><div class="ly">Você me pergunta quem sou</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">onde estou pra onde vou</div></div>
+  <div class="bl"><div class="ch">G D C G D C</div><div class="ly">sou nascido de Deus, oh! oh! oh!</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">estou no centro da sua vontade</div></div>
+  <div class="bl"><div class="ch">G D C G D C</div><div class="ly">o vento sopra aonde quer, assim sou eu, sou eu</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">assim sou eu, sou eu</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">Em muitas coisas você acreditou</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">Viveu num mundo de ilusões</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">Depositou sua fé em homens</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">que não podem responder suas orações</div></div>
+  <div class="bl"><div class="ch">G D C G D C</div><div class="ly">Acredite o sol, a terra e o mar foram feitos pra você, pra você</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">Vem sentir o poder</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">Vem conhecer os segredos</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">de quem te projetou com amor</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">corpo, alma e espírito</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">elo de vida com o Criador</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">você é fruto do sonho de Deus, de Deus</div></div>
+  <div class="bl"><div class="ch">G D C</div><div class="ly">eu sou fruto do sonho de Deus, de Deus</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

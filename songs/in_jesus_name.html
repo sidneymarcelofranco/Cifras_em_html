@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In Jesus Name</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="C">
+
+<header>
+  <div class="hdr-title">
+    <h1>In Jesus Name</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../index.html" class="tb-btn" title="Indice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">F Dm C (la si do mi)</div>
+  <div class="co">F Dm C C D Em</div>
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Deus está lutando, ele é por nós</div></div>
+  <div class="bl"><div class="ch">Am C (C D Em)</div><div class="ly">Ele triunfou, sim, Ele triunfou</div></div>
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Estaremos firmes, sem temor algum</div></div>
+  <div class="bl"><div class="ch">C (C Dm Em)</div><div class="ly">Jesus está aqui</div></div>
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Leva nosso fardo, pecado também</div></div>
+  <div class="bl"><div class="ch">Am C (C Dm Em)</div><div class="ly">Ele triunfou, sim, Ele triunfou</div></div>
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Estaremos firmes, sem temor algum</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus está aqui</div></div>
+  <div class="bl"><div class="ch">Em F G F</div><div class="ly">Vi – ve rei, não morrerei</div></div>
+  <div class="bl"><div class="ch">C Am</div><div class="ly">Com o poder da ressureição</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">É vivo em mim</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Sou livre em nome de Jesus</div></div>
+  <div class="co">F Dm C (la si do mi)</div>
+  <div class="co">F Dm C C D Em</div>
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Leva nosso fardo, pecado também</div></div>
+  <div class="bl"><div class="ch">Am C (C Dm Em)</div><div class="ly">Ele triunfou, sim, Ele triunfou</div></div>
+  <div class="bl"><div class="ch">F Dm</div><div class="ly">Estaremos firmes, sem temor algum</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Jesus está aqui</div></div>
+  <div class="bl"><div class="ch">Em F G F</div><div class="ly">Vi – ve rei, não morrerei</div></div>
+  <div class="bl"><div class="ch">C Am</div><div class="ly">Com o poder da ressureição</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">É vivo em mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sou livre em nome de Jesus</div></div>
+  <div class="bl"><div class="ch">Em F G F</div><div class="ly">Vi – ve rei, não morrerei</div></div>
+  <div class="bl"><div class="ch">C Am</div><div class="ly">Com minha voz te exaltarei</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">É vivo em mim</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Sou livre em nome de Jesus</div></div>
+  <div class="co">F Dm C (la si do mi)</div>
+  <div class="bl"><div class="ch">F Dm C C D Em</div><div class="ly">Deus está lutando</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dissipando as trevas</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Trazendo seu reino</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Firmado pra sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">No nome de Cristo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cai o inimigo</div></div>
+  <div class="bl"><div class="ch">Am C</div><div class="ly">Cantaremos Grande é o Senhor 3x</div></div>
+  <div class="bl"><div class="ch">Em F G F C Am convenção</div><div class="ly">Vi – ve rei, não morrerei</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Com o poder da ressureição</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">É vivo em mim</div></div>
+  <div class="bl"><div class="ch">F C</div><div class="ly">Sou livre em nome de Jesus</div></div>
+  <div class="bl"><div class="ch">Em F G F</div><div class="ly">Vi – ve rei, não morrerei</div></div>
+  <div class="bl"><div class="ch">C Am</div><div class="ly">Com minha voz te exaltarei</div></div>
+  <div class="bl"><div class="ch">Bb</div><div class="ly">É vivo em mim</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Sou livre em nome de Jesus</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus está lutando</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dissipando as trevas</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Trazendo seu reino</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Firmado pra sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">No nome de Cristo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cai o inimigo</div></div>
+  <div class="bl"><div class="ch">Am C</div><div class="ly">Cantaremos Grande é o Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus está lutando</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dissipando as trevas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Trazendo seu reino</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Firmado pra sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">No nome de Cristo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cai o inimigo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantaremos Grande é o Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus está lutando</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dissipando as trevas</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Trazendo seu reino</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Firmado pra sempre</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">No nome de Cristo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cai o inimigo</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Cantaremos Grande é o Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Deus está lutando</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">Dissipando as trevas</div></div>
+  <div class="bl"><div class="ch">Am</div><div class="ly">Trazendo seu reino</div></div>
+  <div class="bl"><div class="ch">Em</div><div class="ly">Firmado pra sempre</div></div>
+  <div class="bl"><div class="ch">F G</div><div class="ly">No nome de Cristo, cai o inimigo</div></div>
+  <div class="bl"><div class="ch">Am C</div><div class="ly">Cantaremos Grande é o Senhor</div></div>
+  <div class="bl"><div class="ch"></div><div class="ly">( F G Am Em )</div></div>
+  <div class="bl"><div class="ch">F G</div><div class="ly">No nome de Cristo, cai o inimigo</div></div>
+  <div class="bl"><div class="ch">Am C</div><div class="ly">Cantaremos Grande é o Senhor</div></div>
+</div></div>
+
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>
