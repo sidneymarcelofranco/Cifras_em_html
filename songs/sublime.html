@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sublime</title>
+<link rel="stylesheet" href="../css/cifra.css">
+</head>
+<body data-tom="D">
+
+<header>
+  <div class="hdr-title">
+    <h1>Sublime</h1>
+    <div class="hdr-counter" id="counter"></div>
+  </div>
+  <div class="hdr-transpose">
+    <button class="hdr-tp-btn" onclick="transpose(-1)" title="-1 semitom (B)">-</button>
+    <button class="hdr-tom-block" onclick="transposeReset()" title="Resetar tom original">
+      <span class="hdr-tom-label delta-zero" id="hdrTomLabel">0</span>
+      <span class="hdr-tom-value" id="hdrTom"></span>
+    </button>
+    <button class="hdr-tp-btn" onclick="transpose(1)" title="+1 semitom (S)">+</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <a href="../cifras.html" class="tb-btn" title="Índice">&#8962;</a>
+  <button class="tb-btn" onclick="sz(1)" title="Zoom +">A+</button>
+  <button class="tb-btn" onclick="sz(-1)" title="Zoom -">A-</button>
+  <button class="tb-btn" id="btnCols" onclick="toggleCols()">1col</button>
+  <button class="tb-btn" id="btnFS" onclick="toggleFS()">&#x26F6;</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btnPrev" onclick="nav(-1)">&#8593;</button>
+  <button class="tb-btn" id="btnNext" onclick="nav(1)">&#8595;</button>
+</div>
+
+<main><div class="sections-wrap">
+
+<div class="s"><div class="lbl intro">Intro</div><div class="bd">
+  <div class="co">D  Bm  A  G</div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Primeira Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D          Bm   A</div><div class="ly">Quem é como Tu, Jesus</div></div>
+  <div class="bl"><div class="ch">G              D</div><div class="ly">Não há ninguém além de Ti</div></div>
+  <div class="bl"><div class="ch">Bm         A</div><div class="ly">Que é manso e humilde assim</div></div>
+  <div class="bl"><div class="ch">G               A   D/F#</div><div class="ly">Não há ninguém igual a Ti</div></div>
+  <div class="bl"><div class="ch">Bm  A</div><div class="ly">Não há</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G7M         A</div><div class="ly">Maravilhoso, admirável</div></div>
+  <div class="bl"><div class="ch">D/F#     Bm  A</div><div class="ly">Tão sublime, glorioso</div></div>
+  <div class="bl"><div class="ch">G7M              A</div><div class="ly">Tua presença é mais desejável</div></div>
+  <div class="bl"><div class="ch">D/F#</div><div class="ly">Do que o ouro</div></div>
+  <div class="bl"><div class="ch">Bm      A    G</div><div class="ly">Melhor que a vida é o teu amor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl verso">Segunda Parte</div><div class="bd">
+  <div class="bl"><div class="ch">D          Bm7  A</div><div class="ly">Quem é como Tu, Jesus</div></div>
+  <div class="bl"><div class="ch">G              D</div><div class="ly">Não há ninguém além de Ti</div></div>
+  <div class="bl"><div class="ch">Bm7        A</div><div class="ly">Que é manso e humilde assim</div></div>
+  <div class="bl"><div class="ch">G</div><div class="ly">Não há ninguém igual a Ti</div></div>
+  <div class="bl"><div class="ch">A     D/F#</div><div class="ly">Não há</div></div>
+  <div class="bl"><div class="ch">Bm   A</div><div class="ly">Não há igual</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G7M         A</div><div class="ly">Maravilhoso, admirável</div></div>
+  <div class="bl"><div class="ch">D/F#     Bm  A</div><div class="ly">Tão sublime, glorioso</div></div>
+  <div class="bl"><div class="ch">G7M              A</div><div class="ly">Tua presença é mais desejável</div></div>
+  <div class="bl"><div class="ch">D/F#</div><div class="ly">Do que o ouro</div></div>
+  <div class="bl"><div class="ch">Bm      A</div><div class="ly">Melhor que a vida é o teu amor</div></div>
+  <div class="bl"><div class="ch">G7M         A</div><div class="ly">Maravilhoso, admirável</div></div>
+  <div class="bl"><div class="ch">D/F#     Bm  A</div><div class="ly">Tão sublime, glorioso</div></div>
+  <div class="bl"><div class="ch">G7M              A</div><div class="ly">Tua presença é mais desejável</div></div>
+  <div class="bl"><div class="ch">D/F#</div><div class="ly">Do que o ouro</div></div>
+  <div class="bl"><div class="ch">Bm      A</div><div class="ly">Melhor que a vida é o teu amor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl solo">Solo</div><div class="bd">
+  <div class="co">G  A  D/F#  Bm  A  (2x)</div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">Em        D      A</div><div class="ly">Ah, como espero o dia</div></div>
+  <div class="bl"><div class="ch">Em            D               A</div><div class="ly">Em que verei a face do meu amado</div></div>
+  <div class="bl"><div class="ch">Em        D      A</div><div class="ly">Ah, como espero o dia</div></div>
+  <div class="bl"><div class="ch">Em             D               A</div><div class="ly">Em que a alegria enfim será completa</div></div>
+  <div class="bl"><div class="ch">Em        D      A</div><div class="ly">Ah, como espero o dia</div></div>
+  <div class="bl"><div class="ch">Em            D               A</div><div class="ly">Em que verei a face do meu amado</div></div>
+  <div class="bl"><div class="ch">Em        D      A</div><div class="ly">Ah, como espero o dia</div></div>
+  <div class="bl"><div class="ch">Em             D               A</div><div class="ly">Em que a alegria enfim será completa</div></div>
+</div></div>
+
+<div class="s"><div class="lbl refrao">Refrão</div><div class="bd">
+  <div class="bl"><div class="ch">G          A</div><div class="ly">Maravilhoso, admirável</div></div>
+  <div class="bl"><div class="ch">D/F#     Bm  A</div><div class="ly">Tão sublime, glorioso</div></div>
+  <div class="bl"><div class="ch">G              A</div><div class="ly">Tua presença é mais desejável</div></div>
+  <div class="bl"><div class="ch">D/F#</div><div class="ly">Do que o ouro</div></div>
+  <div class="bl"><div class="ch">Bm      A</div><div class="ly">Melhor que a vida é o teu amor</div></div>
+</div></div>
+
+<div class="s"><div class="lbl ponte">Ponte</div><div class="bd">
+  <div class="bl"><div class="ch">Em        D      A</div><div class="ly">Ah, como espero o dia</div></div>
+  <div class="bl"><div class="ch">Em            D               A</div><div class="ly">Em que verei a face do meu amado</div></div>
+  <div class="bl"><div class="ch">Em        D      A</div><div class="ly">Ah, como espero o dia</div></div>
+  <div class="bl"><div class="ch">Em             D               A</div><div class="ly">Em que a alegria enfim será completa</div></div>
+  <div class="bl"><div class="ch">Em        D      A</div><div class="ly">Ah, como espero o dia</div></div>
+  <div class="bl"><div class="ch">Em            D               A</div><div class="ly">Em que verei a face do meu amado</div></div>
+  <div class="bl"><div class="ch">Em        D      A</div><div class="ly">Ah, como espero o dia</div></div>
+  <div class="bl"><div class="ch">Em         D/F#              A</div><div class="ly">Em que a alegria enfim será completa</div></div>
+</div></div>
+
+<div class="s"><div class="lbl final">Refrão Final</div><div class="bd">
+  <div class="bl"><div class="ch">G          A/G</div><div class="ly">Maravilhoso, admirável</div></div>
+  <div class="bl"><div class="ch">D/F#     Bm  A</div><div class="ly">Tão sublime, glorioso</div></div>
+  <div class="bl"><div class="ch">G              A/G</div><div class="ly">Tua presença é mais desejável</div></div>
+  <div class="bl"><div class="ch">D/F#</div><div class="ly">Do que o ouro</div></div>
+  <div class="bl"><div class="ch">Bm      A</div><div class="ly">Melhor que a vida é o teu amor</div></div>
+  <div class="bl"><div class="ch">G          A/G</div><div class="ly">Maravilhoso, admirável</div></div>
+  <div class="bl"><div class="ch">D/F#     Bm  A</div><div class="ly">Tão sublime, glorioso</div></div>
+  <div class="bl"><div class="ch">G              A/G</div><div class="ly">Tua presença é mais desejável</div></div>
+  <div class="bl"><div class="ch">D/F#</div><div class="ly">Do que o ouro</div></div>
+  <div class="bl"><div class="ch">Bm      A    G</div><div class="ly">Melhor que a vida é o teu amor</div></div>
+</div></div>
+
+</div></main>
+<script src="../js/cifra.js"></script>
+</body>
+</html>

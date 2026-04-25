@@ -31,6 +31,13 @@ window.SONGS = [
     file: "songs/tu_es_aguas_purificadoras.html"
   },
   {
+    id: "sublime",
+    artist: "Florianópolis House of Prayer",
+    title: "Sublime",
+    key: "D",
+    file: "songs/sublime.html"
+  },
+  {
     id: "lugar_secreto",
     artist: "Gabriela Rocha",
     title: "Lugar Secreto",
@@ -200,9 +207,9 @@ window.SONGS = [
   },
   {
     id: "canta_minhalma",
-    artist: "Central MSC",
-    title: "Canta Minh'Alma",
-    key: "C",
+    artist: "Vox Central MSC",
+    title: "Canta Minh'Alma / Grandioso És Tu",
+    key: "B",
     file: "songs/canta_minhalma.html"
   },
   {
@@ -643,7 +650,7 @@ window.SONGS = [
     id: "jesus_o_plano_perfeito",
     artist: "Renascer Praise",
     title: "Jesus, o Plano Perfeito",
-    key: "C",
+    key: "E",
     file: "songs/jesus_o_plano_perfeito.html"
   },
   {
@@ -902,7 +909,7 @@ window.SONGS = [
     id: "quem_e_esse",
     artist: "Julliany Souza",
     title: "Quem É Esse?",
-    key: "C",
+    key: "F#",
     file: "songs/quem_e_esse.html"
   },
   {
@@ -1061,7 +1068,7 @@ window.SONGS = [
   },
   {
     id: "todavia_me_alegrarei",
-    artist: "Samuel Messias",
+    artist: "Leandro Soares",
     title: "Todavia Me Alegrarei",
     key: "C",
     file: "songs/todavia_me_alegrarei.html"

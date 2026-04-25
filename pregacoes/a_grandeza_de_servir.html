@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>A Grandeza de Servir</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #18140f;
+    --ink2: #3a2e22;
+    --parch: #faf7f2;
+    --parch2: #f0e9da;
+    --gold: #8a6910;
+    --gold2: #c9a227;
+    --red: #6e1c1c;
+    --gray: #6b6055;
+    --border: #d8c9a8;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--parch);
+    color: var(--ink);
+    font-family: 'Lora', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.9;
+    min-height: 100vh;
+  }
+
+  /* NAV BAR */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .topbar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gold2);
+    letter-spacing: .04em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--gold2);
+    border-radius: 2px;
+    transition: all .3s;
+  }
+
+  /* DRAWER */
+  .drawer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 200;
+  }
+
+  .drawer-overlay.open { display: block; }
+
+  .drawer {
+    position: fixed;
+    top: 0; right: -280px;
+    width: 280px;
+    height: 100%;
+    background: var(--ink);
+    z-index: 201;
+    padding: 24px 0;
+    transition: right .3s ease;
+    overflow-y: auto;
+  }
+
+  .drawer.open { right: 0; }
+
+  .drawer-head {
+    padding: 0 24px 20px;
+    border-bottom: 1px solid rgba(216,201,168,0.2);
+    margin-bottom: 12px;
+  }
+
+  .drawer-head p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    margin-bottom: 4px;
+  }
+
+  .drawer-head h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--parch);
+    font-weight: 600;
+  }
+
+  .drawer a {
+    display: block;
+    padding: 12px 24px;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: rgba(250,247,242,0.75);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all .2s;
+  }
+
+  .drawer a:hover, .drawer a:active {
+    color: var(--gold2);
+    border-left-color: var(--gold2);
+    background: rgba(255,255,255,0.04);
+  }
+
+  .drawer-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: none;
+    border: none;
+    color: var(--gray);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+
+  /* CONTENT */
+  .content { padding: 0 0 80px; }
+
+  /* COVER */
+  .cover {
+    background: var(--ink);
+    padding: 56px 28px 52px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(201,162,39,0.06);
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; right: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(201,162,39,0.04);
+  }
+
+  .cover-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 600;
+    color: var(--parch);
+    line-height: 1.1;
+    margin-bottom: 10px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-sub {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(250,247,242,0.5);
+    margin-bottom: 36px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 36px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-ornament span { flex: 1; max-width: 60px; height: 1px; background: rgba(216,201,168,0.3); }
+  .cover-ornament em { color: var(--gold2); font-size: 16px; font-style: normal; }
+
+  .cover-verse {
+    font-style: italic;
+    color: rgba(250,247,242,0.65);
+    font-size: 16px;
+    position: relative; z-index: 1;
+    line-height: 1.6;
+  }
+
+  .cover-verse cite {
+    display: block;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    margin-top: 8px;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 40px 24px 0;
+  }
+
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section p {
+    color: var(--ink2);
+    margin-bottom: 16px;
+    font-size: 17px;
+  }
+
+  /* VERSE */
+  .verse {
+    margin: 28px 0;
+    padding: 18px 20px;
+    border-left: 3px solid var(--gold);
+    background: var(--parch2);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .verse p {
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink);
+    margin: 0 0 6px;
+    line-height: 1.7;
+  }
+
+  .verse cite {
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* IMPACT PHRASE */
+  .impact {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--red);
+    text-align: center;
+    margin: 32px 0;
+    line-height: 1.35;
+    padding: 0 8px;
+  }
+
+  /* ILLUSTRATION CARD */
+  .illus {
+    margin: 20px 0;
+    padding: 20px 20px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+  }
+
+  .illus-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .illus p {
+    font-size: 15px;
+    color: var(--gray);
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  /* STAT BLOCK */
+  .stat {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: var(--ink);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--gold2);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat p {
+    font-size: 14px;
+    color: rgba(250,247,242,0.7);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* DIVIDER */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 40px 24px 0;
+    color: var(--border);
+  }
+  .divider span { flex: 1; height: 1px; background: var(--border); }
+  .divider em { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: normal; color: var(--gold2); }
+
+  /* APPEAL */
+  .appeal {
+    margin: 40px 24px 0;
+    background: var(--ink);
+    border-radius: 10px;
+    padding: 36px 24px;
+  }
+
+  .appeal h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--gold2);
+    border-bottom: 1px solid rgba(216,201,168,0.2);
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+  }
+
+  .appeal p {
+    color: rgba(250,247,242,0.8);
+    font-size: 16px;
+    margin-bottom: 14px;
+    line-height: 1.85;
+  }
+
+  .appeal-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--parch);
+    margin: 18px 0 6px;
+    line-height: 1.4;
+  }
+
+  .appeal-action {
+    margin-top: 28px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(201,162,39,0.25);
+  }
+
+  .appeal-action p {
+    color: rgba(250,247,242,0.9);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .appeal-close {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--gold2);
+    text-align: center;
+    margin-top: 28px;
+    line-height: 1.5;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 48px 24px 60px;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  .footer-ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--gold2);
+    margin-bottom: 12px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    color: var(--gray);
+    letter-spacing: .05em;
+  }
+
+  /* PROGRESS BAR */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--gold2);
+    z-index: 300;
+    width: 0%;
+    transition: width .1s linear;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span class="topbar-title">A Grandeza de Servir</span>
+  <button class="menu-btn" onclick="openDrawer()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+
+<!-- DRAWER -->
+<div class="drawer-overlay" id="overlay" onclick="closeDrawer()"></div>
+<nav class="drawer" id="drawer">
+  <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
+  <div class="drawer-head">
+    <p>Sermao</p>
+    <h3>Indice</h3>
+  </div>
+  <a href="#introducao" onclick="closeDrawer()">Introducao</a>
+  <a href="#bloco1" onclick="closeDrawer()">1. Maturidade e Servico</a>
+  <a href="#bloco2" onclick="closeDrawer()">2. O Lar como Escola</a>
+  <a href="#bloco3" onclick="closeDrawer()">3. Riqueza e Carater</a>
+  <a href="#bloco4" onclick="closeDrawer()">4. A Inveja que nos Cega</a>
+  <a href="#bloco5" onclick="closeDrawer()">5. O Auxilio que Vicia</a>
+  <a href="#conclusao" onclick="closeDrawer()">Conclusao</a>
+</nav>
+
+<div class="content">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-label">Sermao</div>
+    <h1>A Grandeza<br>de Servir</h1>
+    <div class="cover-sub">O Paradoxo do Servo</div>
+    <div class="cover-ornament">
+      <span></span><em>&#x2726;</em><span></span>
+    </div>
+    <div class="cover-verse">
+      "O Filho do Homem nao veio para ser servido, mas para servir e dar a sua vida em resgate de muitos."
+      <cite>Marcos 10:45</cite>
+    </div>
+  </div>
+
+  <!-- INTRODUCAO -->
+  <div class="section" id="introducao">
+    <div class="section-num">Introducao</div>
+    <h2>O Escandalo do Servo</h2>
+    <p>O povo de Israel aguardava um Messias com coroa, exercito e trono. Alguem que chegasse com poder para submeter os romanos e restaurar o reino de Davi. O que veio foi um carpinteiro do interior, filho de uma familia simples, que lavou os pes dos proprios discipulos.</p>
+    <p>Isso escandalizou a todos &mdash; e ainda escandaliza. Porque confundimos grandeza com privilegio e maturidade com poder.</p>
+
+    <div class="impact">Jesus nao veio com cetro. Veio com toalha.</div>
+
+    <p>E nessa inversao esta o maior ensinamento que o mundo ja recebeu: a verdadeira grandeza nasce no servico, nao no dominio.</p>
+
+    <div class="verse">
+      <p>"Quem quiser ser grande entre vos, sera vosso servo... pois o Filho do Homem nao veio para ser servido, mas para servir e dar a sua vida em resgate de muitos."</p>
+      <cite>Marcos 10:43-45</cite>
+    </div>
+  </div>
+
+  <div class="divider"><span></span><em>&#x2726;</em><span></span></div>
+
+  <!-- BLOCO 1 -->
+  <div class="section" id="bloco1">
+    <div class="section-num">Secao 1</div>
+    <h2>Maturidade e Servico, nao Poder</h2>
+    <p>Existe uma confusao profunda em nossa cultura: acreditamos que crescer e ganhar o direito de ser servido.</p>
+    <p>Observe a natureza: o bebe e o ser mais servido da casa &mdash; e ao mesmo tempo o mais dependente, o mais fragil, o que menos decide. Nao por fraqueza de quem serve, mas porque servir e o ato de quem tem forca e amor suficientes para se baixar.</p>
+
+    <div class="impact">Crescer e, progressivamente, passar de servido para servidor.</div>
+
+    <p>E exatamente por isso que tantos jovens vivem em crise: querem os beneficios da vida adulta &mdash; autonomia, respeito, liberdade &mdash; mas recusam o peso que vem com ela. Escolhem a imaturidade disfarcada de liberdade. Preferem a dependencia eterna a pais, ao Estado, ao conjuge &mdash; sem perceber que estao presos justamente porque nao aprenderam a servir.</p>
+    <p>Bons pais nao criam filhos dependentes. Criam filhos capazes. Qualquer animal procria &mdash; isso a biologia garante. Mas criar um ser humano integro, capaz de servir ao proximo, e obra de quem entendeu o chamado.</p>
+
+    <div class="verse">
+      <p>"A vara e a disciplina dao sabedoria, mas a crianca entregue a si mesma envergonha a sua mae."</p>
+      <cite>Proverbios 29:15</cite>
+    </div>
+  </div>
+
+  <div class="divider"><span></span><em>&#x2726;</em><span></span></div>
+
+  <!-- BLOCO 2 -->
+  <div class="section" id="bloco2">
+    <div class="section-num">Secao 2</div>
+    <h2>O Lar como Escola do Servo</h2>
+    <p>Se quiser ver o nivel espiritual de uma familia, observe quem serve quem.</p>
+    <p>Um lar saudavel nao e aquele onde um manda e os outros obedecem. E aquele onde todos servem e todos sao servidos &mdash; o marido serve a esposa, a esposa serve o marido, o casal serve os filhos, e os filhos, a medida que crescem, aprendem a servir os pais e o proximo.</p>
+    <p>Isso nao e romantismo. E engenharia espiritual.</p>
+
+    <div class="impact">Ser servo nao e sinal de fraqueza. E conviccao. E forca mental.</div>
+
+    <p>O fraco, quando recebe ajuda, se sente senhor &mdash; infla o peito, esquece de onde veio, e passa a enxergar quem o ajudou como obrigado. O forte, quando recebe ajuda, aproveita para crescer e se tornar capaz de ajudar tambem.</p>
+    <p>A diferenca entre os dois nao e a situacao &mdash; e o carater.</p>
+
+    <div class="verse">
+      <p>"Tudo o que fizerem, facam de todo o coracao, como para o Senhor... sabendo que receberao do Senhor a recompensa da heranca. E a Cristo, o Senhor, que voces estao servindo."</p>
+      <cite>Colossenses 3:23-24</cite>
+    </div>
+  </div>
+
+  <div class="divider"><span></span><em>&#x2726;</em><span></span></div>
+
+  <!-- BLOCO 3 -->
+  <div class="section" id="bloco3">
+    <div class="section-num">Secao 3</div>
+    <h2>A Riqueza que Nao Passa pelo Carater Nao Dura</h2>
+    <p>Pense em dois homens. O primeiro construiu uma fortuna do zero com decadas de trabalho, disciplina e sabedoria. O segundo ganhou um premio enorme sem ter construido nada. Qual dos dois, se perder tudo, volta a prosperar?</p>
+
+    <div class="impact">O primeiro. Sempre o primeiro.</div>
+
+    <p>Porque a riqueza verdadeira nao esta na conta bancaria. Esta nos valores internalizados &mdash; na disciplina, na etica do trabalho, na capacidade de servir bem e de construir relacoes de confianca. Essas coisas, ninguem toma.</p>
+
+    <div class="verse">
+      <p>"O homem bom deixa uma heranca aos filhos de seus filhos, mas a riqueza do pecador e depositada para o justo."</p>
+      <cite>Proverbios 13:22</cite>
+    </div>
+
+    <div class="illus">
+      <div class="illus-title">Gucci</div>
+      <p>Guccio Gucci comecou como carregador de malas em Londres, sem dinheiro, sem sobrenome famoso. Observando os ricos, aprendeu sobre qualidade e estilo. Voltou para Florenca e fundou uma das maiores marcas do mundo. Os herdeiros transformaram o imperio num campo de batalha familiar &mdash; o caso terminou com o assassinato do neto pelo proprio conjuge. A familia perdeu o controle da empresa para investidores externos. O avo construiu com as maos; a geracao seguinte destruiu com as brigas.</p>
+    </div>
+
+    <div class="illus">
+      <div class="illus-title">Rede A&amp;P</div>
+      <p>O neto de um dos fundadores da maior rede de supermercados dos Estados Unidos herdou o equivalente a quase US$ 90 milhoes. Sem ter construido nada, sem ter servido para aprender, foi perdendo tudo em projetos megalomaniacs e sem criterio &mdash; ate pedir concordata e ir morar de aluguel num predio decadente.</p>
+    </div>
+
+    <div class="stat">
+      <div class="stat-number">75%</div>
+      <p>das empresas familiares no Brasil fecham apos a sucessao.<br>Pesquisa PwC &mdash; 35 paises</p>
+    </div>
+
+    <p>O bem mais precioso que voce pode deixar para seus filhos nao e dinheiro. E carater. E sabedoria. E o exemplo de quem serviu bem.</p>
+  </div>
+
+  <div class="divider"><span></span><em>&#x2726;</em><span></span></div>
+
+  <!-- BLOCO 4 -->
+  <div class="section" id="bloco4">
+    <div class="section-num">Secao 4</div>
+    <h2>A Inveja que nos Cega para a Bencao</h2>
+    <p>Vivemos na geracao materialmente mais privilegiada da historia da humanidade &mdash; e uma das mais insatisfeitas.</p>
+    <p>Reis, rainhas e nobres que governaram imperios nao tinham o que voce tem hoje. O Rei Luis XIV, o homem mais poderoso da Europa no seculo XVII, tomava banho com panos umidos &mdash; agua quente era escassa ate para a realeza. Reis medievais nao tinham anestesia no dentista, nao conheciam antibioticos, morriam de infeccoes que hoje se curam com R$15 numa farmacia.</p>
+    <p>As especiarias que hoje voce compra por poucos reais no mercado motivaram guerras, financiaram imperios e custaram fortunas por seculos.</p>
+
+    <div class="impact">Entao por que nao somos felizes?</div>
+
+    <p>Porque a felicidade virou uma questao de comparacao, nao de gratidao.</p>
+    <p>A escala de servico da igreja e um retrato perfeito disso: quase ninguem pergunta "onde estou escalado?" &mdash; perguntam "onde fulano esta escalado?" Sempre olhando os 10% que o conjuge nao tem, esquecendo os 90% que ele tem.</p>
+
+    <div class="verse">
+      <p>"Melhor e o pouco com o temor do Senhor do que um grande tesouro onde ha inquietacao."</p>
+      <cite>Proverbios 15:16</cite>
+    </div>
+
+    <div class="impact">A felicidade nao esta no que voce acumula. Esta em aprender a enxergar o que ja tem &mdash; e usar isso para servir.</div>
+  </div>
+
+  <div class="divider"><span></span><em>&#x2726;</em><span></span></div>
+
+  <!-- BLOCO 5 -->
+  <div class="section" id="bloco5">
+    <div class="section-num">Secao 5</div>
+    <h2>O Auxilio que Vicia e o Servo que Liberta</h2>
+    <p>Ha uma diferenca enorme entre ajuda e dependencia.</p>
+    <p>A ajuda e temporaria, tem proposito, tem saida. A dependencia e permanente, nao tem horizonte, e ao longo do tempo, atrofia. E como engessar um braco saudavel por anos &mdash; quando tirar o gesso, o musculo nao funciona mais.</p>
+    <p>O problema nao e receber ajuda &mdash; todos precisamos em algum momento. O problema e se acomodar na ajuda como estilo de vida, deixar de crescer, de servir, de construir.</p>
+
+    <div class="verse">
+      <p>"A vida de um homem nao consiste na abundancia dos bens que ele possui."</p>
+      <cite>Lucas 12:15</cite>
+    </div>
+
+    <div class="impact">Crescimento nao e acumular para si &mdash; e acumular para servir mais.</div>
+
+    <p>Com dinheiro, com conhecimento, com experiencia, com espiritualidade. Quanto mais voce cresce, mais ferramentas tem para servir. Quem para de crescer, deixa de servir. E quem deixa de servir, comeca a depender.</p>
+    <p>O servo liberto e aquele que recebe ajuda, levanta, e estende a mao para o proximo.</p>
+  </div>
+
+  <div class="divider"><span></span><em>&#x2726;</em><span></span></div>
+
+  <!-- CONCLUSAO -->
+  <div class="section" id="conclusao">
+    <div class="section-num">Conclusao</div>
+    <h2>A Toalha do Rei</h2>
+    <p>Jesus sabia que ia para a cruz. Joao 13 diz que Ele sabia que o Pai tinha posto tudo em suas maos. Ele tinha plena consciencia de quem era &mdash; e foi exatamente ai que se levantou, pegou uma toalha, e lavou os pes dos discipulos.</p>
+    <p>Nao lavou os pes apesar de saber quem era.</p>
+
+    <div class="impact">Lavou os pes porque sabia quem era.</div>
+
+    <p>A grandeza verdadeira nao precisa ser provada. Ela se manifesta no servico.</p>
+  </div>
+
+  <!-- APELO -->
+  <div class="appeal" id="apelo">
+    <h2>A Pergunta que Fica</h2>
+    <p>A questao nao e "quem vai me servir?"</p>
+
+    <div class="appeal-question">"A quem eu posso servir hoje?"</div>
+
+    <p>No lar. No trabalho. Na igreja. Na comunidade.</p>
+    <p>Porque no Reino de Deus, os primeiros serao os ultimos &mdash; e os ultimos, os primeiros. E o maior de todos sera servo de todos.</p>
+
+    <div class="verse" style="background:rgba(255,255,255,0.06); border-left-color: var(--gold2); margin: 20px 0;">
+      <p style="color: var(--parch);">"Pois o Filho do Homem nao veio para ser servido, mas para servir e dar a sua vida em resgate de muitos."</p>
+      <cite>Marcos 10:45</cite>
+    </div>
+
+    <div class="appeal-action">
+      <p>Antes de sair daqui: pense em uma pessoa que voce pode servir ainda esta semana. Nao um gesto grandioso. Algo simples, concreto, feito de coracao. Comece por ai.</p>
+    </div>
+
+    <div class="appeal-close">
+      Em um mundo que ensina a ser servido&hellip;<br>Deus chama voce para pegar a toalha.
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-ornament">&#x2726;</div>
+    <p>Sermao &mdash; A Grandeza de Servir</p>
+  </div>
+
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrolled = doc.scrollTop || document.body.scrollTop;
+    const total = doc.scrollHeight - doc.clientHeight;
+    const pct = total > 0 ? (scrolled / total) * 100 : 0;
+    document.getElementById('progress').style.width = pct + '%';
+  });
+
+  function openDrawer() {
+    document.getElementById('drawer').classList.add('open');
+    document.getElementById('overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
+</body>
+</html>

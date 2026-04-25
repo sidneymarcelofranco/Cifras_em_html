@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Relacionamento com Deus</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #18140f;
+    --ink2: #3a2e22;
+    --parch: #faf7f2;
+    --parch2: #f0e9da;
+    --gold: #8a6910;
+    --gold2: #c9a227;
+    --red: #6e1c1c;
+    --gray: #6b6055;
+    --border: #d8c9a8;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--parch);
+    color: var(--ink);
+    font-family: 'Lora', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.9;
+    min-height: 100vh;
+  }
+
+  /* ── NAV BAR ── */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--gold2);
+    font-size: 20px;
+    padding: 4px 8px 4px 0;
+    flex-shrink: 0;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .topbar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gold2);
+    letter-spacing: .04em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
+
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--gold2);
+    border-radius: 2px;
+    transition: all .3s;
+  }
+
+  /* ── DRAWER ── */
+  .drawer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 200;
+  }
+
+  .drawer-overlay.open { display: block; }
+
+  .drawer {
+    position: fixed;
+    top: 0; right: -280px;
+    width: 280px;
+    height: 100%;
+    background: var(--ink);
+    z-index: 201;
+    padding: 24px 0;
+    transition: right .3s ease;
+    overflow-y: auto;
+  }
+
+  .drawer.open { right: 0; }
+
+  .drawer-head {
+    padding: 0 24px 20px;
+    border-bottom: 1px solid rgba(216,201,168,0.2);
+    margin-bottom: 12px;
+  }
+
+  .drawer-head p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    margin-bottom: 4px;
+  }
+
+  .drawer-head h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--parch);
+    font-weight: 600;
+  }
+
+  .drawer a {
+    display: block;
+    padding: 12px 24px;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: rgba(250,247,242,0.75);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all .2s;
+  }
+
+  .drawer a:hover, .drawer a:active {
+    color: var(--gold2);
+    border-left-color: var(--gold2);
+    background: rgba(255,255,255,0.04);
+  }
+
+  .drawer-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: none;
+    border: none;
+    color: var(--gray);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+
+  /* ── CONTENT ── */
+  .content { padding: 0 0 80px; }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--ink);
+    padding: 56px 28px 52px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(201,162,39,0.06);
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; right: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(201,162,39,0.04);
+  }
+
+  .cover-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 600;
+    color: var(--parch);
+    line-height: 1.1;
+    margin-bottom: 10px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-sub {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(250,247,242,0.5);
+    margin-bottom: 36px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 36px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-ornament span { flex: 1; max-width: 60px; height: 1px; background: rgba(216,201,168,0.3); }
+  .cover-ornament em { color: var(--gold2); font-size: 16px; font-style: normal; }
+
+  .cover-verse {
+    font-style: italic;
+    color: rgba(250,247,242,0.65);
+    font-size: 16px;
+    position: relative; z-index: 1;
+    line-height: 1.6;
+  }
+
+  .cover-verse cite {
+    display: block;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    margin-top: 8px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 40px 24px 0;
+  }
+
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section p {
+    color: var(--ink2);
+    margin-bottom: 16px;
+    font-size: 17px;
+  }
+
+  /* ── VERSE ── */
+  .verse {
+    margin: 28px 0;
+    padding: 18px 20px;
+    border-left: 3px solid var(--gold);
+    background: var(--parch2);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .verse p {
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink);
+    margin: 0 0 6px;
+    line-height: 1.7;
+  }
+
+  .verse cite {
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── THEOLOGIAN QUOTE ── */
+  .tquote {
+    margin: 28px 0;
+    padding: 22px 22px 18px;
+    background: var(--ink);
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .tquote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    color: var(--gold2);
+    opacity: .25;
+    position: absolute;
+    top: -4px; left: 14px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .tquote p {
+    font-style: italic;
+    font-size: 16px;
+    color: var(--parch);
+    margin: 8px 0 12px;
+    line-height: 1.75;
+    position: relative;
+  }
+
+  .tquote-attr {
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold2);
+  }
+
+  /* ── IMPACT PHRASE ── */
+  .impact {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--red);
+    text-align: center;
+    margin: 32px 0;
+    line-height: 1.35;
+    padding: 0 8px;
+  }
+
+  /* ── HABITS ── */
+  .habit {
+    margin: 16px 0;
+    padding: 18px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+  }
+
+  .habit-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .habit-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--gold2);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .habit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .habit p {
+    font-size: 15px;
+    color: var(--gray);
+    margin: 0 0 8px;
+    line-height: 1.7;
+  }
+
+  .habit-verse {
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 40px 24px 0;
+    color: var(--border);
+  }
+  .divider span { flex: 1; height: 1px; background: var(--border); }
+  .divider em { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: normal; color: var(--gold2); }
+
+  /* ── APPEAL ── */
+  .appeal {
+    margin: 40px 24px 0;
+    background: var(--ink);
+    border-radius: 10px;
+    padding: 36px 24px;
+  }
+
+  .appeal h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--gold2);
+    border-bottom: 1px solid rgba(216,201,168,0.2);
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+  }
+
+  .appeal p {
+    color: rgba(250,247,242,0.8);
+    font-size: 16px;
+    margin-bottom: 14px;
+    line-height: 1.85;
+  }
+
+  .appeal-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--parch);
+    margin: 18px 0 6px;
+    line-height: 1.4;
+  }
+
+  .appeal-action {
+    margin-top: 28px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(201,162,39,0.25);
+  }
+
+  .appeal-action p {
+    color: rgba(250,247,242,0.9);
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .appeal-close {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--gold2);
+    text-align: center;
+    margin-top: 28px;
+    line-height: 1.5;
+  }
+
+  /* ── THEOLOGIANS ── */
+  .theo-section {
+    padding: 48px 24px 0;
+    border-top: 2px solid var(--border);
+    margin-top: 48px;
+  }
+
+  .theo-section > .section-num { margin-bottom: 4px; }
+
+  .theo-section > h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .theo-card {
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .theo-card:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .theo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .theo-years {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--gray);
+    margin-bottom: 4px;
+  }
+
+  .theo-role {
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .theo-card p {
+    font-size: 16px;
+    color: var(--ink2);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  .theo-highlight {
+    font-style: italic;
+    color: var(--gray);
+    font-size: 15px;
+    border-left: 2px solid var(--border);
+    padding-left: 14px;
+    margin: 14px 0;
+    line-height: 1.7;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 48px 24px 60px;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  .footer-ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--gold2);
+    margin-bottom: 12px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    color: var(--gray);
+    letter-spacing: .05em;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: var(--gold2);
+    z-index: 300;
+    width: 0%;
+    transition: width .1s linear;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a class="back-btn" href="../pregacao.html" aria-label="Voltar">&#8592;</a>
+  <span class="topbar-title">Relacionamento com Deus</span>
+  <button class="menu-btn" onclick="openDrawer()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+
+<!-- DRAWER -->
+<div class="drawer-overlay" id="overlay" onclick="closeDrawer()"></div>
+<nav class="drawer" id="drawer">
+  <button class="drawer-close" onclick="closeDrawer()">✕</button>
+  <div class="drawer-head">
+    <p>Sermão</p>
+    <h3>Índice</h3>
+  </div>
+  <a href="#abertura" onclick="closeDrawer()">1. Abertura</a>
+  <a href="#geracao" onclick="closeDrawer()">2. A Geração Bombardeada</a>
+  <a href="#rasos" onclick="closeDrawer()">3. Relacionamentos Rasos</a>
+  <a href="#moises" onclick="closeDrawer()">4. O Contraste — Moisés</a>
+  <a href="#verdade" onclick="closeDrawer()">5. A Verdade Sobre Nós</a>
+  <a href="#alimento" onclick="closeDrawer()">6. Alimentar a Fé</a>
+  <a href="#habitos" onclick="closeDrawer()">7. Hábitos</a>
+  <a href="#centro" onclick="closeDrawer()">8. O Centro — Jesus Cristo</a>
+  <a href="#apelo" onclick="closeDrawer()">9. Apelo</a>
+  <a href="#teologos" onclick="closeDrawer()">✦ Os Teólogos</a>
+</nav>
+
+<div class="content">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-label">Sermão — Juventude</div>
+    <h1>Relacionamento<br>com Deus</h1>
+    <div class="cover-sub">Além da religião, uma vida</div>
+    <div class="cover-ornament">
+      <span></span><em>✦</em><span></span>
+    </div>
+    <div class="cover-verse">
+      "Chegai-vos a Deus, e ele se chegará a vós."
+      <cite>Tiago 4:8</cite>
+    </div>
+  </div>
+
+  <!-- 1. ABERTURA -->
+  <div class="section" id="abertura">
+    <div class="section-num">Seção 1</div>
+    <h2>Abertura</h2>
+    <p>Hoje eu não quero falar sobre religião. Eu quero falar sobre relacionamento.</p>
+    <p>Porque muita gente vai ao culto… mas não vive com Deus.</p>
+    <p>Pensa num pai que só vê o filho no aniversário. Ele conhece o filho? Sim. Ele tem relacionamento? Não. É isso que muita gente tem com Deus — um encontro marcado uma vez por semana, e o resto da vida vivido longe.</p>
+
+    <div class="tquote">
+      <div class="tquote-mark">"</div>
+      <p>Nos fizeste para Ti, e o nosso coração vive inquieto enquanto não repousa em Ti.</p>
+      <span class="tquote-attr">Agostinho de Hipona — Confissões, Livro I</span>
+    </div>
+
+    <p>Você não é estranho a Deus. Você foi feito para essa proximidade. A saudade que você sente é prova disso.</p>
+    <p>Relacionamento com Deus não acontece no domingo. Acontece na segunda, na terça, na quarta — nos 7 dias da semana.</p>
+    <p>O que é um relacionamento de verdade? É decisão. É proximidade. É comunicação. É confiança. É constância.</p>
+
+    <div class="tquote">
+      <div class="tquote-mark">"</div>
+      <p>Orar não é pouca coisa. É a respiração da alma. Um cristão que não ora está tão morto quanto um corpo sem ar.</p>
+      <span class="tquote-attr">Martinho Lutero — Sermões sobre a oração</span>
+    </div>
+
+    <div class="verse">
+      <p>"Chegai-vos a Deus, e ele se chegará a vós."</p>
+      <cite>Tiago 4:8</cite>
+    </div>
+
+    <div class="impact">Relacionamento com Deus começa com aproximação… mas só sobrevive com constância.</div>
+  </div>
+
+  <div class="divider"><span></span><em>✦</em><span></span></div>
+
+  <!-- 2. GERAÇÃO -->
+  <div class="section" id="geracao">
+    <div class="section-num">Seção 2</div>
+    <h2>A Geração Bombardeada</h2>
+    <p>A gente está sendo bombardeado todos os dias.</p>
+    <p>Não tô falando isso pra te condenar. Porque eu sei que você não escolheu nascer nessa geração. Mas a realidade é essa: conteúdo o tempo todo, mensagens contra a fé, ataques à família, incentivo ao pecado, sexualização em tudo, falta de limites.</p>
+
+    <div class="impact">Você abre o celular… e já começa uma guerra pela sua mente.</div>
+
+    <div class="tquote">
+      <div class="tquote-mark">"</div>
+      <p>A mente do homem é uma fábrica perpétua de ídolos.</p>
+      <span class="tquote-attr">João Calvino — Institutas da Religião Cristã, I.xi.8</span>
+    </div>
+
+    <p>Calvino dizia isso no século XVI. Sem celular. Sem algoritmo. Imagina o que ele diria hoje.</p>
+    <p>A mente não fica vazia. Quando ela não é alimentada com Deus, ela fabrica substitutos. Sempre. É automático.</p>
+
+    <div class="verse">
+      <p>"Não vos conformeis com este século."</p>
+      <cite>Romanos 12:2</cite>
+    </div>
+
+    <div class="impact">Se você não alimenta sua fé… o mundo alimenta o contrário.</div>
+
+    <p>E aí vem a pergunta: como ter um relacionamento com Deus se sua mente está cheia de outras coisas?</p>
+  </div>
+
+  <div class="divider"><span></span><em>✦</em><span></span></div>
+
+  <!-- 3. RASOS -->
+  <div class="section" id="rasos">
+    <div class="section-num">Seção 3</div>
+    <h2>Relacionamentos Rasos</h2>
+    <p>A mesma geração que troca de conteúdo rápido… troca de pessoas rápido… troca de decisões rápido.</p>
+
+    <div class="verse">
+      <p>"E, por se multiplicar a iniquidade, o amor de muitos esfriará."</p>
+      <cite>Mateus 24:12</cite>
+    </div>
+
+    <div class="impact">Uma geração que não permanece em nada… não consegue permanecer em Deus.</div>
+  </div>
+
+  <div class="divider"><span></span><em>✦</em><span></span></div>
+
+  <!-- 4. MOISÉS -->
+  <div class="section" id="moises">
+    <div class="section-num">Seção 4</div>
+    <h2>O Contraste — Moisés</h2>
+    <p>Êxodo 33 descreve uma cena que poucos param para imaginar. O povo ficava na porta da tenda olhando de longe. Mas Moisés entrava. Todo dia. Porque ele sabia que o que ele precisava não estava no acampamento — estava lá dentro.</p>
+    <p>A Bíblia diz que o Senhor falava com Moisés face a face, como um homem fala com seu amigo.</p>
+
+    <div class="verse">
+      <p>"Se a tua presença não for conosco, não nos faças subir daqui."</p>
+      <cite>Êxodo 33:15</cite>
+    </div>
+
+    <div class="impact">Enquanto o povo queria coisas… Moisés queria presença.</div>
+
+    <div class="tquote">
+      <div class="tquote-mark">"</div>
+      <p>Aquele que não tem comunhão com Deus no segredo não tem religião nenhuma, por mais que pareça ter.</p>
+      <span class="tquote-attr">John Owen — Comunhão com Deus (1657)</span>
+    </div>
+
+    <div class="impact">Moisés não tinha um momento com Deus… ele tinha uma vida com Deus.</div>
+  </div>
+
+  <div class="divider"><span></span><em>✦</em><span></span></div>
+
+  <!-- 5. VERDADE -->
+  <div class="section" id="verdade">
+    <div class="section-num">Seção 5</div>
+    <h2>A Verdade Sobre Nós</h2>
+    <p>A verdade é que a gente não quer esforço. Não queremos orar. Não queremos ler. Não queremos disciplina. Mas queremos resultado.</p>
+
+    <div class="verse">
+      <p>"Porque não faço o bem que quero, mas o mal que não quero esse faço."</p>
+      <cite>Romanos 7:19</cite>
+    </div>
+
+    <p>Paulo não tava falando de você. Ele tava falando de si mesmo. O apóstolo Paulo. O maior missionário da história. Então você não tá sozinho nisso.</p>
+
+    <div class="verse">
+      <p>"Agora, pois, nenhuma condenação há para os que estão em Cristo Jesus."</p>
+      <cite>Romanos 8:1</cite>
+    </div>
+
+    <div class="tquote">
+      <div class="tquote-mark">"</div>
+      <p>Deus não salva pessoas imaginárias. Ele salva pecadores reais.</p>
+      <span class="tquote-attr">Martinho Lutero — Carta a Melanchthon, 1521</span>
+    </div>
+
+    <p>Você não precisa fingir que está bem pra se aproximar de Deus. Você precisa chegar do jeito que você está.</p>
+    <div class="impact">Você não vai ter uma vida espiritual forte vivendo de vontade fraca.</div>
+  </div>
+
+  <div class="divider"><span></span><em>✦</em><span></span></div>
+
+  <!-- 6. ALIMENTO -->
+  <div class="section" id="alimento">
+    <div class="section-num">Seção 6</div>
+    <h2>Alimentar a Fé</h2>
+    <p>Sua fé precisa ser alimentada todos os dias.</p>
+
+    <div class="verse">
+      <p>"Nem só de pão viverá o homem, mas de toda palavra que sai da boca de Deus."</p>
+      <cite>Mateus 4:4</cite>
+    </div>
+
+    <p>Você come todo dia. Você respira todo dia. Então por que quer buscar Deus só no domingo?</p>
+    <div class="impact">Fé de domingo não sustenta batalha de segunda.</div>
+  </div>
+
+  <div class="divider"><span></span><em>✦</em><span></span></div>
+
+  <!-- 7. HÁBITOS -->
+  <div class="section" id="habitos">
+    <div class="section-num">Seção 7</div>
+    <h2>Hábitos</h2>
+    <p>Você não vive o que sente. Você vive o que repete.</p>
+
+    <div class="tquote">
+      <div class="tquote-mark">"</div>
+      <p>Uma Bíblia que está se desfazendo geralmente pertence a alguém que não está.</p>
+      <span class="tquote-attr">Charles Spurgeon — Pregações do século XIX</span>
+    </div>
+
+    <p>O problema não é falta de acesso a Deus. É falta de hábito de buscá-lo. Criar hábito demora. Perder é rápido.</p>
+    <div class="impact">Ou você cria hábitos… ou seus hábitos criam você.</div>
+
+    <div class="habit">
+      <div class="habit-header">
+        <div class="habit-num">1</div>
+        <div class="habit-title">Comece pequeno</div>
+      </div>
+      <p>Cinco minutos com Deus. Só isso. Não despreze o começo humilde — ele é onde tudo começa.</p>
+      <div class="habit-verse">Zacarias 4:10</div>
+    </div>
+
+    <div class="habit">
+      <div class="habit-header">
+        <div class="habit-num">2</div>
+        <div class="habit-title">Tenha rotina</div>
+      </div>
+      <p>Todo dia, mesmo horário. Calvino pregava duas vezes ao dia em Genebra e ainda ensinava: "A oração é o principal exercício da fé, e pelo qual recebemos os benefícios de Deus dia após dia."</p>
+      <div class="habit-verse">Salmos 5:3</div>
+    </div>
+
+    <div class="habit">
+      <div class="habit-header">
+        <div class="habit-num">3</div>
+        <div class="habit-title">Permaneça sem vontade</div>
+      </div>
+      <p>Decisão é maior que emoção. Você não espera ter vontade de respirar. Não espere ter vontade de buscar Deus.</p>
+      <div class="habit-verse">Gálatas 6:9</div>
+    </div>
+
+    <div class="habit">
+      <div class="habit-header">
+        <div class="habit-num">4</div>
+        <div class="habit-title">Proteja sua mente</div>
+      </div>
+      <p>Corte conteúdos que constroem o homem errado dentro de você. Guarda começa antes da batalha.</p>
+      <div class="habit-verse">Provérbios 4:23</div>
+    </div>
+
+    <div class="impact">Relacionamento com Deus cresce na rotina… não no hype.</div>
+  </div>
+
+  <div class="divider"><span></span><em>✦</em><span></span></div>
+
+  <!-- 8. JESUS -->
+  <div class="section" id="centro">
+    <div class="section-num">Seção 8</div>
+    <h2>O Centro — Jesus Cristo</h2>
+    <p>No final, tudo aponta para Ele.</p>
+    <p>João Bunyan escreveu O Peregrino numa cela de prisão onde ficou 12 anos por recusar-se a parar de pregar. Ele sabia: você pode tentar escalar o muro do céu pela sua própria bondade, pela sua própria disciplina, pelo seu próprio esforço — mas só há uma porta.</p>
+
+    <div class="verse">
+      <p>"Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai senão por mim."</p>
+      <cite>João 14:6</cite>
+    </div>
+
+    <div class="impact">Não é sobre religião. Não é sobre hábito. É sobre seguir Jesus todos os dias.</div>
+  </div>
+
+  <div class="divider"><span></span><em>✦</em><span></span></div>
+
+  <!-- 9. APELO -->
+  <div class="appeal" id="apelo">
+    <h2>Apelo</h2>
+    <p>Você vive com Deus… ou só visita Deus?</p>
+    <p>Sua fé é diária… ou semanal?</p>
+
+    <div class="verse" style="background:rgba(255,255,255,0.06); border-left-color: var(--gold2); margin: 20px 0;">
+      <p style="color: var(--parch);">"Tenho, porém, contra ti que abandonaste o teu primeiro amor."</p>
+      <cite>Apocalipse 2:4</cite>
+    </div>
+
+    <p>Volta hoje. Começa hoje. Decide hoje.</p>
+
+    <div class="appeal-action">
+      <p>Antes de você sair daqui: abre o alarme do seu celular agora. Coloca 10 minutos amanhã cedo. Isso não é religião. É o começo de um relacionamento.</p>
+    </div>
+
+    <div class="appeal-close">
+      Em um mundo que te puxa para longe…<br>Deus continua esperando você se aproximar todos os dias.
+    </div>
+  </div>
+
+  <!-- TEÓLOGOS -->
+  <div class="theo-section" id="teologos">
+    <div class="section-num">Referências</div>
+    <h2>Os Teólogos do Sermão</h2>
+
+    <div class="theo-card">
+      <div class="theo-name">Agostinho de Hipona</div>
+      <div class="theo-years">354 – 430 d.C.</div>
+      <div class="theo-role">Bispo — Norte da África</div>
+      <p>Considerado um dos maiores pensadores do cristianismo, Agostinho passou anos longe de Deus antes de sua conversão — e suas <em>Confissões</em> são o relato mais honesto da história sobre a busca humana por Deus.</p>
+      <div class="theo-highlight">A frase "nosso coração vive inquieto" não é poesia: é autobiografia.</div>
+    </div>
+
+    <div class="theo-card">
+      <div class="theo-name">Martinho Lutero</div>
+      <div class="theo-years">1483 – 1546</div>
+      <div class="theo-role">Reformador — Alemanha</div>
+      <p>Monge alemão que desencadeou a Reforma Protestante ao pregar que a salvação vem pela graça, pela fé, e não por obras ou méritos humanos. Era famoso por sua vida de oração intensa.</p>
+      <div class="theo-highlight">Dizia que nos dias mais ocupados precisava orar mais, não menos.</div>
+    </div>
+
+    <div class="theo-card">
+      <div class="theo-name">João Calvino</div>
+      <div class="theo-years">1509 – 1564</div>
+      <div class="theo-role">Reformador — França / Genebra</div>
+      <p>Teólogo francês que sistematizou a teologia reformada. Além de escrever as <em>Institutas da Religião Cristã</em>, pregava duas vezes ao dia em Genebra e via a disciplina espiritual como resposta à graça, não como meio de merecê-la.</p>
+      <div class="theo-highlight">Um dos teólogos mais rigorosos da história — e um dos mais disciplinados na devoção pessoal.</div>
+    </div>
+
+    <div class="theo-card">
+      <div class="theo-name">John Owen</div>
+      <div class="theo-years">1616 – 1683</div>
+      <div class="theo-role">Puritano — Inglaterra</div>
+      <p>Chamado de "o príncipe dos puritanos". Sua obra <em>Comunhão com Deus</em> é considerada o tratado mais profundo já escrito sobre o que significa ter um relacionamento real com a Trindade.</p>
+      <div class="theo-highlight">Não religião exterior — presença interior. Essa era a distinção central de Owen.</div>
+    </div>
+
+    <div class="theo-card">
+      <div class="theo-name">Charles Spurgeon</div>
+      <div class="theo-years">1834 – 1892</div>
+      <div class="theo-role">Pregador Batista — Inglaterra</div>
+      <p>Pregador que aos 20 anos já lotava o maior salão de Londres. Pregou mais de 3.500 sermões e escreveu sobre a vida devocional com uma clareza e um humor raros.</p>
+      <div class="theo-highlight">Acreditava que a Bíblia não era para ser estudada apenas — era para ser vivida diariamente.</div>
+    </div>
+
+    <div class="theo-card">
+      <div class="theo-name">João Bunyan</div>
+      <div class="theo-years">1628 – 1688</div>
+      <div class="theo-role">Pregador — Inglaterra</div>
+      <p>Passou 12 anos preso por pregar o Evangelho sem licença do governo. Na prisão, escreveu <em>O Peregrino</em> — a alegoria cristã mais lida da história depois da Bíblia.</p>
+      <div class="theo-highlight">Sua vida inteira foi prova de que seguir a Cristo tem um custo real, e que esse custo vale.</div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-ornament">✦</div>
+    <p>Sermão — Relacionamento com Deus</p>
+  </div>
+
+</div>
+
+<script>
+  // Progress bar
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrolled = doc.scrollTop || document.body.scrollTop;
+    const total = doc.scrollHeight - doc.clientHeight;
+    const pct = total > 0 ? (scrolled / total) * 100 : 0;
+    document.getElementById('progress').style.width = pct + '%';
+  });
+
+  // Drawer
+  function openDrawer() {
+    document.getElementById('drawer').classList.add('open');
+    document.getElementById('overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
+</body>
+</html>

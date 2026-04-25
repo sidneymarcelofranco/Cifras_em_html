@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palavra</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background:#111827; color:#f9fafb;
+  font-family:Georgia,serif;
+  padding:32px 5% 80px;
+  max-width:600px; margin:0 auto;
+}
+
+.page-header { margin-bottom:28px; }
+.page-header h1 {
+  font-size:1.5rem; color:#a78bfa;
+  letter-spacing:0.06em; text-transform:uppercase;
+  margin-bottom:4px;
+}
+.page-header p {
+  font-size:0.78rem; color:#6b7280;
+  font-family:'Courier New',monospace;
+}
+
+.search-wrap { position:relative; margin-bottom:28px; }
+.search-wrap input {
+  width:100%; padding:12px 16px 12px 42px;
+  background:#1f2937; border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px; color:#f9fafb;
+  font-size:0.95rem; font-family:Georgia,serif;
+  outline:none; transition:border-color 0.2s;
+  -webkit-appearance:none; appearance:none;
+}
+.search-wrap input::placeholder { color:#4b5563; }
+.search-wrap input:focus { border-color:rgba(167,139,250,0.5); }
+.search-icon {
+  position:absolute; left:14px; top:50%; transform:translateY(-50%);
+  color:#4b5563; font-size:1rem; pointer-events:none;
+}
+.clear-btn {
+  position:absolute; right:12px; top:50%; transform:translateY(-50%);
+  background:none; border:none; color:#6b7280; font-size:1.1rem;
+  cursor:pointer; padding:4px; display:none; line-height:1;
+}
+.clear-btn.visible { display:block; }
+
+.card {
+  display:block;
+  text-decoration:none;
+  background:#1f2937; border:1px solid rgba(255,255,255,0.06);
+  border-left:3px solid #a78bfa;
+  border-radius:10px; padding:16px;
+  margin-bottom:10px; transition:background 0.15s, border-color 0.15s;
+}
+.card:active, .card:hover { background:#263044; border-left-color:rgba(167,139,250,0.8); }
+.card-titulo {
+  font-size:0.98rem; color:#a78bfa;
+  margin-bottom:6px;
+}
+.card-meta {
+  display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+}
+.card-pregador {
+  font-size:0.78rem; color:#d1d5db;
+  font-family:'Courier New',monospace;
+}
+.card-ref {
+  font-size:0.72rem; color:#6b7280;
+  font-family:'Courier New',monospace;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:6px; padding:2px 8px;
+}
+.card-data {
+  font-size:0.68rem; color:#4b5563;
+  font-family:'Courier New',monospace;
+  margin-left:auto;
+}
+
+.empty {
+  text-align:center; padding:60px 0; color:#4b5563; font-size:0.9rem;
+  line-height:1.8;
+}
+.empty-icon { font-size:2rem; margin-bottom:12px; display:block; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+    <div>
+      <h1>Palavra</h1>
+      <p id="contagem"></p>
+    </div>
+    <a href="index.html" style="display:flex;align-items:center;gap:6px;text-decoration:none;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:8px 14px;color:#9ca3af;font-size:0.78rem;font-family:'Courier New',monospace;font-weight:700;white-space:nowrap;flex-shrink:0;letter-spacing:0.04em">
+      ← Início
+    </a>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <span class="search-icon">🔍</span>
+  <input type="search" id="campoBusca" placeholder="Buscar por título ou pregador…" autocomplete="off">
+  <button class="clear-btn" id="btnLimpar" onclick="limparBusca()">✕</button>
+</div>
+
+<div id="lista-pregacoes"></div>
+
+<script src="database/pregacoes.js"></script>
+<script>
+(function () {
+  var itens = (window.PREGACOES || []).slice().sort(function(a, b) {
+    var da = (a.data || '').split('/').reverse().join('');
+    var db = (b.data || '').split('/').reverse().join('');
+    return db.localeCompare(da);
+  });
+
+  var campo   = document.getElementById('campoBusca');
+  var btnLimpar = document.getElementById('btnLimpar');
+  var contagem  = document.getElementById('contagem');
+
+  contagem.textContent = itens.length + ' pregaç' + (itens.length === 1 ? 'ão' : 'ões');
+
+  renderizar('');
+
+  campo.addEventListener('input', function() {
+    var q = campo.value.trim();
+    btnLimpar.classList.toggle('visible', q.length > 0);
+    renderizar(q);
+  });
+
+  function limparBusca() {
+    campo.value = '';
+    btnLimpar.classList.remove('visible');
+    campo.focus();
+    renderizar('');
+  }
+  window.limparBusca = limparBusca;
+
+  function renderizar(busca) {
+    var q = busca.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+    var filtrado = q
+      ? itens.filter(function(p) {
+          var texto = ((p.pregador||'') + ' ' + (p.titulo||'') + ' ' + (p.referencia||''))
+                     .toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+          return texto.indexOf(q) >= 0;
+        })
+      : itens;
+
+    var lista = document.getElementById('lista-pregacoes');
+
+    if (filtrado.length === 0) {
+      lista.innerHTML = itens.length === 0
+        ? '<div class="empty"><span class="empty-icon">📖</span>Nenhuma pregação adicionada ainda.<br>Adicione entradas em <code>database/pregacoes.js</code>.</div>'
+        : '<div class="empty">Nenhuma pregação encontrada</div>';
+      return;
+    }
+
+    var html = '';
+    filtrado.forEach(function(p) {
+      var tag     = p.arquivo ? 'a href="' + esc(p.arquivo) + '"' : 'div';
+      var fechaTag = p.arquivo ? 'a' : 'div';
+      html += '<' + tag + ' class="card">'
+            + '<div class="card-titulo">' + esc(p.titulo) + '</div>'
+            + '<div class="card-meta">'
+            + '<span class="card-pregador">' + esc(p.pregador) + '</span>';
+      if (p.referencia) html += '<span class="card-ref">' + esc(p.referencia) + '</span>';
+      if (p.data)       html += '<span class="card-data">' + esc(p.data) + '</span>';
+      html += '</div></' + fechaTag + '>';
+    });
+
+    lista.innerHTML = html;
+  }
+
+  function esc(str) {
+    return String(str)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+})();
+</script>
+</body>
+</html>
