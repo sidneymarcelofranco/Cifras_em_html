@@ -209,7 +209,7 @@ window.SONGS = [
     id: "canta_minhalma",
     artist: "Vox Central MSC",
     title: "Canta Minh'Alma / Grandioso És Tu",
-    key: "B",
+    key: "A",
     file: "songs/canta_minhalma.html"
   },
   {

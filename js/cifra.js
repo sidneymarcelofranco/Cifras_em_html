@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   total = secs.length;
 
   // Destaca botão home
-  const homeBtn = document.querySelector('.toolbar a.tb-btn[href*="index"]');
+  const homeBtn = document.querySelector('.toolbar a.tb-btn[href*="cifras"], .toolbar a.tb-btn[href*="index"]');
   if (homeBtn) homeBtn.classList.add('home-btn');
 
   ensureLyricsToggleButton();
