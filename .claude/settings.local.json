@@ -8,7 +8,9 @@
       "Bash(sed -i 's|href=\"\"index.html\"\"|href=\"\"../index.html\"\"|g' *.html)",
       "Bash(grep -l \"cifra.css\" *.html)",
       "WebFetch(domain:www.cifraclub.com.br)",
-      "Bash(python3 converter.py)"
+      "Bash(python3 converter.py)",
+      "Read(//g/Meu Drive/Cifras/**)",
+      "Bash(Select-String -Pattern \"nenhuma|este.*poder|vasos|louvemos|teu.reino|santo.*pra|louvem\" -i)"
     ]
   }
 }

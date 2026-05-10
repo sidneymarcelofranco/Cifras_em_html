@@ -1042,7 +1042,7 @@ window.SONGS = [
     id: "teu_reino",
     artist: "Ministério Cristo Vivo",
     title: "Teu Reino",
-    key: "E",
+    key: "F#",
     file: "songs/teu_reino.html"
   },
   {
@@ -1100,6 +1100,13 @@ window.SONGS = [
     title: "Vai Valer a Pena",
     key: "C",
     file: "songs/vai_valer_a_pena.html"
+  },
+  {
+    id: "vasos_quebrados",
+    artist: "Marine Friesen",
+    title: "Vasos Quebrados",
+    key: "E",
+    file: "songs/vasos_quebrados.html"
   },
   {
     id: "vem_cear",
